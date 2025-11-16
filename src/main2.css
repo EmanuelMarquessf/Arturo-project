@@ -1,0 +1,62 @@
+:root {
+  --color-background-dark: #1C1C1C;
+  --color-background-light: #F5F5F5;
+  --color-text-light: #FFFFFF;
+  --color-text-dark: #333333;
+  --color-accent-gold: #C7A84B; 
+  --color-emphasis-red: #9E0000;
+  --color-accent-gold-hover: #D8BD69; 
+  --color-button-secondary-bg: #EAEAEA;
+  --color-button-primary-text: var(--color-text-dark);
+}
+
+/* CLASSES PARA COR DE TEXTO (color) */
+
+.text-gold {
+  color: var(--color-accent-gold);
+}
+
+.text-dark {
+  color: var(--color-text-dark);
+}
+
+.text-light {
+  color: var(--color-text-light);
+}
+
+.text-red-emphasis {
+  color: var(--color-emphasis-red);
+}
+
+
+/* CLASSES PARA COR DE FUNDO (background-color) */
+
+.bg-dark {
+  background-color: var(--color-background-dark);
+}
+
+.bg-light {
+  background-color: var(--color-background-light);
+}
+
+.bg-gold {
+  background-color: var(--color-accent-gold);
+}
+
+
+/* CLASSES PARA COR DE BORDA (border-color) */
+
+.border-gold {
+  border-color: var(--color-accent-gold);
+  border-style: solid; 
+}
+
+.border-dark {
+  border-color: var(--color-background-dark);
+  border-style: solid;
+}
+
+.border-red-emphasis {
+  border-color: var(--color-emphasis-red);
+  border-style: solid;
+}

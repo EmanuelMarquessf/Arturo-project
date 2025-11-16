@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Arturus Project</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="./src/main.css" />
+    <link rel="stylesheet" href="./src/main2.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,8 +14,8 @@
     />
   </head>
   <body>
-    <div class="flex flex-col min-h-screen justify-between">
-      <header class="bg-white shadow-sm sticky top-0 z-10">
+    <div class="flex flex-col min-h-screen justify-between bg-light">
+      <header class="bg-zinc-900 shadow-sm sticky top-0 z-10">
         <div
           class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center"
         >
@@ -24,14 +24,14 @@
               href="/"
               class="barlow-bold text-3xl font-serif font-bold text-pink-900 tracking-wide hover:text-pink-700 transition duration-300"
             >
-              Boteco do Vinho
+              <img src="./public/logo/logo.png" class="w-35" alt="" />
             </a>
           </div>
 
           <nav class="hidden md:flex space-x-8 items-center relative">
             <a
               href="/"
-              class="text-gray-600 font-medium text-base hover:text-pink-700 transition duration-300 ease-in-out"
+              class="text-gray-300 font-medium text-base hover:text-pink-700 transition duration-300 ease-in-out"
             >
               Página Inicial
             </a>
@@ -39,7 +39,7 @@
             <div class="relative group" id="wine-dropdown-container">
               <button
                 id="wine-dropdown-button"
-                class="text-gray-600 font-medium text-base hover:text-pink-700 transition duration-300 ease-in-out flex items-center group-hover:text-pink-700"
+                class="text-gray-300 font-medium text-base hover:text-pink-700 transition duration-300 ease-in-out flex items-center group-hover:text-pink-700"
               >
                 Nossos Vinhos
                 <svg
@@ -80,13 +80,13 @@
 
             <a
               href="/revendedor"
-              class="text-gray-600 font-medium text-base hover:text-pink-700 transition duration-300 ease-in-out"
+              class="text-gray-300 font-medium text-base hover:text-pink-700 transition duration-300 ease-in-out"
             >
               Revendedor
             </a>
             <a
               href="/contato"
-              class="border border-pink-700 text-pink-700 hover:bg-pink-700 hover:text-white rounded-full px-4 py-2 transition duration-300 font-medium text-base"
+              class="border border-gold text-gold hover:bg-gold hover:text-white rounded-full px-4 py-2 transition duration-300 font-medium text-base"
             >
               Contato
             </a>
@@ -114,19 +114,20 @@
         </div>
       </header>
 
-      <footer class="bg-rose-950 text-white">
+      <footer class="bg-zinc-900 text-white">
         <div class="max-w-7xl mx-auto px-6 py-6">
-          <div
-            class="grid grid-cols-1 md:grid-cols-4 gap-10 border-b border-brightWine pb-10"
+          <div 
+            class="grid grid-cols-1 md:grid-cols-4 gap-10 border-b border-gold pb-10"
           >
             <div class="space-y-4">
               <a
                 href="#"
-                class="barlow-bold text-3xl font-serif font-bold tracking-widest text-pink-100 hover:text-white transition duration-300"
+                class="barlow-bold text-3xl font-serif font-bold tracking-widest text-gold hover:text-white transition duration-300"
               >
-                BOTECO DO <span class="text-brightWine">VINHO</span>
+                <!-- BOTECO DO <span class="text-brightWine">VINHO</span> -->
+                <img src="./public/logo/logo.png" alt=""  class="w-45"/>
               </a>
-              <p class="text-sm text-pink-300">
+              <p class="text-sm text-gray-300">
                 A arte e a paixão dos melhores vinhos do mundo, entregues à sua
                 porta.
               </p>
@@ -134,7 +135,7 @@
 
             <div>
               <h3
-                class="text-base font-bold mb-4 uppercase tracking-wider text-pink-100"
+                class="text-base font-bold mb-4 uppercase tracking-wider text-gold"
               >
                 Navegação Rápida
               </h3>
@@ -142,28 +143,28 @@
                 <li>
                   <a
                     href="/"
-                    class="text-pink-300 hover:text-white transition duration-200 text-sm block"
+                    class="text-gray-300 hover:text-white transition duration-200 text-sm block"
                     >Página Inicial</a
                   >
                 </li>
                 <li>
                   <a
                     href="/nossos-vinhos"
-                    class="text-pink-300 hover:text-white transition duration-200 text-sm block"
+                    class="text-gray-300 hover:text-white transition duration-200 text-sm block"
                     >Nossos Vinhos</a
                   >
                 </li>
                 <li>
                   <a
                     href="/revendedor"
-                    class="text-pink-300 hover:text-white transition duration-200 text-sm block"
+                    class="text-gray-300 hover:text-white transition duration-200 text-sm block"
                     >Revendedor</a
                   >
                 </li>
                 <li>
                   <a
                     href="/contato"
-                    class="text-pink-300 hover:text-white transition duration-200 text-sm block"
+                    class="text-gray-300 hover:text-white transition duration-200 text-sm block"
                     >Contato</a
                   >
                 </li>
@@ -172,7 +173,7 @@
 
             <div>
               <h3
-                class="text-base font-bold mb-4 uppercase tracking-wider text-pink-100"
+                class="text-base font-bold mb-4 uppercase tracking-wider text-gold"
               >
                 Nossos Vinhos
               </h3>
@@ -180,21 +181,21 @@
                 <li>
                   <a
                     href="/"
-                    class="text-pink-300 hover:text-white transition duration-200 text-sm block"
+                    class="text-gray-300 hover:text-white transition duration-200 text-sm block"
                     >Tintos</a
                   >
                 </li>
                 <li>
                   <a
                     href="/nossos-vinhos"
-                    class="text-pink-300 hover:text-white transition duration-200 text-sm block"
+                    class="text-gray-300 hover:text-white transition duration-200 text-sm block"
                     >Doces</a
                   >
                 </li>
                 <li>
                   <a
                     href="/revendedor"
-                    class="text-pink-300 hover:text-white transition duration-200 text-sm block"
+                    class="text-gray-300 hover:text-white transition duration-200 text-sm block"
                     >Secos</a
                   >
                 </li>
@@ -203,7 +204,7 @@
 
             <div class="space-y-4">
               <h3
-                class="text-base font-bold mb-4 uppercase tracking-wider text-pink-100"
+                class="text-base font-bold mb-4 uppercase tracking-wider text-gold"
               >
                 Conecte-se
               </h3>
@@ -212,7 +213,7 @@
                 <a
                   href="https://instagram.com/suamarca"
                   target="_blank"
-                  class="w-6 h-6 text-pink-300 hover:text-pink-500 transition duration-200"
+                  class="w-6 h-6 text-gray-300 hover:text-gray-100 transition duration-200"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -229,7 +230,7 @@
                 <a
                   href="https://facebook.com/suamarca"
                   target="_blank"
-                  class="w-6 h-6 text-pink-300 hover:text-blue-500 transition duration-200"
+                  class="w-6 h-6 text-gray-300 hover:text-gray-100 transition duration-200"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -245,7 +246,7 @@
                 </a>
                 <a
                   href="/"
-                  class="w-6 h-6 text-pink-300 hover:text-white transition duration-200"
+                  class="w-6 h-6 text-gray-300 hover:text-gray-100 transition duration-200"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -263,7 +264,7 @@
                 <a
                   href="https://wa.me/5511987654321"
                   target="_blank"
-                  class="w-6 h-6 text-pink-300 hover:text-green-400 transition duration-200"
+                  class="w-6 h-6 text-gray-300 hover:text-gray-100  transition duration-200"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -280,8 +281,8 @@
                 </a>
               </div>
 
-              <div class="mt-8 pt-4 border-t border-brightWine">
-                <h4 class="text-base font-semibold text-pink-100">
+              <div class="mt-8 pt-4 border-t border-gold">
+                <h4 class="text-base font-semibold text-gold">
                   Pronto para revender?
                 </h4>
                 <a
@@ -297,12 +298,15 @@
           <div
             class="pt-8 text-center md:flex md:justify-between md:items-center"
           >
-            <p id="footer-year" class="text-xs text-pink-400 order-2 md:order-1">
-              &copy; {{ new Date().getFullYear() }} Boteco do Vinho. Todos os direitos
-              reservados.
+            <p
+              id="footer-year"
+              class="text-xs text-gold order-2 md:order-1"
+            >
+              &copy; {{ new Date().getFullYear() }} Boteco do Vinho. Todos os
+              direitos reservados.
             </p>
-            <p class="text-xs text-pink-400 mt-2 md:mt-0 order-1 md:order-2">
-              Desenvolvido com 🍷 
+            <p class="text-xs text-gold mt-2 md:mt-0 order-1 md:order-2">
+              Desenvolvido com 🍷
             </p>
           </div>
         </div>

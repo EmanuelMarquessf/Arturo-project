@@ -1,6 +1,22 @@
 :root {
   --primaryColor: #67043B;
-  --secondaryColor: #951345
+  --secondaryColor: #951345;
+
+
+  --brightYellow: #DEDACC;
+  --golden: #C7A84B;
+}
+
+.bg-brightYellow{
+  background-color: var(--brightYellow);
+}
+
+.border-golden{
+  border-color: var(--golden);
+}
+
+.text-golden{
+  color: var(--golden);
 }
 
 .bg-darkWine{
