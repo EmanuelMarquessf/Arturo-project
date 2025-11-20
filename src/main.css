@@ -1,154 +1,148 @@
 :root {
-  --primaryColor: #67043B;
-  --secondaryColor: #951345;
+  --color-background-dark: #1C1C1C;
+  --color-background-light: #F5F5F5;
+  --color-accent-gold: #AF6900; 
+  --color-accent-gold-hover: #D8BD69; 
+  
 
-
-  --brightYellow: #DEDACC;
-  --golden: #C7A84B;
+  --brown-100: #FFFAED;
+  --brown-200: #F5EBDA;
+  --brown-300: #D1B991;
+  --brown-400: #9E845C;
+  --brown-500: #AF6900;
+  --brown-600: #482817;
+  
 }
 
-.bg-brightYellow{
-  background-color: var(--brightYellow);
-}
+/* CLASSES PARA COR DE TEXTO (color) */
 
-.border-golden{
-  border-color: var(--golden);
+.text-brown-100{
+  color: var(--brown-100);
 }
-
-.text-golden{
-  color: var(--golden);
+.text-brown-200{
+  color: var(--brown-200);
 }
-
-.bg-darkWine{
-  background-color: var(--primaryColor);
+.text-brown-300{
+  color: var(--brown-300);
 }
-
-.bg-brightWine{
-  background-color: var(--secondaryColor);
+.text-brown-400{
+  color: var(--brown-400);
 }
-
-.text-darkWine{
-  color: var(--primaryColor);
+.text-brown-500{
+  color: var(--brown-500);
 }
-
-.text-brightWine{
-  color: var(--secondaryColor);
-}
-
-.border-darkWine{
-  border-color: var(--primaryColor);
-}
-
-.border-brightWine{
-  border-color: var(--secondaryColor);
+.text-brown-600{
+  color: var(--brown-600);
 }
 
 
+/* CLASSES PARA COR DE FUNDO (background-color) */
 
-.barlow-thin {
-  font-family: "Barlow", sans-serif;
-  font-weight: 100;
-  font-style: normal;
+.bg-dark {
+  background-color: var(--color-background-dark);
 }
 
-.barlow-extralight {
-  font-family: "Barlow", sans-serif;
-  font-weight: 200;
-  font-style: normal;
+.bg-brown-100{
+  background-color: var(--brown-100);
+}
+.bg-brown-200{
+  background-color: var(--brown-200);
+}
+.bg-brown-300{
+  background-color: var(--brown-300);
+}
+.bg-brown-400{
+  background-color: var(--brown-400);
+}
+.bg-brown-500{
+  background-color: var(--brown-500);
+}
+.bg-brown-600{
+  background-color: var(--brown-600);
 }
 
-.barlow-light {
-  font-family: "Barlow", sans-serif;
-  font-weight: 300;
-  font-style: normal;
+.border-b-brown-100 {
+  border-bottom: 1px solid var(--brown-100);
+}
+.border-b-brown-200 {
+  border-bottom: 1px solid var(--brown-200);
+}
+.border-b-brown-300 {
+  border-bottom: 1px solid var(--brown-300);
+}
+.border-b-brown-400 {
+  border-bottom: 1px solid var(--brown-400);
+}
+.border-b-brown-500 {
+  border-bottom: 1px solid var(--brown-500);
+}
+.border-b-brown-600 {
+  border-bottom: 1px solid var(--brown-600);
 }
 
-.barlow-regular {
-  font-family: "Barlow", sans-serif;
+
+/* CLASSES PARA COR DE BORDA (border-color) */
+
+.border-gold {
+  border-color: var(--color-accent-gold);
+  border-style: solid; 
+}
+
+.border-dark {
+  border-color: var(--color-background-dark);
+  border-style: solid;
+}
+
+.border-red-emphasis {
+  border-color: var(--color-emphasis-red);
+  border-style: solid;
+}
+
+
+/* Fontes */
+
+.libre-baskerville-regular {
+  font-family: "Libre Baskerville", serif;
   font-weight: 400;
   font-style: normal;
 }
 
-.barlow-medium {
-  font-family: "Barlow", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.barlow-semibold {
-  font-family: "Barlow", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-}
-
-.barlow-bold {
-  font-family: "Barlow", sans-serif;
+.libre-baskerville-bold {
+  font-family: "Libre Baskerville", serif;
   font-weight: 700;
   font-style: normal;
 }
 
-.barlow-extrabold {
-  font-family: "Barlow", sans-serif;
-  font-weight: 800;
-  font-style: normal;
-}
-
-.barlow-black {
-  font-family: "Barlow", sans-serif;
-  font-weight: 900;
-  font-style: normal;
-}
-
-.barlow-thin-italic {
-  font-family: "Barlow", sans-serif;
-  font-weight: 100;
-  font-style: italic;
-}
-
-.barlow-extralight-italic {
-  font-family: "Barlow", sans-serif;
-  font-weight: 200;
-  font-style: italic;
-}
-
-.barlow-light-italic {
-  font-family: "Barlow", sans-serif;
-  font-weight: 300;
-  font-style: italic;
-}
-
-.barlow-regular-italic {
-  font-family: "Barlow", sans-serif;
+.libre-baskerville-regular-italic {
+  font-family: "Libre Baskerville", serif;
   font-weight: 400;
   font-style: italic;
 }
 
-.barlow-medium-italic {
-  font-family: "Barlow", sans-serif;
+.playfair-display-400 {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.playfair-display-500 {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
   font-weight: 500;
-  font-style: italic;
+  font-style: normal;
 }
 
-.barlow-semibold-italic {
-  font-family: "Barlow", sans-serif;
+.playfair-display-600 {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
   font-weight: 600;
-  font-style: italic;
+  font-style: normal;
 }
 
-.barlow-bold-italic {
-  font-family: "Barlow", sans-serif;
+.playfair-display-700 {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
   font-weight: 700;
-  font-style: italic;
-}
-
-.barlow-extrabold-italic {
-  font-family: "Barlow", sans-serif;
-  font-weight: 800;
-  font-style: italic;
-}
-
-.barlow-black-italic {
-  font-family: "Barlow", sans-serif;
-  font-weight: 900;
-  font-style: italic;
+  font-style: normal;
 }

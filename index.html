@@ -5,24 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Arturus Project</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="./src/main2.css" />
+    <link rel="stylesheet" href="./src/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=GFS+Didot&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quintessential&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-    <div class="flex flex-col min-h-screen justify-between bg-light">
-      <header class="bg-zinc-900 shadow-sm sticky top-0 z-10">
-        <div
-          class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center"
-        >
+    <div class="flex flex-col min-h-screen justify-between bg-brown-100">
+      <!-- Header -->
+      <header class="bg-zinc-900 top-0 z-10 sticky shadow-sm">
+        <div class="max-w-7xl mx-auto py-4 flex justify-between items-center">
           <div class="flex-shrink-0">
             <a
               href="/"
-              class="barlow-bold text-3xl font-serif font-bold text-gold tracking-wide hover:text-pink-700 transition duration-300"
+              class="barlow-bold text-3xl font-serif font-bold text-brown-400 tracking-wide hover:text-pink-700 transition duration-300"
             >
               <img src="./public/logo/logo.png" class="w-35" alt="" />
             </a>
@@ -35,13 +34,19 @@
             >
               Página Inicial
             </a>
+            <a
+              href="/"
+              class="text-gray-300 font-medium text-base hover:text-pink-700 transition duration-300 ease-in-out"
+            >
+              História
+            </a>
 
             <div class="relative group" id="wine-dropdown-container">
               <button
                 id="wine-dropdown-button"
                 class="text-gray-300 font-medium text-base hover:text-pink-700 transition duration-300 ease-in-out flex items-center group-hover:text-pink-700"
               >
-                Nossos Vinhos
+                Familia Arturo
                 <svg
                   id="wine-dropdown-arrow"
                   class="ml-1 w-4 h-4 transition-transform duration-300"
@@ -67,13 +72,31 @@
                   href="/vinhos-doces"
                   class="block px-4 py-2 text-gray-700 text-sm hover:bg-pink-50 hover:text-pink-700 transition duration-150"
                 >
-                  Vinhos Doces
+                  Suaves
                 </a>
                 <a
                   href="/vinhos-tintos"
                   class="block px-4 py-2 text-gray-700 text-sm hover:bg-pink-50 hover:text-pink-700 transition duration-150"
                 >
-                  Vinhos Tintos
+                  Tintos
+                </a>
+                <a
+                  href="/vinhos-tintos"
+                  class="block px-4 py-2 text-gray-700 text-sm hover:bg-pink-50 hover:text-pink-700 transition duration-150"
+                >
+                  Brancos
+                </a>
+                <a
+                  href="/vinhos-tintos"
+                  class="block px-4 py-2 text-gray-700 text-sm hover:bg-pink-50 hover:text-pink-700 transition duration-150"
+                >
+                  Espumantes
+                </a>
+                <a
+                  href="/vinhos-tintos"
+                  class="block px-4 py-2 text-gray-700 text-sm hover:bg-pink-50 hover:text-pink-700 transition duration-150"
+                >
+                  Sucos
                 </a>
               </div>
             </div>
@@ -85,8 +108,14 @@
               Revendedor
             </a>
             <a
+              href="/revendedor"
+              class="text-gray-300 font-medium text-base hover:text-pink-700 transition duration-300 ease-in-out"
+            >
+              Onde Comprar
+            </a>
+            <a
               href="/contato"
-              class="border border-gold text-gold hover:bg-gold hover:text-white rounded-full px-4 py-2 transition duration-300 font-medium text-base"
+              class="border border-gold text-brown-400 hover:bg-gold hover:text-white rounded-full px-4 py-2 transition duration-300 font-medium text-base"
             >
               Contato
             </a>
@@ -94,7 +123,7 @@
 
           <button
             id="mobile-menu-toggle"
-            class="md:hidden text-gold hover:text-pink-700"
+            class="md:hidden text-brown-400 hover:text-pink-700"
           >
             <svg
               class="w-6 h-6"
@@ -113,31 +142,355 @@
           </button>
         </div>
       </header>
-      <main style="min-height: 500px;">
 
+      <main class="flex flex-col gap-20 h-full">
+        <!-- Pagina Inicial -->
+        <div class="flex items-center w-full px-10 bg-brown-200">
+          <div class="max-w-7xl mx-auto grid grid-cols-12 gap-8 py-30">
+            <div
+              class="pb-20 my-12 col-span-8 flex flex-col justify-center gap-8"
+            >
+              <div>
+                <h2 class="text-4xl text-brown-500 libre-baskerville-regular">
+                  Familia Arturos
+                </h2>
+                <h2
+                  class="text-7xl text-brown-600 uppercase playfair-display-400"
+                >
+                  Familia Arturos
+                </h2>
+              </div>
+              <div class="w-15 h-[2px] bg-brown-500"></div>
+              <p class="text-brown-600 libre-baskerville-regular text-lg">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+                eius ratione ipsa maiores. Recusandae perspiciatis cupiditate
+                expedita porro fuga nihil?
+              </p>
+            </div>
+            <img
+              class="col-span-4 my-12 self-center object-contain"
+              src="./public/img/garrafas/Espumantes/1.png"
+              alt="Espumante"
+            />
+          </div>
+        </div>
+
+        <!-- Somelier -->
+        <div class="w-full bg-brown-200 mb-20">
+          <div
+            class="max-w-7xl h-100 grid grid-cols-12 mx-auto gap-20 mx-auto px-10 lg:px-0"
+          >
+            <div class="flex flex-col mx-auto col-span-8 py-20 gap-10">
+              <div class="d-flex flex-col">
+                <img src="./public/img/aspas.png" alt="" class="w-10 mb-2" />
+                <p class="libre-baskerville-regular text-lg text-brown-600">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Dolorem, perspiciatis dignissimos expedita eum repellendus
+                  doloremque enim non sapiente consequuntur cum doloribus odit
+                  labore, aliquam, assumenda laudantium placeat tempora minus
+                  laboriosam?
+                </p>
+              </div>
+
+              <div class="d-flex flex-col gap-4">
+                <h3
+                  class="text-3xl text-black uppercase libre-baskerville-regular text-brown-500"
+                >
+                  Arthur Sobrenome
+                </h3>
+                <span class="libre-baskerville-regular-italic text-brown-600"
+                  >Lorem ipsum malesu.</span
+                >
+              </div>
+            </div>
+            <img
+              src=""
+              alt=""
+              class="h-110 w-110 bg-gray-300 col-span-4 mb-10 md:relative bottom-10 hidden lg:block"
+            />
+          </div>
+        </div>
+
+        <!-- Imagens -->
+        <div class="max-w-7xl mx-auto flex flex-col gap-6 w-full px-10 md:px-0">
+          <div class="grid grid-cols-12 gap-10 border-b-brown-500 pb-10">
+            <div class="col-span-6 flex flex-col gap-4">
+              <h3 class="text-5xl text-brown-600 libre-baskerville-bold">
+                Lorem ipsum dolor sit.
+              </h3>
+              <span class="text-brown-400 libre-baskerville-regular"
+                >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Voluptatum quibusdam laudantium eius cumque cupiditate, quo
+                reiciendis corporis mollitia sapiente officia? Aut assumenda ab
+                eos, maxime tempore natus quisquam qui illum?
+              </span>
+            </div>
+            <div class="grid grid-cols-6 col-span-6 gap-8">
+              <div class="flex gap-4 col-span-3">
+                <img src="" alt="" class="w-20 h-20 bg-red-100" />
+                <div class="flex flex-col justify-center">
+                  <h4 class="text-brown-600 libre-baskerville-regular text-xl">
+                    Lorem, ipsum.
+                  </h4>
+                  <span
+                    class="text-brown-400 libre-baskerville-regular-italic text-lg "
+                    >Lorem, ipsum dolor.</span
+                  >
+                </div>
+              </div>
+              <div class="flex gap-2 col-span-3">
+                <img src="" alt="" class="w-20 h-20 bg-red-100" />
+                <div class="flex flex-col justify-center">
+                  <h4 class="text-brown-600 libre-baskerville-regular text-xl">
+                    Lorem, ipsum.
+                  </h4>
+                  <span
+                    class="text-brown-400 libre-baskerville-regular-italic text-lg "
+                    >Lorem, ipsum dolor.</span
+                  >
+                </div>
+              </div>
+              <div class="flex gap-2 col-span-3">
+                <img src="" alt="" class="w-20 h-20 bg-red-100" />
+                <div class="flex flex-col justify-center">
+                  <h4 class="text-brown-600 libre-baskerville-regular text-xl">
+                    Lorem, ipsum.
+                  </h4>
+                  <span
+                    class="text-brown-400 libre-baskerville-regular-italic text-lg "
+                    >Lorem, ipsum dolor.</span
+                  >
+                </div>
+              </div>
+              <div class="flex gap-2 col-span-3">
+                <img src="" alt="" class="w-20 h-20 bg-red-100" />
+                <div class="flex flex-col justify-center">
+                  <h4 class="text-brown-600 libre-baskerville-regular text-xl">
+                    Lorem, ipsum.
+                  </h4>
+                  <span
+                    class="text-brown-400 libre-baskerville-regular-italic text-lg "
+                    >Lorem, ipsum dolor.</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-cols-12 gap-4">
+            <img
+              src="https://www.exemplo.com.br/imagens/imagem-padrao.jpg"
+              alt=""
+              class="h-60 bg-red-300 rounded col-span-6 md:col-span-4"
+            />
+            <img
+              src="https://www.exemplo.com.br/imagens/imagem-padrao.jpg"
+              alt=""
+              class="h-60 bg-red-300 rounded col-span-6 md:col-span-4"
+            />
+            <img
+              src="https://www.exemplo.com.br/imagens/imagem-padrao.jpg"
+              alt=""
+              class="h-60 bg-red-300 rounded col-span-6 md:col-span-4"
+            />
+            <img
+              src="https://www.exemplo.com.br/imagens/imagem-padrao.jpg"
+              alt=""
+              class="h-60 bg-red-300 rounded col-span-6 md:col-span-4"
+            />
+            <img
+              src="https://www.exemplo.com.br/imagens/imagem-padrao.jpg"
+              alt=""
+              class="h-60 bg-red-300 rounded col-span-6 md:col-span-4"
+            />
+            <img
+              src="https://www.exemplo.com.br/imagens/imagem-padrao.jpg"
+              alt=""
+              class="h-60 bg-red-300 rounded col-span-6 md:col-span-4"
+            />
+          </div>
+        </div>
+
+        <!-- Categorias -->
+        <div class="max-w-7xl mx-auto flex flex-col gap-4 w-full px-10 lg:px-0">
+          <div>
+            <h2 class="text-3xl text-brown-600 libre-baskerville-bold">
+              Lorem ipsum dolor
+            </h2>
+            <span class="text-brown-400"
+              >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto,
+              ea.</span
+            >
+          </div>
+          <img
+            src="./public/img/background/1.jpg"
+            alt="Imagem de fundo"
+            class="rounded w-full object-cover h-120"
+          />
+          <div
+            class="grid grid-cols-12 gap-4 libre-baskerville-regular text-xs"
+          >
+            <div
+              class="col-span-6 lg:col-span-3 bg-brown-200 rounded pl-6 flex justify-between items-center"
+            >
+              <div class="flex flex-col">
+                <span class="text-brown-500 uppercase">Lorem, ipsum.</span>
+                <span class="text-brown-600 text-xl">Vinho Suave</span>
+                <span class="text-brown-400 libre-baskerville-regular-italic"
+                  >Lorem, ipsum dolor.</span
+                >
+              </div>
+              <img
+                src="./public/img/garrafas/Espumantes/1.png"
+                alt=""
+                class="w-30"
+              />
+            </div>
+            <div
+              class="col-span-6 lg:col-span-3 bg-brown-200 rounded pl-6 flex justify-between items-center"
+            >
+              <div class="flex flex-col">
+                <span class="text-brown-500 uppercase">Lorem, ipsum.</span>
+                <span class="text-brown-600 text-xl">Vinho Suave</span>
+                <span class="text-brown-400 libre-baskerville-regular-italic"
+                  >Lorem, ipsum dolor.</span
+                >
+              </div>
+              <img
+                src="./public/img/garrafas/Espumantes/1.png"
+                alt=""
+                class="w-30"
+              />
+            </div>
+            <div
+              class="col-span-6 lg:col-span-3 bg-brown-200 rounded pl-6 flex justify-between items-center"
+            >
+              <div class="flex flex-col">
+                <span class="text-brown-500 uppercase">Lorem, ipsum.</span>
+                <span class="text-brown-600 text-xl">Vinho Suave</span>
+                <span class="text-brown-400 libre-baskerville-regular-italic"
+                  >Lorem, ipsum dolor.</span
+                >
+              </div>
+              <img
+                src="./public/img/garrafas/Espumantes/1.png"
+                alt=""
+                class="w-30"
+              />
+            </div>
+            <div
+              class="col-span-6 lg:col-span-3 bg-brown-200 rounded pl-6 flex justify-between items-center"
+            >
+              <div class="flex flex-col">
+                <span class="text-brown-500 uppercase">Lorem, ipsum.</span>
+                <span class="text-brown-600 text-xl">Vinho Suave</span>
+                <span class="text-brown-400 libre-baskerville-regular-italic"
+                  >Lorem, ipsum dolor.</span
+                >
+              </div>
+              <img
+                src="./public/img/garrafas/Espumantes/1.png"
+                alt=""
+                class="w-30"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="grid grid-cols-1 md:grid-cols-4 mx-auto">
+          <div class="grid grid-cols-12 w-full">
+            <div class="col-span-5 relative">
+              <img
+                class="w-full h-auto"
+                src="./public/img/garrafas/Espumantes/1.png"
+                alt="Garrafa de Espumante"
+              />
+            </div>
+
+            <div class="col-span-7 bg-gray-300 rounded my-16 pl-28 pr-8 ml-[-10rem] justify-center py-6">
+              <h1 class="font-bold text-xl">Espumantes</h1>
+              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, magni!</span>
+            </div>
+          </div>
+          
+        </div> -->
+
+        <!-- <div class="grid grid-cols-4 max-w-7xl mx-auto gap-4">
+          <div class="bg-gray-200 rounded flex p-4">
+            <img
+              class="w-35"
+              src="./public/img/garrafas/Espumantes/1.png"
+              alt=""
+            />
+            <div>
+              <h1 class="font-bold f text-xl">Espumantes</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+          </div>
+          <div class="bg-gray-200 rounded flex p-4">
+            <img
+              class="w-35"
+              src="./public/img/garrafas/Espumantes/1.png"
+              alt=""
+            />
+            <div>
+              <h1 class="font-bold f text-xl">Espumantes</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+          </div>
+          <div class="bg-gray-200 rounded flex p-4">
+            <img
+              class="w-35"
+              src="./public/img/garrafas/Espumantes/1.png"
+              alt=""
+            />
+            <div>
+              <h1 class="font-bold f text-xl">Espumantes</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+          </div>
+          <div class="bg-gray-200 rounded flex p-4">
+            <img
+              class="w-35"
+              src="./public/img/garrafas/Espumantes/1.png"
+              alt=""
+            />
+            <div>
+              <h1 class="font-bold f text-xl">Espumantes</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+          </div>
+        </div> -->
+        <div class="max-w-7xl mx-auto">
+          <div>
+            <h2 class="text-3xl text-brown-600 libre-baskerville-bold">
+              Lorem ipsum dolor
+            </h2>
+            <span class="text-brown-400"
+              >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto,
+              ea.</span
+            >
+          </div>
+          <div class="flex flex-wrap gap-4" id="cardContainer"></div>
+        </div>
       </main>
+
       <footer class="bg-zinc-900 text-white">
         <div class="max-w-7xl mx-auto px-6 py-6">
-          <div 
+          <div
             class="grid grid-cols-1 md:grid-cols-4 gap-10 border-b border-gold pb-10"
           >
             <div class="space-y-4">
               <a
                 href="#"
-                class="barlow-bold text-3xl font-serif font-bold tracking-widest text-gold hover:text-white transition duration-300"
+                class="barlow-bold text-3xl font-serif font-bold tracking-widest text-brown-400 hover:text-white transition duration-300"
               >
-                <!-- BOTECO DO <span class="text-brightWine">VINHO</span> -->
-                <img src="./public/logo/logo.png" alt=""  class="w-45"/>
+                <img src="./public/logo/logo.png" alt="" class="w-45" />
               </a>
-              <p class="text-sm text-gray-300">
-                A arte e a paixão dos melhores vinhos do mundo, entregues à sua
-                porta.
-              </p>
             </div>
 
             <div>
               <h3
-                class="text-base font-bold mb-4 uppercase tracking-wider text-gold"
+                class="text-base font-bold mb-4 uppercase tracking-wider text-brown-400"
               >
                 Navegação Rápida
               </h3>
@@ -175,7 +528,7 @@
 
             <div>
               <h3
-                class="text-base font-bold mb-4 uppercase tracking-wider text-gold"
+                class="text-base font-bold mb-4 uppercase tracking-wider text-brown-400"
               >
                 Nossos Vinhos
               </h3>
@@ -206,7 +559,7 @@
 
             <div class="space-y-4">
               <h3
-                class="text-base font-bold mb-4 uppercase tracking-wider text-gold"
+                class="text-base font-bold mb-4 uppercase tracking-wider text-brown-400"
               >
                 Conecte-se
               </h3>
@@ -266,7 +619,7 @@
                 <a
                   href="https://wa.me/5511987654321"
                   target="_blank"
-                  class="w-6 h-6 text-gray-300 hover:text-gray-100  transition duration-200"
+                  class="w-6 h-6 text-gray-300 hover:text-gray-100 transition duration-200"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -284,7 +637,7 @@
               </div>
 
               <div class="mt-8 pt-4 border-t border-gold">
-                <h4 class="text-base font-semibold text-gold">
+                <h4 class="text-base font-semibold text-brown-00">
                   Pronto para revender?
                 </h4>
                 <a
@@ -300,14 +653,11 @@
           <div
             class="pt-8 text-center md:flex md:justify-between md:items-center"
           >
-            <p
-              id="footer-year"
-              class="text-xs text-gold order-2 md:order-1"
-            >
+            <p id="footer-year" class="text-xs text-brown-400 order-2 md:order-1">
               &copy; {{ new Date().getFullYear() }} Boteco do Vinho. Todos os
               direitos reservados.
             </p>
-            <p class="text-xs text-gold mt-2 md:mt-0 order-1 md:order-2">
+            <p class="text-xs text-brown-400 mt-2 md:mt-0 order-1 md:order-2">
               Desenvolvido com 🍷
             </p>
           </div>
