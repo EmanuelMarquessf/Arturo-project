@@ -65,7 +65,7 @@
   border-bottom: 2px solid var(--brown-100);
 }
 .border-b-brown-200 {
-  border-bottom: 2px solid var(--brown-200);
+  border-bottom: 1px solid var(--brown-200);
 }
 .border-b-brown-300 {
   border-bottom: 2px solid var(--brown-300);

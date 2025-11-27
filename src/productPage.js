@@ -27,6 +27,7 @@ function buscarVinhoEExibirDetalhes() {
     document.getElementById("teor").textContent = vinhoSelecionado.alcolic;
     vinhoSelecionado.volume;
     document.getElementById("descricaoContainer").textContent = vinhoSelecionado.description;
+        document.getElementById("harmonizacao").textContent = vinhoSelecionado.harmonization;
 
     // --- INJEÇÃO DA IMAGEM ---
     document.getElementById("imagemContainer").innerHTML = `
@@ -45,7 +46,7 @@ function buscarVinhoEExibirDetalhes() {
         if (p.startsWith("**Destaques:**")) {
           // Remove a tag forte do JS para usar o <strong>
           const textoLimpo = p.replace("**Destaques:**", "Destaques:");
-          return `<p class="text-brown-500 libre-baskerville-regular text-base mt-4 pt-2 border-t border-brown-300">
+          return `<p class="text-brown-500 libre-baskerville-regular text-base mt-4 pt-2">
                             <strong>${textoLimpo}</strong>
                         </p>`;
         }
@@ -80,7 +81,7 @@ function buscarVinhoEExibirDetalhes() {
     const caracteristicasHTML = caracteristicas
       .map(
         (item) => `
-            <li class="flex justify-between border-b border-brown-200 py-1">
+            <li class="flex justify-between border-b-brown-300 py-1">
                 <span>${item.label}:</span>
                 <span class="font-medium text-brown-600">${item.value}</span>
             </li>
