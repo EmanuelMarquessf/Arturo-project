@@ -83,7 +83,7 @@ function buscarVinhoEExibirDetalhes() {
         (item) => `
             <li class="flex justify-between border-b-brown-300 py-1">
                 <span>${item.label}:</span>
-                <span class="font-medium text-brown-600">${item.value}</span>
+                <span class="font-medium text-brown-600 text-right">${item.value}</span>
             </li>
         `
       )
