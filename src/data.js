@@ -12,7 +12,7 @@ export const vinhosJson = [
             "**Destaques:** Produção limitada (lotes pequenos e controlados); Foco na qualidade, não na quantidade; Uvas rigorosamente selecionadas e vinificadas em pequenas autoclaves; Enólogo promissor; Região e vinhedo: Garibaldi (melhores espumantes do Brasil); Público-alvo: hotéis, restaurantes e lojas especializadas; Exclusividade comercial (não competimos com lojas online de massa); Linha de elaboração própria.",
         ],
         harmonization: "A região escolhida foi Garibaldi, reconhecida por seu terroir e excelência na produção de espumantes premium. Unimos essa tradição à nossa filosofia de valorizar enólogos talentosos — ainda pouco conhecidos, mas com enorme dedicação, técnica e paixão pelo que fazem — garantindo que cada detalhe, do vinhedo à taça, seja tratado com o máximo cuidado.",
-        image: "../public/img/garrafas/Espumantes/1.png",
+        image: "../public/img/garrafas/Espumantes/2.png",
         url: "",
         grape: "Chardonnay, Riesling Itálico e Prosecco",
         country: "Brasil",
