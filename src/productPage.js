@@ -34,7 +34,7 @@ function buscarVinhoEExibirDetalhes() {
             <img 
                 src="${vinhoSelecionado.image}" 
                 alt="Imagem de ${vinhoSelecionado.title}" 
-                class="w-56 lg:w-92 h-auto object-contain transition-transform duration-500 hover:scale-105"
+                class="w-56 lg:w-92 h-120 md:h-150 object-contain transition-transform duration-500 hover:scale-105"
             />
         `;
 

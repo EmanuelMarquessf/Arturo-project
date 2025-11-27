@@ -138,31 +138,31 @@
         </div>
       </header>
 
-      <main class="flex-grow py-16 lg:py-24 bg-brown-100">
+      <main class="flex-grow py-16 px-4 lg:py-24 bg-brown-100">
         <div class="max-w-7xl mx-auto">
-          <div id="estruturaPrincipal" class="flex flex-col gap-20">
-            <div class="grid grid-cols-6 items-center gap-10">
+          <div id="estruturaPrincipal" class="flex flex-col gap-12 md:gap-20">
+            <div class="grid grid-cols-6 items-center md:gap-10">
               <div
                 id="imagemContainer"
-                class="flex justify-center items-center bg-brown-100 col-span-2 rounded h-100"
+                class="flex justify-center items-center bg-brown-100 col-span-6 md:col-span-2 rounded "
               ></div>
-              <div class="col-span-4 flex flex-col gap-14">
-                <div>
+              <div class="col-span-6 md:col-span-4 flex flex-col  gap-12">
+                <div class="text-center md:text-left">
                   <span
                     id="tipoVinho"
                     class="text-brown-500 libre-baskerville-regular text-lg uppercase tracking-widest"
                   ></span>
                   <h1
                     id="tituloVinho"
-                    class="text-7xl lg:text-6xl text-brown-600 uppercase playfair-display-400"
+                    class="text-5xl lg:text-6xl text-brown-600 uppercase playfair-display-400"
                   ></h1>
                 </div>
                 <div
                   id="descricaoContainer"
-                  class="mt-4 col-span-3 text-2xl"
+                  class="col-span-3 text-lg text-center md:text-left libre-baskerville-regular text-brown-400"
                 ></div>
-                <div class="flex flex-row justify-between">
-                  <div class="flex flex-col" id="categoriasContainer">
+                <div class="flex flex-row justify-between text-center md:text-left">
+                  <div class="flex flex-col">
                     <span
                       class="text-brown-400 text-md libre-baskerville-regular-italic"
                     >
@@ -170,9 +170,9 @@
                     </span>
                     <span
                       id="categoria"
-                      class="text-brown-600 libre-baskerville-bold text-2xl"
+                      class="text-brown-600 libre-baskerville-bold text-lg md:text-2xl"
                     ></span>
-                    <div class="w-full h-[2px] bg-brown-200"></div>
+                    <div class="hidden md:block w-full h-[2px] bg-brown-200"></div>
                   </div>
                   <div class="flex flex-col">
                     <span
@@ -181,10 +181,10 @@
                       Variedades
                     </span>
                     <span
-                      class="text-brown-600 libre-baskerville-bold text-2xl"
+                      class="text-brown-600 libre-baskerville-bold text-lg md:text-2xl"
                       id="variedade"
                     ></span>
-                    <div class="w-full h-[2px] bg-brown-200"></div>
+                    <div class="hidden md:block w-full h-[2px] bg-brown-200"></div>
                   </div>
                   <div class="flex flex-col">
                     <span
@@ -193,10 +193,10 @@
                       Volume
                     </span>
                     <span
-                      class="text-brown-600 libre-baskerville-bold text-2xl"
+                      class="text-brown-600 libre-baskerville-bold text-lg md:text-2xl"
                       id="volume"
                     ></span>
-                    <div class="w-full h-[2px] bg-brown-200"></div>
+                    <div class="hidden md:block w-full h-[2px] bg-brown-200"></div>
                   </div>
                   <div class="flex flex-col">
                     <span
@@ -206,9 +206,9 @@
                     </span>
                     <span
                       id="teor"
-                      class="text-brown-600 libre-baskerville-bold text-2xl"
+                      class="text-brown-600 libre-baskerville-bold text-lg md:text-2xl"
                     ></span>
-                    <div class="w-full h-[2px] bg-brown-200"></div>
+                    <div class="hidden md:block w-full h-[2px] bg-brown-200"></div>
                   </div>
                 </div>
               </div>
@@ -218,7 +218,7 @@
             <div class="grid grid-cols-6 gap-12">
               <div
                 id="descricaoContainer"
-                class="col-span-4 flex flex-col gap-4"
+                class="col-span-6 md:col-span-4 flex flex-col gap-4"
               >
                 <div class="flex flex-col gap-4">
                   <h2 class="text-2xl text-brown-600 libre-baskerville-bold">
@@ -245,12 +245,12 @@
 
               <img
                 src="./public/img/background/1.jpg"
-                class="object-cover h-full rounded shadow-sm col-span-2"
+                class="hidden md:block object-cover h-full rounded shadow-sm md:col-span-2"
                 alt=""
               />
             </div>
             <div class="grid grid-cols-6 gap-12">
-              <div class="col-span-4 bg-brown-200 p-6 rounded">
+              <div class="col-span-6 md:col-span-4 bg-brown-200 p-6 rounded">
                 <h2 class="text-2xl text-brown-600 libre-baskerville-bold mb-3">
                   Ficha Técnica
                 </h2>
@@ -260,7 +260,7 @@
                 ></ul>
               </div>
               <div
-                class="col-span-2 flex flex-col gap-4 bg-brown-200 rounded p-6 justify-between"
+                class="col-span-6 md:col-span-2 flex flex-col gap-4 bg-brown-200 rounded p-6 justify-between"
               >
                 <div class="flex flex-col gap-4">
                   <div class="flex flex-col">
