@@ -26,8 +26,10 @@ function buscarVinhoEExibirDetalhes() {
     document.getElementById("volume").textContent = vinhoSelecionado.volume;
     document.getElementById("teor").textContent = vinhoSelecionado.alcolic;
     vinhoSelecionado.volume;
-    document.getElementById("descricaoContainer").textContent = vinhoSelecionado.description;
-        document.getElementById("harmonizacao").textContent = vinhoSelecionado.harmonization;
+    document.getElementById("descricaoContainer").textContent =
+      vinhoSelecionado.description;
+    document.getElementById("harmonizacao").textContent =
+      vinhoSelecionado.harmonization;
 
     // --- INJEÇÃO DA IMAGEM ---
     document.getElementById("imagemContainer").innerHTML = `
@@ -88,10 +90,23 @@ function buscarVinhoEExibirDetalhes() {
         `
       )
       .join("");
-
     // Injeta os itens <li> na lista <ul>
     document.getElementById("fichaTecnicaLista").innerHTML =
       caracteristicasHTML;
+
+    const listTopics = vinhoSelecionado.topics.split(";");
+
+    const topicsHTML = listTopics
+      .map(
+        (item) => `
+        <li class="py-1 text-base text-brown-500">
+          <span class="text-brown-400 libre-baskerville-regular text-md">${item}</span>
+        </li>
+      `
+      )
+      .join("");
+
+    document.getElementById("topicsContainer").innerHTML = topicsHTML;
   } else {
     // --- TRATAMENTO DE ERRO (Vinho não encontrado) ---
     // Se o vinho não for encontrado, exibe a mensagem de erro no container principal
