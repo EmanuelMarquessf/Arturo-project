@@ -30,14 +30,15 @@ function buscarVinhoEExibirDetalhes() {
       vinhoSelecionado.description;
     document.getElementById("harmonizacao").textContent =
       vinhoSelecionado.harmonization;
+    document.getElementById("buttonToStore").href = vinhoSelecionado.url;
 
     // --- INJEÇÃO DA IMAGEM ---
     document.getElementById("imagemContainer").innerHTML = `
-            <img 
-                src="${vinhoSelecionado.image}" 
-                alt="Imagem de ${vinhoSelecionado.title}" 
-                class="w-56 lg:w-92 h-120 md:h-150 object-contain transition-transform duration-500 hover:scale-105"
-            />
+          <img 
+            src="${vinhoSelecionado.image}" 
+            alt="Imagem de ${vinhoSelecionado.title}" 
+            class="w-56 lg:w-92 h-120 md:h-150 object-contain transition-transform duration-500 hover:scale-105"
+          />
         `;
 
     const descriptionHTML = vinhoSelecionado.description;
@@ -48,9 +49,10 @@ function buscarVinhoEExibirDetalhes() {
         if (p.startsWith("**Destaques:**")) {
           // Remove a tag forte do JS para usar o <strong>
           const textoLimpo = p.replace("**Destaques:**", "Destaques:");
-          return `<p class="text-brown-500 libre-baskerville-regular text-base mt-4 pt-2">
-                            <strong>${textoLimpo}</strong>
-                        </p>`;
+          return `
+          <p class="text-brown-500 libre-baskerville-regular text-base mt-4 pt-2">
+            <strong>${textoLimpo}</strong>
+          </p>`;
         }
         return `<p class="text-brown-400 libre-baskerville-regular text-base mb-4">${p}</p>`;
       })
