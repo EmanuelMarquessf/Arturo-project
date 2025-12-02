@@ -1,7 +1,4 @@
-// ==========================================================
-// 1. IMPORTAÇÃO DOS DADOS
-// Garanta que o caminho e o nome do arquivo estejam corretos
-// ==========================================================
+import { setupHeaderInteractions } from "./components/header/header.js";
 import { vinhosJson } from "./data.js";
 
 function buscarVinhoEExibirDetalhes() {
@@ -130,4 +127,5 @@ function buscarVinhoEExibirDetalhes() {
 // 2. INICIALIZAÇÃO
 // Garante que a função seja chamada somente após o DOM estar pronto
 // ==========================================================
+setupHeaderInteractions();
 document.addEventListener("DOMContentLoaded", buscarVinhoEExibirDetalhes);
