@@ -1,5 +1,5 @@
-import { setupHeaderInteractions } from "./components/header/header.js";
-import { vinhosJson } from "./data.js";
+import { setupHeaderInteractions } from "../components/header/header.js";
+import { vinhosJson } from "../data.js";
 
 function buscarVinhoEExibirDetalhes() {
   // Obtém o parâmetro 'id' da URL (ex: detalhe.html?id=1)

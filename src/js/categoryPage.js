@@ -1,7 +1,14 @@
-import { setupHeaderInteractions } from "./components/header/header.js";
-import { setupFooterInteractions } from "./components/footer/footer.js";
-import { vinhosJson } from "./data.js";
-// ... importar outros módulos aqui ...
+import { vinhosJson } from "../data.js";
+
+const urlParams = new URLSearchParams(window.location.search);
+const typeParam = urlParams.get("type");
+
+const filteredVinhos = vinhosJson.filter((vinho) =>
+  vinho.type.toLowerCase().includes(typeParam?.toLowerCase())
+);
+
+document.getElementById('categoryTitle').innerText = typeParam == 'suave' ? 'Vinhos Suaves' : typeParam == 'tinto' ? 'Vinhos Tintos' : typeParam == 'branco' ? 'Vinhos Brancos' : typeParam;
+
 
 function criarCards(vinhos) {
   const container = document.getElementById("cardContainer");
@@ -20,7 +27,7 @@ function criarCards(vinhos) {
       // As classes Tailwind CSS e as variáveis do objeto 'vinho' são mantidas.
       return `
             <a href="productPage.html?id=${vinho.id}" 
-                class="grid grid-cols-6 items-center bg-brown-200 rounded p-4 flex flex-col text-center">
+                class="grid grid-cols-6 items-center bg-brown-200 rounded p-4 flex flex-col text-center transform transition duration-300 ease-in-out hover:scale-105">
                 <img src="${vinho.image}" 
                     alt="${vinho.title}" 
                     class="col-span-2 h-50 mx-auto">
@@ -45,13 +52,6 @@ function criarCards(vinhos) {
   container.innerHTML = cardsHTML;
 }
 
-function initializeApp() {
-  setupHeaderInteractions();
-  setupFooterInteractions();
-}
-
-document.addEventListener("DOMContentLoaded", initializeApp);
-
 document.addEventListener("DOMContentLoaded", () => {
-  criarCards(vinhosJson);
+  criarCards(filteredVinhos);
 });

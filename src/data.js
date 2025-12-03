@@ -25,7 +25,7 @@ export const vinhosJson = [
     {
         id: 2,
         title: "Natural Delama Brut",
-        type: "Espumante",
+        type: "Vinho Suave",
         description: `
           Elaborado pelo método charmat, apresenta elegante perlage, fineza aromática, boa cremosidade, excelente equilíbrio e persistência.
         `,
