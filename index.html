@@ -24,15 +24,15 @@
         </div>
 
         <nav class="hidden md:flex space-x-8 items-center relative">
-          <a href="index.html" class="text-gray-300 font-medium text-base hover:text-pink-700 transition duration-300 ease-in-out">
+          <a href="index.html" class="text-gray-300 font-medium text-base hover:text-white transition duration-300 ease-in-out">
             Página Inicial
           </a>
-          <a href="#historyContainer" class="text-gray-300 font-medium text-base hover:text-pink-700 transition duration-300 ease-in-out">
+          <a href="#historyContainer" class="text-gray-300 font-medium text-base hover:text-white transition duration-300 ease-in-out">
             História
           </a>
 
           <div class="relative group" id="wine-dropdown-container">
-            <button id="wine-dropdown-button" class="text-gray-300 font-medium text-base hover:text-pink-700 transition duration-300 ease-in-out flex items-center group-hover:text-pink-700">
+            <button id="wine-dropdown-button" class="text-gray-300 font-medium text-base hover:text-white transition duration-300 ease-in-out flex items-center group-hover:text-white">
               Familia Arturo
               <svg id="wine-dropdown-arrow" class="ml-1 w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -40,31 +40,31 @@
             </button>
 
             <div id="wine-dropdown-menu" class="absolute left-0 mt-0 w-48 bg-white rounded-lg shadow-xl z-20 overflow-hidden transform transition-all duration-300 origin-top border border-gray-100 hidden">
-              <a href="categoryPage.html?type=suave" class="block px-4 py-2 text-gray-700 text-sm hover:bg-pink-50 hover:text-pink-700 transition duration-150">
+              <a href="categoryPage.html?type=suave" class="block px-4 py-2 text-gray-700 text-sm hover:bg-gray-100 hover:text-gray-900 transition duration-150">
                 Suaves
               </a>
-              <a href="categoryPage.html?type=tinto" class="block px-4 py-2 text-gray-700 text-sm hover:bg-pink-50 hover:text-pink-700 transition duration-150">
+              <a href="categoryPage.html?type=tinto" class="block px-4 py-2 text-gray-700 text-sm hover:bg-gray-100 hover:text-gray-900 transition duration-150">
                 Tintos
               </a>
-              <a href="categoryPage.html?type=branco" class="block px-4 py-2 text-gray-700 text-sm hover:bg-pink-50 hover:text-pink-700 transition duration-150">
+              <a href="categoryPage.html?type=branco" class="block px-4 py-2 text-gray-700 text-sm hover:bg-gray-100 hover:text-gray-900 transition duration-150">
                 Brancos
               </a>
-              <a href="categoryPage.html?type=espumante" class="block px-4 py-2 text-gray-700 text-sm hover:bg-pink-50 hover:text-pink-700 transition duration-150">
+              <a href="categoryPage.html?type=espumante" class="block px-4 py-2 text-gray-700 text-sm hover:bg-gray-100 hover:text-gray-900 transition duration-150">
                 Espumantes
               </a>
-              <a href="/vinhos-tintos" class="block px-4 py-2 text-gray-700 text-sm hover:bg-pink-50 hover:text-pink-700 transition duration-150">
+              <a href="/vinhos-tintos" class="block px-4 py-2 text-gray-700 text-sm hover:bg-gray-100 hover:text-gray-900 transition duration-150">
                 Sucos
               </a>
             </div>
           </div>
 
-          <a href="#revendedorContainer" class="text-gray-300 font-medium text-base hover:text-pink-700 transition duration-300 ease-in-out">
+          <a href="#revendedorContainer" class="text-gray-300 font-medium text-base hover:text-white transition duration-300 ease-in-out">
             Revendedor
           </a>
-          <a href="#buyContainer" class="text-gray-300 font-medium text-base hover:text-pink-700 transition duration-300 ease-in-out">
+          <a href="#buyContainer" class="text-gray-300 font-medium text-base hover:text-white transition duration-300 ease-in-out">
             Onde Comprar
           </a>
-          <a href="#contactContainer" class="border border-gold text-brown-400 hover:bg-gold hover:text-white rounded-full px-4 py-2 transition duration-300 font-medium text-base">
+          <a href="#contactContainer" class="border-brown-500  text-brown-500 hover-brown-500 hover-text-brown-100 rounded-full px-4 py-2 transition duration-300 font-medium text-base">
             Contato
           </a>
         </nav>
@@ -190,7 +190,7 @@
       </div>
 
       <!-- Imagens -->
-      <div class="max-w-7xl mx-auto flex flex-col gap-6 w-full px-2 md:px-5">
+      <div class="max-w-7xl mx-auto flex flex-col gap-6 w-full px-2 md:px-0">
         <div class="grid md:grid-cols-2 gap-10">
           <div class="flex flex-col gap-4 text-center md:text-left">
             <h3 class="text-5xl text-brown-600 libre-baskerville-bold">
@@ -254,8 +254,34 @@
         </div>
       </div>
 
+      <!-- Somelier -->
+      <div class="w-full bg-brown-200 px-2 md:px-5">
+        <div class="max-w-7xl lg:h-100 grid lg:grid-cols-3 mx-auto gap-20 mx-auto pl-5 lg:px-0">
+          <div class="flex flex-col mx-auto lg:col-span-2 py-20 gap-10">
+            <div class="d-flex flex-col">
+              <img src="./public/img/aspas.png" alt="" class="w-10 mb-2" />
+              <p class="libre-baskerville-regular text-lg text-brown-600">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Dolorem, perspiciatis dignissimos expedita eum repellendus
+                doloremque enim non sapiente consequuntur cum doloribus odit
+                labore, aliquam, assumenda laudantium placeat tempora minus
+                laboriosam?
+              </p>
+            </div>
+
+            <div class="d-flex flex-col gap-4">
+              <h3 class="text-3xl text-black uppercase libre-baskerville-regular text-brown-500">
+                Arthur Sobrenome
+              </h3>
+              <span class="libre-baskerville-regular-italic text-brown-600">Lorem ipsum malesu.</span>
+            </div>
+          </div>
+          <img src="" alt="" class="h-110 w-110 bg-gray-300 mb-10 bottom-10 relative hidden lg:block" />
+        </div>
+      </div>
+
       <!-- Categorias -->
-      <div class="max-w-7xl mx-auto flex flex-col gap-4 w-full px-2 md:px-5">
+      <div class="max-w-7xl mx-auto flex flex-col gap-4 w-full px-2 md:px-0">
         <div>
           <h2 class="text-3xl text-brown-600 libre-baskerville-bold">
             Lorem ipsum dolor
@@ -300,31 +326,39 @@
           </a>
         </div>
       </div>
-      <!-- Somelier -->
-      <div class="w-full bg-brown-200 px-2 md:px-5">
-        <div class="max-w-7xl lg:h-100 grid lg:grid-cols-3 mx-auto gap-20 mx-auto pl-5 lg:px-0">
-          <div class="flex flex-col mx-auto lg:col-span-2 py-20 gap-10">
-            <div class="d-flex flex-col">
-              <img src="./public/img/aspas.png" alt="" class="w-10 mb-2" />
-              <p class="libre-baskerville-regular text-lg text-brown-600">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Dolorem, perspiciatis dignissimos expedita eum repellendus
-                doloremque enim non sapiente consequuntur cum doloribus odit
-                labore, aliquam, assumenda laudantium placeat tempora minus
-                laboriosam?
-              </p>
-            </div>
-
-            <div class="d-flex flex-col gap-4">
-              <h3 class="text-3xl text-black uppercase libre-baskerville-regular text-brown-500">
-                Arthur Sobrenome
-              </h3>
-              <span class="libre-baskerville-regular-italic text-brown-600">Lorem ipsum malesu.</span>
-            </div>
-          </div>
-          <img src="" alt="" class="h-110 w-110 bg-gray-300 mb-10 bottom-10 relative hidden lg:block" />
+      
+      <!-- Loja Online -->
+      <div id="buyContainer" class="flex flex-col max-w-7xl mx-auto text-center justify-center items-center gap-12 py-20">
+        <div class="flex flex-col items-center">
+          <h2 class="text-xl text-brown-500 libre-baskerville-regular">
+            Exclusividade e Tradição
+          </h2>
+            
+          <h3 class="text-5xl sm:text-6xl text-brown-600 uppercase playfair-display-400 leading-tight">
+            Visite Nossa Loja Online
+          </h3>
+          <div class="w-20 h-[3px] bg-brown-500 mt-4"></div>
         </div>
+        <div class="flex flex-col gap-4 items-center">
+          <p class="text-brown-600 libre-baskerville-regular text-lg max-w-3xl">
+            Navegue pela nossa coleção completa de vinhos finos e espumantes. Receba a qualidade Arturus diretamente na sua casa, com toda a segurança.
+          </p>
+          
+          <a 
+            href="https://www.botecodovinho.com.br/" 
+            target="_blank" 
+            class="bg-brown-600 text-white libre-baskerville-bold text-md px-8 py-4 rounded-full hover:bg-brown-600 hover:text-white transition duration-300 shadow-2xl mt-4 border-2 border-brown-400 hover:border-brown-500 uppercase tracking-widest"
+          >
+            Visite Nossa Loja Online
+          </a>
+        </div>
+
       </div>
+
+
+
+
+
 
       <footer class="bg-zinc-900 text-white">
         <div class="max-w-7xl mx-auto px-6 py-6">
