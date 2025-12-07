@@ -15,116 +15,113 @@
   </head>
   <body>
     <div class="flex flex-col min-h-screen justify-between bg-brown-100">
-    <header class="bg-zinc-900 top-0 z-10 sticky shadow-sm z-20">
-      <div class="max-w-7xl mx-auto py-4 flex justify-between items-center px-4 sm:px-6 lg:px-8">
-        <div class="flex-shrink-0">
-          <a href="index.html" class="barlow-bold text-3xl font-serif font-bold text-brown-400 tracking-wide hover:text-pink-700 transition duration-300">
-            <img src="./public/logo/logo.png" class="w-35" alt="Logo" />
-          </a>
-        </div>
-
-        <nav class="hidden md:flex space-x-8 items-center relative">
-          <a href="index.html" class="text-gray-300 font-medium text-base hover:text-white transition duration-300 ease-in-out">
-            Página Inicial
-          </a>
-          <a href="#historyContainer" class="text-gray-300 font-medium text-base hover:text-white transition duration-300 ease-in-out">
-            História
-          </a>
-
-          <div class="relative group" id="wine-dropdown-container">
-            <button id="wine-dropdown-button" class="text-gray-300 font-medium text-base hover:text-white transition duration-300 ease-in-out flex items-center group-hover:text-white">
-              Familia Arturo
-              <svg id="wine-dropdown-arrow" class="ml-1 w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-              </svg>
-            </button>
-
-            <div id="wine-dropdown-menu" class="absolute left-0 mt-0 w-48 bg-white rounded-lg shadow-xl z-20 overflow-hidden transform transition-all duration-300 origin-top border border-gray-100 hidden">
-              <a href="categoryPage.html?type=suave" class="block px-4 py-2 text-gray-700 text-sm hover:bg-gray-100 hover:text-gray-900 transition duration-150">
-                Suaves
-              </a>
-              <a href="categoryPage.html?type=tinto" class="block px-4 py-2 text-gray-700 text-sm hover:bg-gray-100 hover:text-gray-900 transition duration-150">
-                Tintos
-              </a>
-              <a href="categoryPage.html?type=branco" class="block px-4 py-2 text-gray-700 text-sm hover:bg-gray-100 hover:text-gray-900 transition duration-150">
-                Brancos
-              </a>
-              <a href="categoryPage.html?type=espumante" class="block px-4 py-2 text-gray-700 text-sm hover:bg-gray-100 hover:text-gray-900 transition duration-150">
-                Espumantes
-              </a>
-              <a href="/vinhos-tintos" class="block px-4 py-2 text-gray-700 text-sm hover:bg-gray-100 hover:text-gray-900 transition duration-150">
-                Sucos
-              </a>
-            </div>
+      <header class="bg-zinc-900 top-0 z-10 sticky shadow-sm z-20">
+        <div class="max-w-7xl mx-auto py-4 flex justify-between items-center px-4 sm:px-6 lg:px-8">
+          <div class="flex-shrink-0">
+            <a href="index.html" class="barlow-bold text-3xl font-serif font-bold text-brown-400 tracking-wide hover:text-pink-700 transition duration-300">
+              <img src="./public/logo/logo.png" class="w-35" alt="Logo" />
+            </a>
           </div>
 
-          <a href="#revendedorContainer" class="text-gray-300 font-medium text-base hover:text-white transition duration-300 ease-in-out">
-            Revendedor
-          </a>
-          <a href="#buyContainer" class="text-gray-300 font-medium text-base hover:text-white transition duration-300 ease-in-out">
-            Onde Comprar
-          </a>
-          <a href="#contactContainer" class="border-brown-500  text-brown-500 hover-brown-500 hover-text-brown-100 rounded-full px-4 py-2 transition duration-300 font-medium text-base">
-            Contato
-          </a>
+          <nav class="hidden md:flex space-x-8 items-center relative">
+            <a href="index.html" class="text-gray-300 font-medium text-base hover:text-white transition duration-300 ease-in-out">
+              Página Inicial
+            </a>
+            <a href="#historyContainer" class="text-gray-300 font-medium text-base hover:text-white transition duration-300 ease-in-out">
+              História
+            </a>
+
+            <div class="relative group" id="wine-dropdown-container">
+              <button id="wine-dropdown-button" class="text-gray-300 font-medium text-base hover:text-white transition duration-300 ease-in-out flex items-center group-hover:text-white">
+                Familia Arturo
+                <svg id="wine-dropdown-arrow" class="ml-1 w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+
+              <div id="wine-dropdown-menu" class="absolute left-0 mt-0 w-48 bg-white rounded-lg shadow-xl z-20 overflow-hidden transform transition-all duration-300 origin-top border border-gray-100 hidden">
+                <a href="categoryPage.html?type=suave" class="block px-4 py-2 text-gray-700 text-sm hover:bg-gray-100 hover:text-gray-900 transition duration-150">
+                  Suaves
+                </a>
+                <a href="categoryPage.html?type=tinto" class="block px-4 py-2 text-gray-700 text-sm hover:bg-gray-100 hover:text-gray-900 transition duration-150">
+                  Tintos
+                </a>
+                <a href="categoryPage.html?type=branco" class="block px-4 py-2 text-gray-700 text-sm hover:bg-gray-100 hover:text-gray-900 transition duration-150">
+                  Brancos
+                </a>
+                <a href="categoryPage.html?type=espumante" class="block px-4 py-2 text-gray-700 text-sm hover:bg-gray-100 hover:text-gray-900 transition duration-150">
+                  Espumantes
+                </a>
+              </div>
+            </div>
+
+            <a href="#revendedorContainer" class="text-gray-300 font-medium text-base hover:text-white transition duration-300 ease-in-out">
+              Revendedor
+            </a>
+            <a href="#buyContainer" class="text-gray-300 font-medium text-base hover:text-white transition duration-300 ease-in-out">
+              Onde Comprar
+            </a>
+            <a href="#contactContainer" class="border-brown-500  text-brown-500 hover-brown-500 hover-text-brown-100 rounded-full px-4 py-2 transition duration-300 font-medium text-base">
+              Contato
+            </a>
+          </nav>
+
+          <button id="mobile-menu-toggle" class="md:hidden text-brown-400 hover:text-pink-700 z-30" aria-label="Abrir menu">
+            <svg id="icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+            <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+
+        <nav id="mobile-menu" class="md:hidden hidden absolute top-full left-0 w-full bg-zinc-900 border-t border-zinc-700 shadow-lg z-20">
+          <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-center">
+            <a href="/index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-zinc-800 hover:text-pink-700 transition duration-300 w-full text-center">
+              Página Inicial
+            </a>
+            <a href="/" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-zinc-800 hover:text-pink-700 transition duration-300 w-full text-center">
+              História
+            </a>
+
+            <div class="relative w-full text-center">
+              <button id="mobile-wine-dropdown-button" class="px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-zinc-800 hover:text-pink-700 transition duration-300 w-full flex justify-center items-center">
+                Familia Arturo
+                <svg id="mobile-wine-dropdown-arrow" class="ml-1 w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div id="mobile-wine-dropdown-menu" class="w-full bg-zinc-800 rounded-md shadow-inner mt-1 overflow-hidden hidden">
+                <a href="/vinhos-doces" class="block px-4 py-2 text-sm text-gray-300 hover:bg-zinc-700 hover:text-pink-700 transition duration-150">
+                  Suaves
+                </a>
+                <a href="/vinhos-tintos" class="block px-4 py-2 text-sm text-gray-300 hover:bg-zinc-700 hover:text-pink-700 transition duration-150">
+                  Tintos
+                </a>
+                <a href="/vinhos-tintos" class="block px-4 py-2 text-sm text-gray-300 hover:bg-zinc-700 hover:text-pink-700 transition duration-150">
+                  Brancos
+                </a>
+                <a href="/vinhos-tintos" class="block px-4 py-2 text-sm text-gray-300 hover:bg-zinc-700 hover:text-pink-700 transition duration-150">
+                  Espumantes
+                </a>
+                <a href="/vinhos-tintos" class="block px-4 py-2 text-sm text-gray-300 hover:bg-zinc-700 hover:text-pink-700 transition duration-150">
+                  Sucos
+                </a>
+              </div>
+            </div>
+            <a href="/revendedor" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-zinc-800 hover:text-pink-700 transition duration-300 w-full text-center">
+              Revendedor
+            </a>
+            <a href="/revendedor" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-zinc-800 hover:text-pink-700 transition duration-300 w-full text-center">
+              Onde Comprar
+            </a>
+            <a href="/contato" class="block border border-gold text-brown-400 hover:bg-gold hover:text-white rounded-full px-4 py-2 transition duration-300 font-medium text-base mt-2 w-1/2 text-center mx-auto">
+              Contato
+            </a>
+          </div>
         </nav>
-
-        <button id="mobile-menu-toggle" class="md:hidden text-brown-400 hover:text-pink-700 z-30" aria-label="Abrir menu">
-          <svg id="icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-          <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-          </svg>
-        </button>
-      </div>
-
-      <nav id="mobile-menu" class="md:hidden hidden absolute top-full left-0 w-full bg-zinc-900 border-t border-zinc-700 shadow-lg z-20">
-        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-center">
-          <a href="/index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-zinc-800 hover:text-pink-700 transition duration-300 w-full text-center">
-            Página Inicial
-          </a>
-          <a href="/" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-zinc-800 hover:text-pink-700 transition duration-300 w-full text-center">
-            História
-          </a>
-
-          <div class="relative w-full text-center">
-            <button id="mobile-wine-dropdown-button" class="px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-zinc-800 hover:text-pink-700 transition duration-300 w-full flex justify-center items-center">
-              Familia Arturo
-              <svg id="mobile-wine-dropdown-arrow" class="ml-1 w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-              </svg>
-            </button>
-            <div id="mobile-wine-dropdown-menu" class="w-full bg-zinc-800 rounded-md shadow-inner mt-1 overflow-hidden hidden">
-              <a href="/vinhos-doces" class="block px-4 py-2 text-sm text-gray-300 hover:bg-zinc-700 hover:text-pink-700 transition duration-150">
-                Suaves
-              </a>
-              <a href="/vinhos-tintos" class="block px-4 py-2 text-sm text-gray-300 hover:bg-zinc-700 hover:text-pink-700 transition duration-150">
-                Tintos
-              </a>
-              <a href="/vinhos-tintos" class="block px-4 py-2 text-sm text-gray-300 hover:bg-zinc-700 hover:text-pink-700 transition duration-150">
-                Brancos
-              </a>
-              <a href="/vinhos-tintos" class="block px-4 py-2 text-sm text-gray-300 hover:bg-zinc-700 hover:text-pink-700 transition duration-150">
-                Espumantes
-              </a>
-              <a href="/vinhos-tintos" class="block px-4 py-2 text-sm text-gray-300 hover:bg-zinc-700 hover:text-pink-700 transition duration-150">
-                Sucos
-              </a>
-            </div>
-          </div>
-          <a href="/revendedor" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-zinc-800 hover:text-pink-700 transition duration-300 w-full text-center">
-            Revendedor
-          </a>
-          <a href="/revendedor" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-zinc-800 hover:text-pink-700 transition duration-300 w-full text-center">
-            Onde Comprar
-          </a>
-          <a href="/contato" class="block border border-gold text-brown-400 hover:bg-gold hover:text-white rounded-full px-4 py-2 transition duration-300 font-medium text-base mt-2 w-1/2 text-center mx-auto">
-            Contato
-          </a>
-        </div>
-      </nav>
-    </header>
+      </header>
 
       <main class="flex-grow py-16 px-4 lg:py-24 bg-brown-100">
         <div class="max-w-7xl mx-auto">
@@ -419,7 +416,7 @@
                   <a
                     href="categoryPage.html?type=espumante"
                     class="text-gray-300 hover:text-white transition duration-200 text-sm block"
-                    >Espumante</a
+                    >Espumantes</a
                   >
                 </li>
               </ul>
@@ -451,23 +448,6 @@
                   </svg>
                 </a>
                 <a
-                  href="https://www.facebook.com/botecodovinho.pc/?locale=pt_BR"
-                  target="_blank"
-                  class="w-6 h-6 text-gray-300 hover:text-gray-100 transition duration-200"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M17 1H3c-1.1 0-2 .9-2 2v14c0 1.101.9 2 2 2h7v-7H8V9.525h2v-2.05c0-2.164 1.212-3.684 3.766-3.684l1.803.002v2.605h-1.197c-.994 0-1.372.746-1.372 1.438v1.69h2.568L15 12h-2v7h4c1.1 0 2-.899 2-2V3c0-1.1-.9-2-2-2"
-                    />
-                  </svg>
-                </a>
-                <a
                   href="https://www.botecodovinho.com.br/"
                   target="_blank"
                   class="w-6 h-6 text-gray-300 hover:text-gray-100 transition duration-200"
@@ -478,7 +458,6 @@
                     height="26"
                     viewBox="0 0 23 23"
                   >
-                    <!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE -->
                     <path
                       fill="currentColor"
                       d="M3 22q-.825 0-1.412-.587T1 20V10q0-.425.288-.712T2 9t.713.288T3 10v10h16q.425 0 .713.288T20 21t-.288.713T19 22zm4-4q-.825 0-1.412-.587T5 16V6q0-.425.288-.712T6 5h4V3q0-.825.588-1.412T12 1h4q.825 0 1.413.588T18 3v2h4q.425 0 .713.288T23 6v10q0 .825-.587 1.413T21 18zm5-13h4V3h-4zm0 9.225q0 .3.263.425t.512-.025l4.05-2.575q.225-.15.225-.425t-.225-.425l-4.05-2.575q-.25-.15-.513-.025T12 9.025z"
