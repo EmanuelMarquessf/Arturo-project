@@ -125,7 +125,30 @@
 
     <main class="flex flex-col gap-16 md:gap-40 h-full">
       <!-- Pagina Inicial -->
-      <div class="flex flex-col items-center md:items-start w-full px-5 bg-brown-200 ">
+    <div class="relative w-full flex items-end" style="height: 90vh;">
+      <img src="./public/img/background/1.jpg" class="absolute inset-0 w-full h-full object-cover object-left" alt="Vinhedos da Familia Arturo - Fundo Elegante" />
+      <div class="absolute inset-0" style="background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.5) 70%, transparent 100%);"></div>
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8  py-16 md:pb-16 text-white z-10 w-full text-left">
+        <h2 class="text-xl md:text-3xl text-brown-400 libre-baskerville-regular tracking-widest">
+          Lorem ipsum dolor sit.
+        </h2>
+        <h1 class="text-6xl md:text-8xl playfair-display-400 font-extrabold uppercase text-brown-100"  >
+          Familia Arturo
+        </h1>
+        <a 
+            href="#historyContainer" 
+            class="libre-baskerville-regular inline-flex items-center text-lg mt-8 transition duration-300 uppercase tracking-wider text-brown-100 hover:text-brown-400 group border-b"
+        >
+          Lorem, ipsum dolor
+          <!-- <svg class="ml-3 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"/>
+          </svg> -->
+        </a>
+      </div>
+    </div>
+
+    
+      <!-- <div class="flex flex-col items-center md:items-start w-full px-5 bg-brown-200 ">
         <div class="flex flex-col max-w-7xl mx-auto md:grid md:grid-cols-3 gap-8 md:gap-40 py-40">
           <div class="cols-span-3 md:col-span-2 flex flex-col justify-center gap-8 items-center md:items-start order-2 md:order-1">
             <div class="text-center md:text-left">
@@ -145,7 +168,9 @@
           </div>
           <img class="h-130 self-center object-contain order-1 md:order-2" src="./public/img/garrafas/Espumantes/1.png" alt="Espumante" />
         </div>
-      </div>
+      </div> -->
+
+      
 
       <!--Nossa História-->
       <div id="historyContainer" class="max-w-7xl mx-auto grid grid-cols-3 gap-8 px-2">
@@ -311,7 +336,7 @@
               <span class="text-brown-600 text-xl">Brancos</span>
               <span class="text-brown-400 libre-baskerville-regular-italic">Lorem, ipsum dolor.</span>
             </div>
-            <img src="./public/img/garrafas/Vinhos Brancos/moscatel.png" alt="" class="h-50" />
+            <img src="./public/img/garrafas/Vinhos Brancos/florada-campos.png" alt="" class="h-50" />
           </a>
           <a href="categoryPage.html?type=espumante" class="bg-brown-200 rounded px-6 py-2 flex justify-between items-center transform transition duration-300 ease-in-out hover:scale-105">
             <div class="flex flex-col">
