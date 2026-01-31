@@ -13,6 +13,29 @@
 </head>
 
 <body>
+  <div id="age-gate" style="display: none; transition: opacity 0.3s ease;" class="fixed inset-0 z-[100] flex items-center justify-center bg-zinc-900 bg-opacity-95 px-4">
+    <div class="max-w-md w-full bg-brown-100 p-8 rounded-lg shadow-2xl text-center border-2 border-brown-400">
+      <img src="./public/logo/logo.png" class="w-32 mx-auto mb-6" alt="Logo" />
+      
+      <h2 class="playfair-display-400 text-3xl text-brown-600 mb-4 uppercase">Bem-vindo à Família Arturo</h2>
+      
+      <p class="libre-baskerville-regular text-brown-500 mb-8">
+        Você deve ter 18 anos ou mais para acessar este site.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <button id="age-gate-yes" class="bg-brown-600 text-white px-8 py-3 rounded-full hover:bg-brown-700 transition duration-300 font-bold uppercase tracking-widest text-sm cursor-pointer">
+          Tenho 18+ anos
+        </button>
+        <button id="age-gate-no" class="border border-brown-400 text-brown-600 px-8 py-3 rounded-full hover:bg-brown-200 transition duration-300 text-sm cursor-pointer">
+          Sair
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+
   <div class="flex flex-col min-h-screen justify-between bg-brown-100">
     <!-- Header -->
     <header class="bg-zinc-900 top-0 z-10 sticky shadow-sm z-20">
@@ -169,8 +192,6 @@
           <img class="h-130 self-center object-contain order-1 md:order-2" src="./public/img/garrafas/Espumantes/1.png" alt="Espumante" />
         </div>
       </div> -->
-
-      
 
       <!--Nossa História-->
       <div id="historyContainer" class="max-w-7xl mx-auto grid grid-cols-3 gap-8 px-2">
