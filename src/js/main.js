@@ -11,11 +11,11 @@ function setupAgeGate() {
 
   const verificationData = localStorage.getItem('age-verified-data');
   const now = new Date().getTime();
-  const thirtyMinutes = 10 * 60 * 60 * 6;
+  const time = 1000 * 60 * 60 * 6;
 
   if(verificationData){
     const lastVerificationTime = parseInt(verificationData)
-    if(now - lastVerificationTime < thirtyMinutes){
+    if(now - lastVerificationTime < time){
       ageGate.remove();
       return;
     }
