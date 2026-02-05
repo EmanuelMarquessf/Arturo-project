@@ -11,9 +11,8 @@ function setupAgeGate() {
 
   const verificationData = localStorage.getItem('age-verified-data');
   const now = new Date().getTime();
-  const thirtyMinutes = 10 * 60 * 1000; // 30 minutos em milissegundos
+  const thirtyMinutes = 10 * 60 * 60 * 6;
 
-  // Verifica se existe dado e se ainda está dentro do prazo de 30 min
   if(verificationData){
     const lastVerificationTime = parseInt(verificationData)
     if(now - lastVerificationTime < thirtyMinutes){
@@ -22,11 +21,9 @@ function setupAgeGate() {
     }
   }
 
-  // Se chegou aqui, ou não tem dado ou expirou. Mostramos o modal.
   ageGate.style.display = 'flex';
 
   btnYes.addEventListener('click', () => {
-    // Salva o horário atual (timestamp) no momento do clique
     const timestamp = new Date().getTime();
     localStorage.setItem('age-verified-data', timestamp.toString());
     
