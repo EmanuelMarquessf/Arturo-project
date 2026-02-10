@@ -1,6 +1,48 @@
 export const vinhosJson = [
     {
         id: 1,
+        title: "Arturo Cabernet Sauvignon",
+        type: "Suaves",
+        description: ``,
+        detailDescription:[
+            
+        ],
+        topics: "",
+        harmonization: "",
+        image: "./public/img/garrafas/suaves/arturo.avif",
+        url: "",
+        grape: "",
+        country: "Brasil",
+        region: "",
+        productor: "",
+        safra: "",
+        alcolic: "",
+        volume: "750ml",
+        selected: true,
+    },
+    {
+        id: 2,
+        title: "Arturo Cabernet Sauvignon",
+        type: "Tintos",
+        description: ``,
+        detailDescription:[
+            
+        ],
+        topics: "",
+        harmonization: "",
+        image: "./public/img/garrafas/Espumantes/delama-brut.png",
+        url: "",
+        grape: "",
+        country: "Brasil",
+        region: "",
+        productor: "",
+        safra: "",
+        alcolic: "",
+        volume: "750ml",
+        selected: true,
+    }, 
+    {
+        id: 3,
         title: "Natural Delama Brut",
         type: "Vinho Espumante",
         description: `
@@ -20,28 +62,11 @@ export const vinhosJson = [
         productor: "Vinicola São Luis",
         safra: "2025",
         alcolic: "12.5%",
-        volume: "750ml"
+        volume: "750ml",
+        selected: true,
     },
     {
-        id: 2,
-        title: "Florada Dos Campos",
-        type: "Vinho Branco",
-        description: ``,
-        detailDescription:[],
-        topics: "",
-        harmonization: "",
-        image: "./public/img/garrafas/Vinhos Brancos/florada-campos.png",
-        url: "",
-        grape: "",
-        country: "",
-        region: "",
-        productor: "",
-        safra: "",
-        alcolic: "",
-        volume: ""
-    },
-    {
-        id: 3,
+        id: 4,
         title: "Florada dos Campos Moscatel",
         type: "Espumante",
         description: ``,
@@ -57,10 +82,31 @@ export const vinhosJson = [
         productor: "",
         safra: "",
         alcolic: "12.5%",
-        volume: ""
+        volume: "",
+        selected: true,
     },
     {
-        id: 4,
+        id: 5,
+        title: "Florada Dos Campos",
+        type: "Vinho Branco",
+        description: ``,
+        detailDescription:[],
+        topics: "",
+        harmonization: "",
+        image: "./public/img/garrafas/Vinhos Brancos/florada-campos.png",
+        url: "",
+        grape: "",
+        country: "",
+        region: "",
+        productor: "",
+        safra: "",
+        alcolic: "",
+        volume: "",
+        selected: true,
+    },
+
+    {
+        id: 6,
         title: "Delaso",
         type: "Vinho Suave",
         description: `
@@ -77,6 +123,7 @@ export const vinhosJson = [
         productor: "Vinicola São Luis",
         safra: "2025",
         alcolic: "12.5%",
-        volume: "750ml"
+        volume: "750ml",
+        selected: true,
     },
 ];
