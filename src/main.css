@@ -11,6 +11,7 @@
   --brown-400: #9E845C;
   --brown-500: #AF6900;
   --brown-600: #482817;
+  --brown-700: #241710;
   
 }
 
@@ -37,6 +38,9 @@ html {
 }
 .text-brown-600{
   color: var(--brown-600);
+}
+.text-brown-700{
+  color: var(--brown-700);
 }
 
 .hover-text-brown-100:hover { color: var(--brown-100); }
@@ -70,6 +74,9 @@ html {
 }
 .bg-brown-600{
   background-color: var(--brown-600);
+}
+.bg-brown-700{
+  background-color: var(--brown-700);
 }
 
 .hover-brown-100:hover { background-color: var(--brown-100); }
