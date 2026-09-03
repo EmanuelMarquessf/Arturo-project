@@ -5,14 +5,17 @@
   --color-accent-gold-hover: #D8BD69; 
   
 
+
   --brown-100: #FFFAED;
   --brown-200: #F5EBDA;
   --brown-300: #D1B991;
   --brown-400: #9E845C;
+  
   --brown-500: #AF6900;
   --brown-600: #482817;
   --brown-700: #241710;
   
+  --brown-muted: #725c4d;
 }
 
 html {
@@ -41,6 +44,9 @@ html {
 }
 .text-brown-700{
   color: var(--brown-700);
+}
+.text-brown-muted{
+  color: var(--brown-muted);
 }
 
 .hover-text-brown-100:hover { color: var(--brown-100); }
