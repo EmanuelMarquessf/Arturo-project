@@ -55,7 +55,7 @@ function filterSelectedProducts() {
         <div class="flex flex-col p-4 gap-3">
           <div class="flex flex-col">
             <span class="text-brown-500 uppercase tracking-[0.2em] uppercase">${vinho.type.replace('Vinho', '')}</span>
-            <span class="text-brown-600 text-xl">${vinho.title}</span>
+            <span class="text-brown-600 text-xl font-medium">${vinho.title}</span>
           </div>
           <div class="bg-[#E5D3B3] w-1/2 h-[2px] mx-auto mb-2"> </div>
           <p class="text-brown-600 libre-baskerville-regular text-base line-clamp-3 leading-relaxed">${vinho.description}</p>
