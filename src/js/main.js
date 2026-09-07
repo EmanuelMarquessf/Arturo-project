@@ -50,7 +50,7 @@ function filterSelectedProducts() {
 
   const cardsHTML = filteredWine.map((vinho) => {
     return `
-      <a href="productPage.html?id=${vinho.id}" class="flex flex-col items-center text-center bg-brown-200 rounded flex items-center transform transition duration-300 ease-in-out hover:scale-105 p-4 min-w-[300px] w-[300px]">
+      <a href="productPage.html?id=${vinho.id}" class="flex flex-col items-center text-center bg-brown-200 rounded flex items-center transition-all duration-300 ease-out hover:-translate-y-2 p-4 min-w-[300px] w-[300px]">
         <img src="${vinho.image}" alt="" class="h-72" />
         <div class="flex flex-col p-4 gap-3">
           <div class="flex flex-col">
