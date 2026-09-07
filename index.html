@@ -166,20 +166,20 @@
       <div id="ourProducts" class="max-w-7xl mx-auto flex flex-col gap-4 w-full scroll-mt-36 px-2 md:px-0">
         <div class="flex justify-between items-end">
           <div class="text-left">
-            <h2 class="text-xl md:text-xl text-brown-500 libre-baskerville-regular">
+            <h2 class="text-base md:text-xl text-brown-500 libre-baskerville-regular">
               SELEÇÃO EXCLUSIVA
             </h2>
-            <h2 class="text-4xl md:text-5xl text-brown-600 playfair-display-400">
+            <h2 class="text-4xl md:text-6xl text-brown-600 playfair-display-400">
               Nossos Vinhos
             </h2>
           </div>
           <div class="flex gap-3">
-            <button onclick="scrollCarrossel(-1)" class="p-2 border border-brown-200 rounded-full hover:bg-brown-200 transition text-brown-600 hover:scale-125 cursor-pointer">
+            <button onclick="scrollCarrosselProducts(-1)" class="p-2 border border-brown-200 rounded-full hover:bg-brown-200 transition text-brown-600 hover:scale-125 cursor-pointer">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
                 <path d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
               </svg>
             </button>
-            <button onclick="scrollCarrossel(1)" class="p-2 border border-brown-200 rounded-full hover:bg-brown-200 transition text-brown-600 hover:scale-110 cursor-pointer">
+            <button onclick="scrollCarrosselProducts(1)" class="p-2 border border-brown-200 rounded-full hover:bg-brown-200 transition text-brown-600 hover:scale-110 cursor-pointer">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
                 <path d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
               </svg>
@@ -187,7 +187,7 @@
           </div>
         </div>
         <div class="w-full h-[2px] bg-brown-200"></div>
-        <div id="selectedContainer" class="gap-6 flex flex-nowrap overflow-x-auto scrollbar-hide scroll-smooth snap-x snap-mandatory px-2 py-4 overflow-y-hidden">
+        <div id="productCards" class="gap-6 flex flex-nowrap overflow-x-auto scrollbar-hide scroll-smooth snap-x snap-mandatory px-2 py-4 overflow-y-hidden">
         </div>
       </div>
 
@@ -264,6 +264,34 @@
         </div>
         <!--<img src="./public/img/background/1.jpg" alt="" class="object-cover aspect-[4/4] md:aspect-[4/5] rounded z-10 shadow-sm" /> -->
         <div class="object-cover aspect-[4/4] md:aspect-[4/5] rounded z-10 shadow-sm bg-brown-200 border-2 border-brown-400"></div>
+      </div>
+
+      <div id="ourTerroirs" class="max-w-7xl mx-auto flex flex-col gap-4 w-full scroll-mt-36 px-2 md:px-0">
+        <div class="flex justify-between items-end">
+          <div class="text-left">
+            <h2 class="text-base md:text-xl text-brown-500 libre-baskerville-regular">
+              CONHEÇA NOSSAS ORIGENS
+            </h2>
+            <h2 class="text-4xl md:text-6xl text-brown-600 playfair-display-400">
+              Terroirs do Brasil
+            </h2>
+          </div>
+          <div class="flex gap-3">
+            <button onclick="scrollCarrosselTerroirs(-1)" class="p-2 border border-brown-200 rounded-full hover:bg-brown-200 transition text-brown-600 hover:scale-125 cursor-pointer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+              </svg>
+            </button>
+            <button onclick="scrollCarrosselTerroirs(1)" class="p-2 border border-brown-200 rounded-full hover:bg-brown-200 transition text-brown-600 hover:scale-110 cursor-pointer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="w-full h-[2px] bg-brown-200"></div>
+        <div id="terroirsCards" class="gap-6 flex flex-nowrap overflow-x-auto scrollbar-hide scroll-smooth snap-x snap-mandatory px-2 py-4 overflow-y-hidden">
+        </div>
       </div>
 
       <!-- Imagens -->
@@ -539,9 +567,17 @@
   </div>
   <script src="./src/js/main.js" type="module"></script>
   <script>
-    function scrollCarrossel(direction) {
-      const container = document.getElementById("selectedContainer");
+    function scrollCarrosselProducts(direction) {
+      const container = document.getElementById("productCards");
       const scrollAmount = 320; // Largura do card + gap
+      container.scrollBy({
+        left: direction * scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+    function scrollCarrosselTerroirs(direction) {
+      const container = document.getElementById("terroirsCards");
+      const scrollAmount = 370; // Largura do card + gap
       container.scrollBy({
         left: direction * scrollAmount,
         behavior: 'smooth'
