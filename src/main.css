@@ -183,3 +183,23 @@ html {
   font-weight: 700;
   font-style: normal;
 }
+@layer utilities {
+  /* Estilização personalizada para uma barra de rolagem fina e discreta */
+  .custom-scrollbar::-webkit-scrollbar {
+    height: 8px; /* Altura bem fininha */
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(111, 78, 55, 0.08); /* Fundo sutil combinando com o bege */
+    border-radius: 4px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(111, 78, 55, 0.3); /* "Puxador" marrom translúcido e elegante */
+    border-radius: 4px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(111, 78, 55, 0.5); /* Fica um pouco mais visível ao passar o mouse */
+  }
+}

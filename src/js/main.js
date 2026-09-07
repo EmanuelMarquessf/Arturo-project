@@ -57,8 +57,8 @@ function filterSelectedProducts() {
             <span class="text-brown-500 uppercase tracking-[0.2em] uppercase">${vinho.type.replace('Vinho', '')}</span>
             <span class="text-brown-600 text-xl">${vinho.title}</span>
           </div>
-          <hr class="border-[#E5D3B3] w-1/2 mx-auto mb-2" />
-          <p class="text-brown-400 libre-baskerville-regular-italic line-clamp-3 leading-relaxed">${vinho.description}</p>
+          <div class="bg-[#E5D3B3] w-1/2 h-[2px] mx-auto mb-2"> </div>
+          <p class="text-brown-600 libre-baskerville-regular text-base line-clamp-3 leading-relaxed">${vinho.description}</p>
         </div>
       </a>
     `;
