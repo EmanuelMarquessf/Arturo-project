@@ -1,523 +1,470 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Arturo Project</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="./src/main.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=GFS+Didot&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quintessential&display=swap"
-      rel="stylesheet" />
-  </head>
-  <body>
-    <!--Validaçao de idade-->
-    <div
-      id="age-gate"
-      style="display: none; transition: opacity 0.3s ease"
-      class="fixed inset-0 z-[100] flex items-center justify-center bg-zinc-900 bg-opacity-95 px-4">
-      <div class="max-w-md w-full bg-brown-100 p-8 rounded-lg shadow-2xl text-center border-2 border-brown-400 flex flex-col gap-8">
-        <!-- <img src="./public/logo/logo.png" class="w-32 mx-auto mb-6" alt="Logo" /> -->
-        <h2 class="playfair-display-400 text-3xl text-brown-600 uppercase">Bem-vindo à Família Arturo</h2>
-        <p class="libre-baskerville-regular text-brown-500 text-lg">Você deve ter 18 anos ou mais para acessar este site.</p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <button
-            id="age-gate-yes"
-            class="bg-brown-600 text-white px-8 py-3 rounded-full hover:bg-brown-700 transition duration-300 font-bold uppercase tracking-widest text-sm cursor-pointer">
-            Tenho 18+ anos
-          </button>
-          <button
-            id="age-gate-no"
-            class="border border-brown-400 text-brown-600 px-8 py-3 rounded-full hover:bg-brown-200 transition duration-300 text-sm cursor-pointer">
-            Sair
-          </button>
-        </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arturo Project</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="./src/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=GFS+Didot&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quintessential&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <!--Validaçao de idade-->
+  <div id="age-gate" style="display: none; transition: opacity 0.3s ease" class="fixed inset-0 z-[100] flex items-center justify-center bg-zinc-900 bg-opacity-95 px-4">
+    <div class="max-w-md w-full bg-brown-100 p-8 rounded-lg shadow-2xl text-center border-2 border-brown-400 flex flex-col gap-8">
+      <!-- <img src="./public/logo/logo.png" class="w-32 mx-auto mb-6" alt="Logo" /> -->
+      <h2 class="playfair-display-400 text-3xl text-brown-600 uppercase">Bem-vindo à Família Arturo</h2>
+      <p class="libre-baskerville-regular text-brown-500 text-lg">Você deve ter 18 anos ou mais para acessar este site.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <button id="age-gate-yes" class="bg-brown-600 text-white px-8 py-3 rounded-full hover:bg-brown-700 transition duration-300 font-bold uppercase tracking-widest text-sm cursor-pointer">
+          Tenho 18+ anos
+        </button>
+        <button id="age-gate-no" class="border border-brown-400 text-brown-600 px-8 py-3 rounded-full hover:bg-brown-200 transition duration-300 text-sm cursor-pointer">
+          Sair
+        </button>
       </div>
     </div>
+  </div>
 
-    <div class="flex flex-col min-h-screen justify-between bg-brown-100">
-      <!-- Header -->
-      <header class="bg-zinc-900 top-0 z-10 sticky shadow-sm z-20">
-        <div class="max-w-7xl mx-auto py-4 flex justify-between items-center px-4 sm:px-6 lg:px-8">
-          <div class="flex-shrink-0">
-            <a href="index.html" class="barlow-bold text-3xl font-serif font-bold text-brown-400 tracking-wide hover:text-pink-700 transition duration-300">
-              <img src="./public/logo/logo.png" class="w-35" alt="Logo" />
-            </a>
-          </div>
-
-          <nav class="hidden md:flex space-x-8 items-center relative">
-            <a href="index.html" class="text-gray-300 font-medium text-base hover:text-white transition duration-300 ease-in-out">Página Inicial</a>
-            <a href="index.html#historyContainer" class="text-gray-300 font-medium text-base hover:text-white transition duration-300 ease-in-out">História</a>
-
-            <div class="relative group" id="wine-dropdown-container">
-              <a
-                href="index.html#wineCategory"
-                id="wine-dropdown-button"
-                class="text-gray-300 font-medium text-base hover:text-white transition duration-300 ease-in-out flex items-center group-hover:text-white">
-                Familia Arturo
-                <svg
-                  id="wine-dropdown-arrow"
-                  class="ml-1 w-4 h-4 transition-transform duration-300"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                </svg>
-              </a>
-
-              <div
-                id="wine-dropdown-menu"
-                class="absolute left-0 mt-0 w-48 bg-white rounded-lg shadow-xl z-20 overflow-hidden transform transition-all duration-300 origin-top border border-gray-100 hidden">
-                <a
-                  href="categoryPage.html?type=suave"
-                  class="block px-4 py-2 text-gray-700 text-sm hover:bg-gray-100 hover:text-gray-900 transition duration-150">
-                  Suaves
-                </a>
-                <a
-                  href="categoryPage.html?type=tinto"
-                  class="block px-4 py-2 text-gray-700 text-sm hover:bg-gray-100 hover:text-gray-900 transition duration-150">
-                  Tintos
-                </a>
-                <a
-                  href="categoryPage.html?type=branco"
-                  class="block px-4 py-2 text-gray-700 text-sm hover:bg-gray-100 hover:text-gray-900 transition duration-150">
-                  Brancos
-                </a>
-                <a
-                  href="categoryPage.html?type=espumante"
-                  class="block px-4 py-2 text-gray-700 text-sm hover:bg-gray-100 hover:text-gray-900 transition duration-150">
-                  Espumantes
-                </a>
-              </div>
-            </div>
-
-            <a href="index.html#buyContainer" class="text-gray-300 font-medium text-base hover:text-white transition duration-300 ease-in-out">Loja Online</a>
-            <a
-              href="#contactContainer"
-              class="border-brown-500 text-brown-500 hover-brown-500 hover-text-brown-100 rounded-full px-4 py-2 transition duration-300 font-medium text-base">
-              Contato
-            </a>
-          </nav>
-
-          <button id="mobile-menu-toggle" class="md:hidden text-brown-400 hover:text-pink-700 z-30" aria-label="Abrir menu">
-            <svg id="icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-            <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-            </svg>
-          </button>
+  <div class="flex flex-col min-h-screen justify-between bg-brown-100">
+    <!-- Header -->
+    <header class="bg-zinc-900 top-0 z-10 sticky shadow-sm z-20">
+      <div class="max-w-7xl mx-auto py-4 flex justify-between items-center px-4 sm:px-6 lg:px-8">
+        <div class="flex-shrink-0">
+          <a href="index.html" class="barlow-bold text-3xl font-serif font-bold text-brown-400 tracking-wide hover:text-pink-700 transition duration-300">
+            <img src="./public/logo/logo.png" class="w-35" alt="Logo" />
+          </a>
         </div>
 
-        <nav id="mobile-menu" class="md:hidden hidden absolute top-full left-0 w-full bg-zinc-900 border-t border-zinc-700 shadow-lg z-20">
-          <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-center">
-            <a
-              href="/index.html"
-              class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-zinc-800 hover:text-pink-700 transition duration-300 w-full text-center">
-              Página Inicial
-            </a>
-            <a
-              href="index.html#historyContainer"
-              class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-zinc-800 hover:text-pink-700 transition duration-300 w-full text-center">
-              História
+        <nav class="hidden md:flex space-x-8 items-center relative">
+          <a href="index.html" class="text-gray-300 font-medium text-base hover:text-white transition duration-300 ease-in-out">Página Inicial</a>
+          <a href="index.html#historyContainer" class="text-gray-300 font-medium text-base hover:text-white transition duration-300 ease-in-out">História</a>
+
+          <!--
+          <div class="relative group" id="wine-dropdown-container">
+            <a href="#wineCategory" id="wine-dropdown-button" class="text-gray-300 font-medium text-base hover:text-white transition duration-300 ease-in-out flex items-center group-hover:text-white ">
+              Familia Arturo
+              <svg id="wine-dropdown-arrow" class="ml-1 w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
             </a>
 
-            <div class="relative w-full text-center">
-              <a
-                href="index.html#wineCategory"
-                id="mobile-wine-dropdown-button"
-                class="px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-zinc-800 hover:text-pink-700 transition duration-300 w-full flex justify-center items-center">
-                Familia Arturo
-                <svg
-                  id="mobile-wine-dropdown-arrow"
-                  class="ml-1 w-4 h-4 transition-transform duration-300"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                </svg>
+            <div id="wine-dropdown-menu" class="absolute left-0 mt-0 w-48 bg-white rounded-lg shadow-xl z-20 overflow-hidden transform transition-all duration-300 origin-top border border-gray-100 hidden">
+              <a href="categoryPage.html?type=suave" class="block px-4 py-2 text-gray-700 text-sm hover:bg-gray-100 hover:text-gray-900 transition duration-150">
+                Suaves
               </a>
-              <div id="mobile-wine-dropdown-menu" class="w-full bg-zinc-800 rounded-md shadow-inner mt-1 overflow-hidden hidden">
-                <a
-                  href="categoryPage.html?type=suave"
-                  class="block px-4 py-2 text-sm text-gray-300 hover:bg-zinc-700 hover:text-pink-700 transition duration-150">
-                  Suaves
-                </a>
-                <a
-                  href="categoryPage.html?type=tinto"
-                  class="block px-4 py-2 text-sm text-gray-300 hover:bg-zinc-700 hover:text-pink-700 transition duration-150">
-                  Tintos
-                </a>
-                <a
-                  href="categoryPage.html?type=branco"
-                  class="block px-4 py-2 text-sm text-gray-300 hover:bg-zinc-700 hover:text-pink-700 transition duration-150">
-                  Brancos
-                </a>
-                <a
-                  href="categoryPage.html?type=espumante"
-                  class="block px-4 py-2 text-sm text-gray-300 hover:bg-zinc-700 hover:text-pink-700 transition duration-150">
-                  Espumantes
-                </a>
-              </div>
+              <a href="categoryPage.html?type=tinto" class="block px-4 py-2 text-gray-700 text-sm hover:bg-gray-100 hover:text-gray-900 transition duration-150">
+                Tintos
+              </a>
+              <a href="categoryPage.html?type=branco" class="block px-4 py-2 text-gray-700 text-sm hover:bg-gray-100 hover:text-gray-900 transition duration-150">
+                Brancos
+              </a>
+              <a href="categoryPage.html?type=espumante" class="block px-4 py-2 text-gray-700 text-sm hover:bg-gray-100 hover:text-gray-900 transition duration-150">
+                Espumantes
+              </a>
             </div>
-            <a
-              href="index.html#buyContainer"
-              class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-zinc-800 hover:text-pink-700 transition duration-300 w-full text-center">
-              Loja Online
-            </a>
-            <a
-              href="/contato"
-              class="block border border-gold text-brown-400 hover:bg-gold hover:text-white rounded-full px-4 py-2 transition duration-300 font-medium text-base mt-2 w-1/2 text-center mx-auto">
-              Contato
-            </a>
-          </div>
+          </div>-->
+
+          <a href="index.html#ourProducts" class="text-gray-300 font-medium text-base hover:text-white transition duration-300 ease-in-out">
+            Familia Arturo
+          </a>
+
+          <a href="index.html#buyContainer" class="text-gray-300 font-medium text-base hover:text-white transition duration-300 ease-in-out">Loja Online</a>
+          <a href="#contactContainer" class="border-brown-500 text-brown-500 hover-brown-500 hover-text-brown-100 rounded-full px-4 py-2 transition duration-300 font-medium text-base">
+            Contato
+          </a>
         </nav>
-      </header>
 
-      <main class="flex flex-col gap-16 md:gap-30 h-full py-16">
-        <!--Nossa História-->
-        <div id="historyContainer" class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 md:gap-24 px-4 items-center">
-          <div class="md:my-12 flex flex-col items-start gap-8">
-            <div class="text-left">
-              <h2 class="text-3xl text-brown-500 libre-baskerville-regular">Familia Arturo</h2>
-              <h2 class="text-6xl md:text-8xl lg:text-9xl text-brown-600 uppercase playfair-display-400 leading-none tracking-tighter">Nossa História</h2>
-            </div>
-            <div class="w-16 h-[2px] bg-brown-500"></div>
-            <div class="flex flex-col gap-4 text-left items-start">
-              <p class="text-brown-600 libre-baskerville-regular text-2xl leading-snug">
-                Antes de ser uma marca, Arturo foi uma história construída ao redor da mesa.
-              </p>
-              <p class="text-brown-400 libre-baskerville-regular text-base leading-loose">
-                O vinho sempre esteve presente nos encontros da minha família. Com o tempo, essa vivência transformou-se em estudo, profissão e propósito. Hoje,
-                a Arturo Vinhos é o resultado dessa trajetória: uma casa de vinhos brasileiros dedicada a encontrar o lugar certo, as pessoas certas e a melhor
-                expressão para cada vinho.
-              </p>
-              <a href="#historia" class="flex flex-row items-center gap-2 text-base uppercase font-bold tracking-widest text-brown-600">
-                <span>Começar a História</span>
-                <svg
-                  id="icone-chevron"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="3"
-                  stroke="currentColor"
-                  class="w-4 h-4 transition-transform duration-300">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                </svg>
+        <button id="mobile-menu-toggle" class="md:hidden text-brown-400 hover:text-pink-700 z-30" aria-label="Abrir menu">
+          <svg id="icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+      <nav id="mobile-menu" class="md:hidden hidden absolute top-full left-0 w-full bg-zinc-900 border-t border-zinc-700 shadow-lg z-20">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-center">
+          <a href="/index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-zinc-800 hover:text-pink-700 transition duration-300 w-full text-center">
+            Página Inicial
+          </a>
+          <a href="index.html#historyContainer" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-zinc-800 hover:text-pink-700 transition duration-300 w-full text-center">
+            História
+          </a>
+
+          <div class="relative w-full text-center">
+            <a href="index.html#wineCategory" id="mobile-wine-dropdown-button" class="px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-zinc-800 hover:text-pink-700 transition duration-300 w-full flex justify-center items-center">
+              Familia Arturo
+              <svg id="mobile-wine-dropdown-arrow" class="ml-1 w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </a>
+            <div id="mobile-wine-dropdown-menu" class="w-full bg-zinc-800 rounded-md shadow-inner mt-1 overflow-hidden hidden">
+              <a href="categoryPage.html?type=suave" class="block px-4 py-2 text-sm text-gray-300 hover:bg-zinc-700 hover:text-pink-700 transition duration-150">
+                Suaves
               </a>
-              <!--<div class="w-full h-[2px] bg-brown-200"></div> -->
+              <a href="categoryPage.html?type=tinto" class="block px-4 py-2 text-sm text-gray-300 hover:bg-zinc-700 hover:text-pink-700 transition duration-150">
+                Tintos
+              </a>
+              <a href="categoryPage.html?type=branco" class="block px-4 py-2 text-sm text-gray-300 hover:bg-zinc-700 hover:text-pink-700 transition duration-150">
+                Brancos
+              </a>
+              <a href="categoryPage.html?type=espumante" class="block px-4 py-2 text-sm text-gray-300 hover:bg-zinc-700 hover:text-pink-700 transition duration-150">
+                Espumantes
+              </a>
             </div>
           </div>
-          <!--<img src="./public/img/background/1.jpg" alt="" class="object-cover aspect-[4/4] md:aspect-[4/5] rounded z-10 shadow-sm" /> -->
-          <div class="object-cover aspect-[4/4] md:aspect-[4/5] rounded z-10 shadow-sm bg-brown-200 border-2 border-brown-400"></div>
+          <a href="index.html#buyContainer" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-zinc-800 hover:text-pink-700 transition duration-300 w-full text-center">
+            Loja Online
+          </a>
+          <a href="/contato" class="block border border-gold text-brown-400 hover:bg-gold hover:text-white rounded-full px-4 py-2 transition duration-300 font-medium text-base mt-2 w-1/2 text-center mx-auto">
+            Contato
+          </a>
         </div>
+      </nav>
+    </header>
 
-        <!--Primeiro texto grande-->
-        <div id="historia" class="w-full bg-brown-700 px-2 md:px-5 text-center">
-          <span class="block max-w-6xl mx-auto py-12 md:py-20 text-brown-200 playfair-display-600 leading-12 md:leading-18 text-3xl md:text-5xl">
-            "O vinho deixou de ser somente uma paixão e passou a ser uma forma de conhecer lugares, compreender pessoas e contar histórias."
-          </span>
+    <main class="flex flex-col gap-16 md:gap-30 h-full py-16">
+      <!--Nossa História-->
+      <div id="historyContainer" class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 md:gap-24 px-4 items-center">
+        <div class="md:my-12 flex flex-col items-start gap-8">
+          <div class="text-left">
+            <h2 class="text-3xl text-brown-500 libre-baskerville-regular">Familia Arturo</h2>
+            <h2 class="text-6xl md:text-8xl lg:text-9xl text-brown-600 uppercase playfair-display-400 leading-none tracking-tighter">Nossa História</h2>
+          </div>
+          <div class="w-16 h-[2px] bg-brown-500"></div>
+          <div class="flex flex-col gap-4 text-left items-start">
+            <p class="text-brown-600 libre-baskerville-regular text-2xl leading-snug">
+              Antes de ser uma marca, Arturo foi uma história construída ao redor da mesa.
+            </p>
+            <p class="text-brown-400 libre-baskerville-regular text-base leading-loose">
+              O vinho sempre esteve presente nos encontros da minha família. Com o tempo, essa vivência transformou-se em estudo, profissão e propósito. Hoje,
+              a Arturo Vinhos é o resultado dessa trajetória: uma casa de vinhos brasileiros dedicada a encontrar o lugar certo, as pessoas certas e a melhor
+              expressão para cada vinho.
+            </p>
+            <a href="#historia" class="flex flex-row items-center gap-2 text-base uppercase font-bold tracking-widest text-brown-600">
+              <span>Começar a História</span>
+              <svg id="icone-chevron" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-4 h-4 transition-transform duration-300">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+              </svg>
+            </a>
+            <!--<div class="w-full h-[2px] bg-brown-200"></div> -->
+          </div>
         </div>
-        <!--Da mesa de família ao mundo do vinho-->
+        <!--<img src="./public/img/background/1.jpg" alt="" class="object-cover aspect-[4/4] md:aspect-[4/5] rounded z-10 shadow-sm" /> -->
+        <div class="object-cover aspect-[4/4] md:aspect-[4/5] rounded z-10 shadow-sm bg-brown-200 border-2 border-brown-400"></div>
+      </div>
+
+      <!--Primeiro texto grande-->
+      <div id="historia" class="w-full bg-brown-700 px-2 md:px-5 text-center">
+        <span class="block max-w-6xl mx-auto py-12 md:py-20 text-brown-200 playfair-display-600 leading-12 md:leading-18 text-3xl md:text-5xl">
+          "O vinho deixou de ser somente uma paixão e passou a ser uma forma de conhecer lugares, compreender pessoas e contar histórias."
+        </span>
+      </div>
+      <!--Da mesa de família ao mundo do vinho-->
+      <div class="max-w-4xl mx-auto flex flex-row gap-6 md:gap-20 lg:gap-40 px-4">
+        <span class="text-2xl md:text-4xl lg:text-5xl text-end md:leading-12 lg:leading-16 text-brown-500 libre-baskerville-regular-italic">01</span>
+        <div class="flex flex-col gap-5">
+          <h3 class="text-3xl md:text-6xl md:leading-12 lg:leading-16 text-brown-600 libre-baskerville-regular">Da mesa de família ao mundo do vinho</h3>
+          <p class="text-brown-700 libre-baskerville-regular text-base leading-loose">
+            De um lado, trago a origem italiana dos meus avós. Do outro, uma forte influência portuguesa. Cresci em um ambiente no qual o vinho fazia parte
+            das conversas, dos encontros e dos momentos compartilhados em família.
+          </p>
+          <p class="text-brown-700 libre-baskerville-regular text-base leading-loose">
+            Meu pai também teve uma influência importante nessa trajetória. Durante muitos anos, trabalhou e gerenciou hotéis, especialmente na área de
+            Alimentos & Bebidas. Por isso, desde cedo tive contato não apenas com o vinho, mas também com a gastronomia, o serviço e a hospitalidade.
+          </p>
+          <p class="text-brown-700 libre-baskerville-regular text-base leading-loose">
+            Curiosamente, minha formação profissional começou em outro caminho. Sou formado em Gestão Ambiental e, quando terminei a faculdade, imaginava que
+            seguiria trabalhando nessa área. Mas o vinho já ocupava um espaço cada vez maior na minha vida.
+          </p>
+        </div>
+      </div>
+      <div class="w-full max-w-6xl mx-auto h-[2px] bg-brown-200"></div>
+      <!--Quando a paixão se tornou profissão-->
+      <div class="max-w-7xl mx-auto flex flex-col gap-14 px-4">
         <div class="max-w-4xl mx-auto flex flex-row gap-6 md:gap-20 lg:gap-40 px-4">
-          <span class="text-2xl md:text-4xl lg:text-5xl text-end md:leading-12 lg:leading-16 text-brown-500 libre-baskerville-regular-italic">01</span>
+          <span class="text-2xl md:text-4xl lg:text-5xl text-end md:leading-12 lg:leading-16 text-brown-500 libre-baskerville-regular-italic">02</span>
           <div class="flex flex-col gap-5">
-            <h3 class="text-3xl md:text-6xl md:leading-12 lg:leading-16 text-brown-600 libre-baskerville-regular">Da mesa de família ao mundo do vinho</h3>
+            <h3 class="text-3xl md:text-6xl md:leading-12 lg:leading-16 text-brown-600 libre-baskerville-regular">Quando a paixão se tornou profissão</h3>
             <p class="text-brown-700 libre-baskerville-regular text-base leading-loose">
-              De um lado, trago a origem italiana dos meus avós. Do outro, uma forte influência portuguesa. Cresci em um ambiente no qual o vinho fazia parte
-              das conversas, dos encontros e dos momentos compartilhados em família.
+              Comecei a trabalhar comercialmente com vinhos de uma vinícola chilena. A partir dali, passei a estudar regiões produtoras, uvas, estilos e
+              métodos de elaboração.
             </p>
             <p class="text-brown-700 libre-baskerville-regular text-base leading-loose">
-              Meu pai também teve uma influência importante nessa trajetória. Durante muitos anos, trabalhou e gerenciou hotéis, especialmente na área de
-              Alimentos & Bebidas. Por isso, desde cedo tive contato não apenas com o vinho, mas também com a gastronomia, o serviço e a hospitalidade.
+              Quanto mais aprendia, mais percebia que uma garrafa nunca contém apenas vinho. Por trás dela existe geografia. Existe clima, solo, cultura e
+              história. Existem famílias, produtores, enólogos e trabalhadores dedicados ao vinhedo.
             </p>
             <p class="text-brown-700 libre-baskerville-regular text-base leading-loose">
-              Curiosamente, minha formação profissional começou em outro caminho. Sou formado em Gestão Ambiental e, quando terminei a faculdade, imaginava que
-              seguiria trabalhando nessa área. Mas o vinho já ocupava um espaço cada vez maior na minha vida.
+              O vinho deixou de ser somente uma paixão e passou a ser a forma que encontrei de conhecer lugares, compreender pessoas e contar histórias.
             </p>
           </div>
         </div>
-        <div class="w-full max-w-6xl mx-auto h-[2px] bg-brown-200"></div>
-        <!--Quando a paixão se tornou profissão-->
-        <div class="max-w-7xl mx-auto flex flex-col gap-14 px-4">
-          <div class="max-w-4xl mx-auto flex flex-row gap-6 md:gap-20 lg:gap-40 px-4">
-            <span class="text-2xl md:text-4xl lg:text-5xl text-end md:leading-12 lg:leading-16 text-brown-500 libre-baskerville-regular-italic">02</span>
-            <div class="flex flex-col gap-5">
-              <h3 class="text-3xl md:text-6xl md:leading-12 lg:leading-16 text-brown-600 libre-baskerville-regular">Quando a paixão se tornou profissão</h3>
-              <p class="text-brown-700 libre-baskerville-regular text-base leading-loose">
-                Comecei a trabalhar comercialmente com vinhos de uma vinícola chilena. A partir dali, passei a estudar regiões produtoras, uvas, estilos e
-                métodos de elaboração.
-              </p>
-              <p class="text-brown-700 libre-baskerville-regular text-base leading-loose">
-                Quanto mais aprendia, mais percebia que uma garrafa nunca contém apenas vinho. Por trás dela existe geografia. Existe clima, solo, cultura e
-                história. Existem famílias, produtores, enólogos e trabalhadores dedicados ao vinhedo.
-              </p>
-              <p class="text-brown-700 libre-baskerville-regular text-base leading-loose">
-                O vinho deixou de ser somente uma paixão e passou a ser a forma que encontrei de conhecer lugares, compreender pessoas e contar histórias.
-              </p>
-            </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 items-end gap-8">
+          <figure class="relative w-full overflow-hidden rounded shadow-sm col-span-2">
+            <figcaption class="absolute left-4 top-4 z-10 rounded bg-brown-700 px-3 py-1 text-sm uppercase text-white shadow">Arquivo 01</figcaption>
+            <img src="public/history/arquivo-1.png" alt="Pré-visualização do Arquivo 01" class="h-auto w-full object-cover" />
+          </figure>
+          <div class="flex flex-col gap-4">
+            <h4 class="text-brown-600 uppercase font-medium">O vinho como ofício</h4>
+            <p class="text-brown-600 libre-baskerville-regular text-sm leading-loose">
+              Comecei a trabalhar comercialmente com vinhos de uma vinícola chilena. A partir dali, passei a estudar regiões produtoras, uvas, estilos e
+              métodos de elaboração.
+            </p>
+            <span class="uppercase libre-baskerville-regular text-brown-500 text-xs">Arquivo pessoal</span>
           </div>
-          <div class="grid grid-cols-1 md:grid-cols-3 items-end gap-8">
-            <figure class="relative w-full overflow-hidden rounded shadow-sm col-span-2">
-              <figcaption class="absolute left-4 top-4 z-10 rounded bg-brown-700 px-3 py-1 text-sm uppercase text-white shadow">Arquivo 01</figcaption>
-              <img src="public/history/arquivo-1.png" alt="Pré-visualização do Arquivo 01" class="h-auto w-full object-cover" />
+        </div>
+      </div>
+
+      <div class="w-full max-w-6xl mx-auto h-[2px] bg-brown-200"></div>
+      <!--A experiência que deu origem à Arturo-->
+      <div class="max-w-7xl mx-auto flex flex-col gap-14 px-4">
+        <div class="max-w-4xl mx-auto flex flex-row gap-6 md:gap-20 lg:gap-40 px-4">
+          <span class="text-2xl md:text-4xl lg:text-5xl text-end md:leading-12 lg:leading-16 text-brown-500 libre-baskerville-regular-italic">03</span>
+          <div class="flex flex-col gap-5">
+            <h3 class="text-3xl md:text-6xl md:leading-12 lg:leading-16 text-brown-600 libre-baskerville-regular">A experiência que deu origem à Arturo</h3>
+            <p class="text-brown-700 libre-baskerville-regular text-base leading-loose">
+              Dessa trajetória nasceu a Cone Leste. E essa história não começou sozinho. Desde os primeiros passos, minha mãe esteve ao meu lado, trabalhando
+              comigo na construção da empresa e permanecendo parte dela até hoje.
+            </p>
+            <p class="text-brown-700 libre-baskerville-regular text-base leading-loose">
+              No início, trabalhávamos principalmente com vinhos chilenos. Com o tempo, ampliamos o portfólio e passamos a conhecer diferentes produtores,
+              regiões e estilos.
+            </p>
+            <p class="text-brown-700 libre-baskerville-regular text-base leading-loose">
+              Foram anos conversando com consumidores, sommeliers, restaurantes, lojistas e profissionais da gastronomia. Essa experiência me ensinou algo que
+              nenhum livro, sozinho, poderia ensinar: compreender quem está do outro lado da garrafa.
+            </p>
+            <p class="text-brown-700 libre-baskerville-regular text-base leading-loose">
+              Aprendi a perceber o que as pessoas realmente gostam de beber — algo diferente de simplesmente saber o que um crítico considera um grande vinho.
+            </p>
+            <p class="text-brown-700 libre-baskerville-regular text-base leading-loose">
+              Com o passar dos anos, surgiu uma inquietação. Trabalhar com tantos vinhos de diferentes origens fez crescer em mim a vontade de criar um vinho
+              brasileiro que tivesse a nossa identidade.
+            </p>
+            <p class="text-brown-700 libre-baskerville-regular text-base leading-loose">
+              Não queria apenas escolher um produto pronto e colocar um nome nele. Queria participar verdadeiramente do projeto: conhecer o lugar, acompanhar
+              o processo e trabalhar ao lado das pessoas responsáveis pela elaboração. Foi assim que Arturo começou a nascer.
+            </p>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="flex flex-col gap-2">
+            <figure class="relative w-full overflow-hidden rounded shadow-sm">
+              <figcaption class="absolute left-4 top-4 z-10 rounded bg-brown-700 px-3 py-1 text-sm uppercase text-white shadow">Arquivo 02</figcaption>
+              <img src="public/history/arquivo-2.png" alt="Pré-visualização do Arquivo 01" class="h-auto w-full object-cover" />
             </figure>
             <div class="flex flex-col gap-4">
-              <h4 class="text-brown-600 uppercase font-medium">O vinho como ofício</h4>
+              <h4 class="text-brown-600 uppercase font-medium">Uma história construída juntos</h4>
               <p class="text-brown-600 libre-baskerville-regular text-sm leading-loose">
-                Comecei a trabalhar comercialmente com vinhos de uma vinícola chilena. A partir dali, passei a estudar regiões produtoras, uvas, estilos e
-                métodos de elaboração.
+                Os primeiros anos de trabalho, quando Arthur e sua mãe construíam o caminho que daria origem à Cone Leste.
               </p>
               <span class="uppercase libre-baskerville-regular text-brown-500 text-xs">Arquivo pessoal</span>
             </div>
           </div>
-        </div>
-
-        <div class="w-full max-w-6xl mx-auto h-[2px] bg-brown-200"></div>
-        <!--A experiência que deu origem à Arturo-->
-        <div class="max-w-7xl mx-auto flex flex-col gap-14 px-4">
-          <div class="max-w-4xl mx-auto flex flex-row gap-6 md:gap-20 lg:gap-40 px-4">
-            <span class="text-2xl md:text-4xl lg:text-5xl text-end md:leading-12 lg:leading-16 text-brown-500 libre-baskerville-regular-italic">03</span>
-            <div class="flex flex-col gap-5">
-              <h3 class="text-3xl md:text-6xl md:leading-12 lg:leading-16 text-brown-600 libre-baskerville-regular">A experiência que deu origem à Arturo</h3>
-              <p class="text-brown-700 libre-baskerville-regular text-base leading-loose">
-                Dessa trajetória nasceu a Cone Leste. E essa história não começou sozinho. Desde os primeiros passos, minha mãe esteve ao meu lado, trabalhando
-                comigo na construção da empresa e permanecendo parte dela até hoje.
-              </p>
-              <p class="text-brown-700 libre-baskerville-regular text-base leading-loose">
-                No início, trabalhávamos principalmente com vinhos chilenos. Com o tempo, ampliamos o portfólio e passamos a conhecer diferentes produtores,
-                regiões e estilos.
-              </p>
-              <p class="text-brown-700 libre-baskerville-regular text-base leading-loose">
-                Foram anos conversando com consumidores, sommeliers, restaurantes, lojistas e profissionais da gastronomia. Essa experiência me ensinou algo que
-                nenhum livro, sozinho, poderia ensinar: compreender quem está do outro lado da garrafa.
-              </p>
-              <p class="text-brown-700 libre-baskerville-regular text-base leading-loose">
-                Aprendi a perceber o que as pessoas realmente gostam de beber — algo diferente de simplesmente saber o que um crítico considera um grande vinho.
-              </p>
-              <p class="text-brown-700 libre-baskerville-regular text-base leading-loose">
-                Com o passar dos anos, surgiu uma inquietação. Trabalhar com tantos vinhos de diferentes origens fez crescer em mim a vontade de criar um vinho
-                brasileiro que tivesse a nossa identidade.
-              </p>
-              <p class="text-brown-700 libre-baskerville-regular text-base leading-loose">
-                Não queria apenas escolher um produto pronto e colocar um nome nele. Queria participar verdadeiramente do projeto: conhecer o lugar, acompanhar
-                o processo e trabalhar ao lado das pessoas responsáveis pela elaboração. Foi assim que Arturo começou a nascer.
-              </p>
-            </div>
-          </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="flex flex-col gap-2">
-              <figure class="relative w-full overflow-hidden rounded shadow-sm">
-                <figcaption class="absolute left-4 top-4 z-10 rounded bg-brown-700 px-3 py-1 text-sm uppercase text-white shadow">Arquivo 02</figcaption>
-                <img src="public/history/arquivo-2.png" alt="Pré-visualização do Arquivo 01" class="h-auto w-full object-cover" />
-              </figure>
-              <div class="flex flex-col gap-4">
-                <h4 class="text-brown-600 uppercase font-medium">Uma história construída juntos</h4>
-                <p class="text-brown-600 libre-baskerville-regular text-sm leading-loose">
-                  Os primeiros anos de trabalho, quando Arthur e sua mãe construíam o caminho que daria origem à Cone Leste.
-                </p>
-                <span class="uppercase libre-baskerville-regular text-brown-500 text-xs">Arquivo pessoal</span>
-              </div>
-            </div>
-            <div class="flex flex-col gap-2">
-              <figure class="relative w-full overflow-hidden rounded shadow-sm">
-                <figcaption class="absolute left-4 top-4 z-10 rounded bg-brown-700 px-3 py-1 text-sm uppercase text-white shadow">Arquivo 03</figcaption>
-                <img src="public/history/arquivo-3.png" alt="Pré-visualização do Arquivo 01" class="h-auto w-full object-cover" />
-              </figure>
-              <div class="flex flex-col gap-4">
-                <h4 class="text-brown-600 uppercase font-medium">Do mercado ao vinhedo</h4>
-                <p class="text-brown-600 libre-baskerville-regular text-sm leading-loose">Arthur durante uma de suas primeiras visitas a regiões produtoras.</p>
-                <span class="uppercase libre-baskerville-regular text-brown-500 text-xs">Arquivo pessoal</span>
-              </div>
+          <div class="flex flex-col gap-2">
+            <figure class="relative w-full overflow-hidden rounded shadow-sm">
+              <figcaption class="absolute left-4 top-4 z-10 rounded bg-brown-700 px-3 py-1 text-sm uppercase text-white shadow">Arquivo 03</figcaption>
+              <img src="public/history/arquivo-3.png" alt="Pré-visualização do Arquivo 01" class="h-auto w-full object-cover" />
+            </figure>
+            <div class="flex flex-col gap-4">
+              <h4 class="text-brown-600 uppercase font-medium">Do mercado ao vinhedo</h4>
+              <p class="text-brown-600 libre-baskerville-regular text-sm leading-loose">Arthur durante uma de suas primeiras visitas a regiões produtoras.</p>
+              <span class="uppercase libre-baskerville-regular text-brown-500 text-xs">Arquivo pessoal</span>
             </div>
           </div>
         </div>
+      </div>
 
-        <div class="w-full max-w-6xl mx-auto h-[2px] bg-brown-200"></div>
-        <!--A busca pelo nosso primeiro vinho-->
-        <div class="max-w-4xl mx-auto flex flex-row gap-6 md:gap-20 lg:gap-40 px-4">
-          <span class="text-2xl md:text-4xl lg:text-5xl text-end md:leading-12 lg:leading-16 text-brown-500 libre-baskerville-regular-italic">04</span>
+      <div class="w-full max-w-6xl mx-auto h-[2px] bg-brown-200"></div>
+      <!--A busca pelo nosso primeiro vinho-->
+      <div class="max-w-4xl mx-auto flex flex-row gap-6 md:gap-20 lg:gap-40 px-4">
+        <span class="text-2xl md:text-4xl lg:text-5xl text-end md:leading-12 lg:leading-16 text-brown-500 libre-baskerville-regular-italic">04</span>
+        <div class="flex flex-col gap-5">
+          <h3 class="text-3xl md:text-6xl md:leading-12 lg:leading-16 text-brown-600 libre-baskerville-regular">A busca pelo nosso primeiro vinho</h3>
+          <p class="text-brown-700 libre-baskerville-regular text-base leading-loose">
+            Peguei um avião e fui para o Rio Grande do Sul. Começou ali um trabalho de pesquisa, viagens, visitas, conversas e muitas degustações.
+          </p>
+          <p class="text-brown-700 libre-baskerville-regular text-base leading-loose">
+            Fui conhecer regiões produtoras, vinhedos, vinícolas, enólogos e as pessoas que estavam por trás de cada vinho. Porque esse é um princípio que
+            mantenho até hoje: quero saber de onde vem aquilo que colocamos dentro de uma garrafa da Arturo.
+          </p>
+          <p class="text-brown-700 libre-baskerville-regular text-base leading-loose">
+            Vou às vinícolas e aos vinhedos. Converso com quem produz, conheço o enólogo, sua equipe e, muitas vezes, também sua família e sua história.
+            Procuro compreender o solo, o clima, a uva e a filosofia de cada projeto.
+          </p>
+          <p class="text-brown-700 libre-baskerville-regular text-base leading-loose">
+            Porque vinho é feito de uva, mas grandes vinhos também são feitos de pessoas.
+          </p>
+          <p class="text-brown-700 libre-baskerville-regular text-base leading-loose">
+            Dessa busca nasceram os primeiros rótulos Arturo: inicialmente, um Cabernet Sauvignon com um delicado toque de doçura e, depois, uma versão seca.
+            O que havia começado com alguns vinhos, no entanto, estava apenas começando.
+          </p>
+        </div>
+      </div>
+      <div class="w-full max-w-6xl mx-auto h-[2px] bg-brown-200"></div>
+      <!--Quando Arturo se tornou uma casa de vinhos-->
+      <div class="max-w-7xl mx-auto flex flex-col gap-14 px-4">
+        <div id="historyContainer" class="max-w-4xl mx-auto flex flex-row gap-6 md:gap-20 lg:gap-40 px-4">
+          <span class="text-2xl md:text-4xl lg:text-5xl text-end md:leading-12 lg:leading-16 text-brown-500 libre-baskerville-regular-italic">05</span>
           <div class="flex flex-col gap-5">
-            <h3 class="text-3xl md:text-6xl md:leading-12 lg:leading-16 text-brown-600 libre-baskerville-regular">A busca pelo nosso primeiro vinho</h3>
+            <h3 class="text-3xl md:text-6xl md:leading-12 lg:leading-16 text-brown-600 libre-baskerville-regular">
+              Quando Arturo se tornou uma casa de vinhos
+            </h3>
             <p class="text-brown-700 libre-baskerville-regular text-base leading-loose">
-              Peguei um avião e fui para o Rio Grande do Sul. Começou ali um trabalho de pesquisa, viagens, visitas, conversas e muitas degustações.
+              Durante muitos anos, Arturo foi essencialmente o nome dos nossos rótulos. Até que, em 2024, comecei a enxergar algo maior.
             </p>
             <p class="text-brown-700 libre-baskerville-regular text-base leading-loose">
-              Fui conhecer regiões produtoras, vinhedos, vinícolas, enólogos e as pessoas que estavam por trás de cada vinho. Porque esse é um princípio que
-              mantenho até hoje: quero saber de onde vem aquilo que colocamos dentro de uma garrafa da Arturo.
+              Depois de anos conhecendo produtores, negociando vinhos, estudando o comportamento dos consumidores e desenvolvendo minha própria forma de
+              selecionar produtos, percebi que havia chegado o momento de transformar toda essa experiência em uma empresa.
             </p>
             <p class="text-brown-700 libre-baskerville-regular text-base leading-loose">
-              Vou às vinícolas e aos vinhedos. Converso com quem produz, conheço o enólogo, sua equipe e, muitas vezes, também sua família e sua história.
-              Procuro compreender o solo, o clima, a uva e a filosofia de cada projeto.
+              Não queria mais criar apenas um vinho. Queria construir uma família de vinhos.
             </p>
             <p class="text-brown-700 libre-baskerville-regular text-base leading-loose">
-              Porque vinho é feito de uva, mas grandes vinhos também são feitos de pessoas.
+              Em 2025, essa visão começou a ganhar forma. Novos projetos foram desenvolvidos, a família cresceu e Arturo deixou de ser somente o nome de um
+              rótulo para se transformar na Arturo Vinhos.
             </p>
             <p class="text-brown-700 libre-baskerville-regular text-base leading-loose">
-              Dessa busca nasceram os primeiros rótulos Arturo: inicialmente, um Cabernet Sauvignon com um delicado toque de doçura e, depois, uma versão seca.
-              O que havia começado com alguns vinhos, no entanto, estava apenas começando.
+              Uma casa dedicada ao desenvolvimento de vinhos brasileiros com identidade própria, produzidos em parceria com pessoas que compartilham dos
+              mesmos valores e do mesmo cuidado, do vinhedo à taça.
             </p>
-          </div>
-        </div>
-        <div class="w-full max-w-6xl mx-auto h-[2px] bg-brown-200"></div>
-        <!--Quando Arturo se tornou uma casa de vinhos-->
-        <div class="max-w-7xl mx-auto flex flex-col gap-14 px-4">
-          <div id="historyContainer" class="max-w-4xl mx-auto flex flex-row gap-6 md:gap-20 lg:gap-40 px-4">
-            <span class="text-2xl md:text-4xl lg:text-5xl text-end md:leading-12 lg:leading-16 text-brown-500 libre-baskerville-regular-italic">05</span>
-            <div class="flex flex-col gap-5">
-              <h3 class="text-3xl md:text-6xl md:leading-12 lg:leading-16 text-brown-600 libre-baskerville-regular">
-                Quando Arturo se tornou uma casa de vinhos
-              </h3>
-              <p class="text-brown-700 libre-baskerville-regular text-base leading-loose">
-                Durante muitos anos, Arturo foi essencialmente o nome dos nossos rótulos. Até que, em 2024, comecei a enxergar algo maior.
-              </p>
-              <p class="text-brown-700 libre-baskerville-regular text-base leading-loose">
-                Depois de anos conhecendo produtores, negociando vinhos, estudando o comportamento dos consumidores e desenvolvendo minha própria forma de
-                selecionar produtos, percebi que havia chegado o momento de transformar toda essa experiência em uma empresa.
-              </p>
-              <p class="text-brown-700 libre-baskerville-regular text-base leading-loose">
-                Não queria mais criar apenas um vinho. Queria construir uma família de vinhos.
-              </p>
-              <p class="text-brown-700 libre-baskerville-regular text-base leading-loose">
-                Em 2025, essa visão começou a ganhar forma. Novos projetos foram desenvolvidos, a família cresceu e Arturo deixou de ser somente o nome de um
-                rótulo para se transformar na Arturo Vinhos.
-              </p>
-              <p class="text-brown-700 libre-baskerville-regular text-base leading-loose">
-                Uma casa dedicada ao desenvolvimento de vinhos brasileiros com identidade própria, produzidos em parceria com pessoas que compartilham dos
-                mesmos valores e do mesmo cuidado, do vinhedo à taça.
-              </p>
-              <p class="text-brown-700 libre-baskerville-regular text-base leading-loose">
-                Foi durante esse crescimento que compreendemos algo essencial: não precisávamos pensar o vinho brasileiro a partir de uma única região. O Brasil
-                vitivinícola é muito maior do que isso.
-              </p>
-            </div>
-          </div>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-end">
-            <div class="flex flex-col gap-2 md:col-span-2">
-              <figure class="relative w-full overflow-hidden rounded shadow-sm">
-                <figcaption class="absolute left-4 top-4 z-10 rounded bg-brown-700 px-3 py-1 text-sm uppercase text-white shadow">Arquivo 04</figcaption>
-                <img src="public/history/arquivo-4.jpg" alt="Pré-visualização do Arquivo 01" class="h-auto w-full object-cover" />
-              </figure>
-              <div class="flex flex-col gap-4">
-                <h4 class="text-brown-600 uppercase font-medium">Vinhedos do Sul</h4>
-                <p class="text-brown-600 libre-baskerville-regular text-sm leading-loose">
-                  Paisagens visitadas por Arthur e Erika durante a busca por novos projetos.
-                </p>
-                <span class="uppercase libre-baskerville-regular text-brown-500 text-xs">Arquivo pessoal · 2025</span>
-              </div>
-            </div>
-            <div class="flex flex-col gap-2">
-              <figure class="relative w-full overflow-hidden rounded shadow-sm">
-                <figcaption class="absolute left-4 top-4 z-10 rounded bg-brown-700 px-3 py-1 text-sm uppercase text-white shadow">Arquivo 05</figcaption>
-                <img src="public/history/arquivo-5.jpg" alt="Pré-visualização do Arquivo 01" class="h-auto w-full object-cover max-h-[500px]" />
-              </figure>
-              <div class="flex flex-col gap-4">
-                <h4 class="text-brown-600 uppercase font-medium">O vinho de perto</h4>
-                <p class="text-brown-600 libre-baskerville-regular text-sm leading-loose">Erika durante a visita a uma vinícola no Sul do Brasil.</p>
-                <span class="uppercase libre-baskerville-regular text-brown-500 text-xs">Arquivo pessoal · 2025</span>
-              </div>
-            </div>
-            <div class="md:col-span-3">
-              <figure class="relative w-full overflow-hidden rounded shadow-sm ">
-                <figcaption class="absolute left-4 top-4 z-10 rounded bg-brown-700 px-3 py-1 text-sm uppercase text-white shadow">Arquivo 06</figcaption>
-                <img src="public/history/arquivo-6.jpg" alt="Pré-visualização do Arquivo 01" class="h-auto w-full object-cover max-h-[700px]" />
-              </figure>
-              <div class="flex flex-col gap-4">
-                <h4 class="text-brown-600 uppercase font-medium">Entre os vinhedos</h4>
-                <p class="text-brown-600 libre-baskerville-regular text-sm leading-loose">Erika durante a visita aos vinhedos do Sul do Brasil.</p>
-                <span class="uppercase libre-baskerville-regular text-brown-500 text-xs">Arquivo pessoal · 2025</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--Terroirs do Brasil-->
-        <div class="w-full bg-brown-700 px-2 md:px-5 py-30 flex flex-col gap-16">
-          <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-10 lg:gap-30">
-            <div class="text-left">
-              <h2 class="text-2xl text-brown-400 libre-baskerville-regular">O próximo capítulo</h2>
-              <h2 class="text-5xl md:text-5xl lg:text-7xl text-brown-200 uppercase playfair-display-400 leading-none tracking-tighter w-full break-words">
-                Terroirs do Brasil
-              </h2>
-            </div>
-            <div class="flex flex-col gap-5">
-              <p class="text-brown-200 libre-baskerville-regular text-base leading-loose">
-                Foi viajando, visitando produtores e buscando novos projetos que nasceu o conceito que representa o próximo capítulo da Arturo Vinhos: Terroirs
-                do Brasil.
-              </p>
-              <p class="text-brown-200 libre-baskerville-regular text-base leading-loose">
-                Durante muito tempo, falar em vinho brasileiro de qualidade significava olhar quase exclusivamente para a Serra Gaúcha. Ela continua sendo
-                fundamental para nossa história e para a história do vinho nacional.
-              </p>
-              <p class="text-brown-200 libre-baskerville-regular text-base leading-loose">
-                Mas o Brasil mudou. Novas regiões surgiram, novos produtores apareceram, novas técnicas foram desenvolvidas e terroirs completamente diferentes
-                começaram a revelar sua personalidade.
-              </p>
-              <p class="text-brown-200 libre-baskerville-regular text-base leading-loose">
-                Percebemos, então, que a identidade da Arturo não precisava estar presa a uma vinícola, a um único vinhedo ou a uma região específica. Nossa
-                identidade poderia estar justamente na busca.
-              </p>
-            </div>
-          </div>
-          <div class="w-full max-w-7xl mx-auto h-[1px] bg-brown-300"></div>
-          <div class="max-w-7xl mx-auto text-center">
-            <span class="block max-w-6xl mx-auto py-12 md:py-30 text-brown-200 playfair-display-600 leading-12 md:leading-18 text-4xl md:text-5xl">
-              “Não procuramos um único lugar para fazer nossos vinhos. Procuramos o lugar certo para cada vinho.”
-            </span>
-          </div>
-          <div class="w-full max-w-7xl mx-auto h-[1px] bg-brown-300"></div>
-          <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20">
-            <img src="./public/img/background/1.jpg" alt="" class="w-full object-cover aspect-[6/4] rounded z-10 shadow-sm" />
-            <div class="flex flex-col gap-5">
-              <p class="text-brown-200 libre-baskerville-regular text-base leading-loose">
-                Hoje, nossos projetos passam por diferentes terroirs brasileiros, incluindo Vale dos Vinhedos, Garibaldi, Campanha Gaúcha e Serra da
-                Mantiqueira. Amanhã, novas regiões poderão fazer parte dessa história.
-              </p>
-              <p class="text-brown-200 libre-baskerville-regular text-base leading-loose">
-                Porque “Terroirs do Brasil” não estabelece fronteiras. Estabelece um compromisso.
-              </p>
-              <p class="text-brown-200 libre-baskerville-regular text-base leading-loose">
-                Se uma uva encontra sua melhor expressão em determinada região, queremos conhecê-la. Se encontramos um produtor ou um enólogo com um trabalho
-                extraordinário, queremos conversar com ele. Se descobrimos um vinhedo capaz de entregar algo especial, queremos estar lá.
-              </p>
-              <p class="text-brown-200 libre-baskerville-regular text-base leading-loose">
-                Não enxergamos o Brasil como um único terroir. Enxergamos um país inteiro de possibilidades.
-              </p>
-            </div>
-          </div>
-        </div>
-        <!--Somelier-->
-        <div id="historyContainer" class="max-w-7xl mx-auto grid md:grid-cols-5 gap-12 md:gap-10 lg:gap-40 px-4 items-center">
-          <img src="./public/history/arthur.png" alt="" class="object-cover md:col-span-2 rounded z-10 md:aspect-[4/6]" />
-          <div class="md:col-span-3 flex flex-col gap-5">
-            <div class="flex flex-col gap-2">
-              <span class="text-md text-brown-muted uppercase tracking-widest libre-baskerville-bold">Quem está por trás da Arturo</span>
-              <span class="text-6xl md:text-9xl text-brown-600 capitalize playfair-display-400 leading-none tracking-tighter">Arthur</span>
-              <span class="text-xl text-brown-500 libre-baskerville-regular">Fundador e sommelier da Arturo Vinhos</span>
-            </div>
             <p class="text-brown-700 libre-baskerville-regular text-base leading-loose">
-              Minha relação com o vinho foi construída entre a vivência familiar, o estudo e os anos de contato direto com produtores e consumidores. Acredito
-              que cada vinho deve nascer de um encontro verdadeiro entre lugar, uva e pessoas. É essa busca que orienta os projetos da Arturo e que continuará
-              conduzindo os próximos capítulos da nossa história.
+              Foi durante esse crescimento que compreendemos algo essencial: não precisávamos pensar o vinho brasileiro a partir de uma única região. O Brasil
+              vitivinícola é muito maior do que isso.
             </p>
           </div>
         </div>
-      </main>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-end">
+          <div class="flex flex-col gap-2 md:col-span-2">
+            <figure class="relative w-full overflow-hidden rounded shadow-sm">
+              <figcaption class="absolute left-4 top-4 z-10 rounded bg-brown-700 px-3 py-1 text-sm uppercase text-white shadow">Arquivo 04</figcaption>
+              <img src="public/history/arquivo-4.jpg" alt="Pré-visualização do Arquivo 01" class="h-auto w-full object-cover" />
+            </figure>
+            <div class="flex flex-col gap-4">
+              <h4 class="text-brown-600 uppercase font-medium">Vinhedos do Sul</h4>
+              <p class="text-brown-600 libre-baskerville-regular text-sm leading-loose">
+                Paisagens visitadas por Arthur e Erika durante a busca por novos projetos.
+              </p>
+              <span class="uppercase libre-baskerville-regular text-brown-500 text-xs">Arquivo pessoal · 2025</span>
+            </div>
+          </div>
+          <div class="flex flex-col gap-2">
+            <figure class="relative w-full overflow-hidden rounded shadow-sm">
+              <figcaption class="absolute left-4 top-4 z-10 rounded bg-brown-700 px-3 py-1 text-sm uppercase text-white shadow">Arquivo 05</figcaption>
+              <img src="public/history/arquivo-5.jpg" alt="Pré-visualização do Arquivo 01" class="h-auto w-full object-cover max-h-[500px]" />
+            </figure>
+            <div class="flex flex-col gap-4">
+              <h4 class="text-brown-600 uppercase font-medium">O vinho de perto</h4>
+              <p class="text-brown-600 libre-baskerville-regular text-sm leading-loose">Erika durante a visita a uma vinícola no Sul do Brasil.</p>
+              <span class="uppercase libre-baskerville-regular text-brown-500 text-xs">Arquivo pessoal · 2025</span>
+            </div>
+          </div>
+          <div class="md:col-span-3">
+            <figure class="relative w-full overflow-hidden rounded shadow-sm ">
+              <figcaption class="absolute left-4 top-4 z-10 rounded bg-brown-700 px-3 py-1 text-sm uppercase text-white shadow">Arquivo 06</figcaption>
+              <img src="public/history/arquivo-6.jpg" alt="Pré-visualização do Arquivo 01" class="h-auto w-full object-cover max-h-[700px]" />
+            </figure>
+            <div class="flex flex-col gap-4">
+              <h4 class="text-brown-600 uppercase font-medium">Entre os vinhedos</h4>
+              <p class="text-brown-600 libre-baskerville-regular text-sm leading-loose">Erika durante a visita aos vinhedos do Sul do Brasil.</p>
+              <span class="uppercase libre-baskerville-regular text-brown-500 text-xs">Arquivo pessoal · 2025</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Terroirs do Brasil-->
+      <div class="w-full bg-brown-700 px-2 md:px-5 py-30 flex flex-col gap-16">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-10 lg:gap-30">
+          <div class="text-left">
+            <h2 class="text-2xl text-brown-400 libre-baskerville-regular">O próximo capítulo</h2>
+            <h2 class="text-5xl md:text-5xl lg:text-7xl text-brown-200 uppercase playfair-display-400 leading-none tracking-tighter w-full break-words">
+              Terroirs do Brasil
+            </h2>
+          </div>
+          <div class="flex flex-col gap-5">
+            <p class="text-brown-200 libre-baskerville-regular text-base leading-loose">
+              Foi viajando, visitando produtores e buscando novos projetos que nasceu o conceito que representa o próximo capítulo da Arturo Vinhos: Terroirs
+              do Brasil.
+            </p>
+            <p class="text-brown-200 libre-baskerville-regular text-base leading-loose">
+              Durante muito tempo, falar em vinho brasileiro de qualidade significava olhar quase exclusivamente para a Serra Gaúcha. Ela continua sendo
+              fundamental para nossa história e para a história do vinho nacional.
+            </p>
+            <p class="text-brown-200 libre-baskerville-regular text-base leading-loose">
+              Mas o Brasil mudou. Novas regiões surgiram, novos produtores apareceram, novas técnicas foram desenvolvidas e terroirs completamente diferentes
+              começaram a revelar sua personalidade.
+            </p>
+            <p class="text-brown-200 libre-baskerville-regular text-base leading-loose">
+              Percebemos, então, que a identidade da Arturo não precisava estar presa a uma vinícola, a um único vinhedo ou a uma região específica. Nossa
+              identidade poderia estar justamente na busca.
+            </p>
+          </div>
+        </div>
+        <div class="w-full max-w-7xl mx-auto h-[1px] bg-brown-300"></div>
+        <div class="max-w-7xl mx-auto text-center">
+          <span class="block max-w-6xl mx-auto py-12 md:py-30 text-brown-200 playfair-display-600 leading-12 md:leading-18 text-4xl md:text-5xl">
+            “Não procuramos um único lugar para fazer nossos vinhos. Procuramos o lugar certo para cada vinho.”
+          </span>
+        </div>
+        <div class="w-full max-w-7xl mx-auto h-[1px] bg-brown-300"></div>
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20">
+          <img src="./public/img/background/1.jpg" alt="" class="w-full object-cover aspect-[6/4] rounded z-10 shadow-sm" />
+          <div class="flex flex-col gap-5">
+            <p class="text-brown-200 libre-baskerville-regular text-base leading-loose">
+              Hoje, nossos projetos passam por diferentes terroirs brasileiros, incluindo Vale dos Vinhedos, Garibaldi, Campanha Gaúcha e Serra da
+              Mantiqueira. Amanhã, novas regiões poderão fazer parte dessa história.
+            </p>
+            <p class="text-brown-200 libre-baskerville-regular text-base leading-loose">
+              Porque “Terroirs do Brasil” não estabelece fronteiras. Estabelece um compromisso.
+            </p>
+            <p class="text-brown-200 libre-baskerville-regular text-base leading-loose">
+              Se uma uva encontra sua melhor expressão em determinada região, queremos conhecê-la. Se encontramos um produtor ou um enólogo com um trabalho
+              extraordinário, queremos conversar com ele. Se descobrimos um vinhedo capaz de entregar algo especial, queremos estar lá.
+            </p>
+            <p class="text-brown-200 libre-baskerville-regular text-base leading-loose">
+              Não enxergamos o Brasil como um único terroir. Enxergamos um país inteiro de possibilidades.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--Somelier-->
+      <div id="historyContainer" class="max-w-7xl mx-auto grid md:grid-cols-5 gap-12 md:gap-10 lg:gap-40 px-4 items-center">
+        <img src="./public/history/arthur.png" alt="" class="object-cover md:col-span-2 rounded z-10 md:aspect-[4/6]" />
+        <div class="md:col-span-3 flex flex-col gap-5">
+          <div class="flex flex-col gap-2">
+            <span class="text-md text-brown-muted uppercase tracking-widest libre-baskerville-bold">Quem está por trás da Arturo</span>
+            <span class="text-6xl md:text-9xl text-brown-600 capitalize playfair-display-400 leading-none tracking-tighter">Arthur</span>
+            <span class="text-xl text-brown-500 libre-baskerville-regular">Fundador e sommelier da Arturo Vinhos</span>
+          </div>
+          <p class="text-brown-700 libre-baskerville-regular text-base leading-loose">
+            Minha relação com o vinho foi construída entre a vivência familiar, o estudo e os anos de contato direto com produtores e consumidores. Acredito
+            que cada vinho deve nascer de um encontro verdadeiro entre lugar, uva e pessoas. É essa busca que orienta os projetos da Arturo e que continuará
+            conduzindo os próximos capítulos da nossa história.
+          </p>
+        </div>
+      </div>
+    </main>
 
-      <footer class="bg-zinc-900 text-white">
+        <footer class="bg-zinc-900 text-white">
         <div class="max-w-7xl mx-auto px-6 py-6">
-          <div class="grid grid-cols-3 md:grid-cols-4 gap-8 border-b border-gold pb-4 md:pb-10">
-            <div class="col-span-3 md:col-span-1 flex justify-center">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-8 border-b border-gold pb-4 md:pb-10">
+            <div class="col-span-3 md:col-span-1 flex  justify-center ">
               <a href="index.html" class="barlow-bold text-3xl font-serif font-bold tracking-widest text-brown-400 hover:text-white transition duration-300">
                 <img src="./public/logo/logo.png" alt="" class="w-45" />
               </a>
             </div>
 
-            <div class="">
-              <h3 class="text-base font-bold mb-4 uppercase tracking-wider text-brown-400">Menu</h3>
+            <div class="md:col-span-2">
+              <h3 class="text-base font-bold mb-4 uppercase tracking-wider text-brown-400">
+                Menu
+              </h3>
               <ul class="space-y-3">
                 <li>
                   <a href="index.html" class="text-gray-300 hover:text-white transition duration-200 text-sm block">Página Inicial</a>
@@ -526,15 +473,15 @@
                   <a href="historyPage.html" class="text-gray-300 hover:text-white transition duration-200 text-sm block">História</a>
                 </li>
                 <li>
-                  <a href="https://www.botecodovinho.com.br/" target="_blank" class="text-gray-300 hover:text-white transition duration-200 text-sm block">
-                    Loja Online
-                  </a>
+                  <a href="https://www.botecodovinho.com.br/" target="_blank" class="text-gray-300 hover:text-white transition duration-200 text-sm block">Loja Online</a>
                 </li>
               </ul>
             </div>
-
+            <!--
             <div class="">
-              <h3 class="text-base font-bold mb-4 uppercase tracking-wider text-brown-400">Coleções</h3>
+              <h3 class="text-base font-bold mb-4 uppercase tracking-wider text-brown-400">
+                Coleções
+              </h3>
               <ul class="space-y-3">
                 <li>
                   <a href="categoryPage.html?type=suave" class="text-gray-300 hover:text-white transition duration-200 text-sm block">Suaves</a>
@@ -549,35 +496,27 @@
                   <a href="categoryPage.html?type=espumante" class="text-gray-300 hover:text-white transition duration-200 text-sm block">Espumantes</a>
                 </li>
               </ul>
-            </div>
+            </div> -->
 
-            <div class="">
-              <h3 class="text-base font-bold mb-4 uppercase tracking-wider text-brown-400">Social</h3>
+            <div id="contactContainer" class="">
+              <h3 id="social" class="text-base font-bold mb-4 uppercase tracking-wider text-brown-400">
+                Social
+              </h3>
 
-              <div class="flex flex-col md:flex-row gap-4">
-                <a
-                  href="https://www.instagram.com/botecodovinho/"
-                  target="_blank"
-                  class="text-gray-300 hover:text-gray-100 transition duration-200 flex items-center gap-3">
+              <div class="flex flex-col md:flex-row gap-4  ">
+                <a href="https://www.instagram.com/botecodovinho/" target="_blank" class="text-gray-300 hover:text-gray-100 transition duration-200 flex items-center gap-3">
                   <div class="w-7 flex justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 20" class="shrink-0">
-                      <path
-                        fill="currentColor"
-                        d="M17 1H3c-1.1 0-2 .9-2 2v14c0 1.101.9 2 2 2h14c1.1 0 2-.899 2-2V3c0-1.1-.9-2-2-2M9.984 15.523a5.54 5.54 0 0 0 5.538-5.539c0-.338-.043-.664-.103-.984H17v7.216a.69.69 0 0 1-.693.69H3.693a.69.69 0 0 1-.693-.69V9h1.549c-.061.32-.104.646-.104.984a5.54 5.54 0 0 0 5.539 5.539M6.523 9.984a3.461 3.461 0 1 1 6.922 0a3.461 3.461 0 0 1-6.922 0M16.307 6h-1.615A.694.694 0 0 1 14 5.308V3.691c0-.382.31-.691.691-.691h1.615c.384 0 .694.309.694.691v1.616c0 .381-.31.693-.693.693" />
+                      <path fill="currentColor" d="M17 1H3c-1.1 0-2 .9-2 2v14c0 1.101.9 2 2 2h14c1.1 0 2-.899 2-2V3c0-1.1-.9-2-2-2M9.984 15.523a5.54 5.54 0 0 0 5.538-5.539c0-.338-.043-.664-.103-.984H17v7.216a.69.69 0 0 1-.693.69H3.693a.69.69 0 0 1-.693-.69V9h1.549c-.061.32-.104.646-.104.984a5.54 5.54 0 0 0 5.539 5.539M6.523 9.984a3.461 3.461 0 1 1 6.922 0a3.461 3.461 0 0 1-6.922 0M16.307 6h-1.615A.694.694 0 0 1 14 5.308V3.691c0-.382.31-.691.691-.691h1.615c.384 0 .694.309.694.691v1.616c0 .381-.31.693-.693.693" />
                     </svg>
                   </div>
 
                   <span class="text-sm block md:hidden">Instagram</span>
                 </a>
-                <a
-                  href="https://www.botecodovinho.com.br/"
-                  target="_blank"
-                  class="text-gray-300 hover:text-gray-100 transition duration-200 flex items-center gap-3">
+                <a href="https://www.botecodovinho.com.br/" target="_blank" class="text-gray-300 hover:text-gray-100 transition duration-200 flex items-center gap-3">
                   <div class="w-7 flex justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 23 23" class="shrink-0">
-                      <path
-                        fill="currentColor"
-                        d="M3 22q-.825 0-1.412-.587T1 20V10q0-.425.288-.712T2 9t.713.288T3 10v10h16q.425 0 .713.288T20 21t-.288.713T19 22zm4-4q-.825 0-1.412-.587T5 16V6q0-.425.288-.712T6 5h4V3q0-.825.588-1.412T12 1h4q.825 0 1.413.588T18 3v2h4q.425 0 .713.288T23 6v10q0 .825-.587 1.413T21 18zm5-13h4V3h-4zm0 9.225q0 .3.263.425t.512-.025l4.05-2.575q.225-.15.225-.425t-.225-.425l-4.05-2.575q-.25-.15-.513-.025T12 9.025z" />
+                      <path fill="currentColor" d="M3 22q-.825 0-1.412-.587T1 20V10q0-.425.288-.712T2 9t.713.288T3 10v10h16q.425 0 .713.288T20 21t-.288.713T19 22zm4-4q-.825 0-1.412-.587T5 16V6q0-.425.288-.712T6 5h4V3q0-.825.588-1.412T12 1h4q.825 0 1.413.588T18 3v2h4q.425 0 .713.288T23 6v10q0 .825-.587 1.413T21 18zm5-13h4V3h-4zm0 9.225q0 .3.263.425t.512-.025l4.05-2.575q.225-.15.225-.425t-.225-.425l-4.05-2.575q-.25-.15-.513-.025T12 9.025z" />
                     </svg>
                   </div>
 
@@ -586,9 +525,7 @@
                 <a href="https://wa.me/5512996446844" target="_blank" class="text-gray-300 hover:text-gray-100 transition duration-200 flex items-center gap-3">
                   <div class="w-7 flex justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 16 16" class="shrink-0">
-                      <path
-                        fill="currentColor"
-                        d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144l-2.494.654l.666-2.433l-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931a6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646c-.182-.065-.315-.099-.445.099c-.133.197-.513.646-.627.775c-.114.133-.232.148-.43.05c-.197-.1-.836-.308-1.592-.985c-.59-.525-.985-1.175-1.103-1.372c-.114-.198-.011-.304.088-.403c.087-.088.197-.232.296-.346c.1-.114.133-.198.198-.33c.065-.134.034-.248-.015-.347c-.05-.099-.445-1.076-.612-1.47c-.16-.389-.323-.335-.445-.34c-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992c.47.205.84.326 1.129.418c.475.152.904.129 1.246.08c.38-.058 1.171-.48 1.338-.943c.164-.464.164-.86.114-.943c-.049-.084-.182-.133-.38-.232" />
+                      <path fill="currentColor" d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144l-2.494.654l.666-2.433l-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931a6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646c-.182-.065-.315-.099-.445.099c-.133.197-.513.646-.627.775c-.114.133-.232.148-.43.05c-.197-.1-.836-.308-1.592-.985c-.59-.525-.985-1.175-1.103-1.372c-.114-.198-.011-.304.088-.403c.087-.088.197-.232.296-.346c.1-.114.133-.198.198-.33c.065-.134.034-.248-.015-.347c-.05-.099-.445-1.076-.612-1.47c-.16-.389-.323-.335-.445-.34c-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992c.47.205.84.326 1.129.418c.475.152.904.129 1.246.08c.38-.058 1.171-.48 1.338-.943c.164-.464.164-.86.114-.943c-.049-.084-.182-.133-.38-.232" />
                     </svg>
                   </div>
 
@@ -597,20 +534,20 @@
               </div>
 
               <div class="hidden md:block mt-8 pt-4 border-t border-gold">
-                <h4 class="text-base font-semibold text-brown-400">Pronto para revender?</h4>
-                <a
-                  href="/revendedor"
-                  class="inline-flex py-3 text-gray-300 hover:text-white transition duration-200 text-sm block font-bold transition duration-300 text-sm uppercase tracking-wide">
+                <h4 class="text-base font-semibold text-brown-400">
+                  Pronto para revender?
+                </h4>
+                <a href="/revendedor" class="inline-flex py-3 text-gray-300 hover:text-white transition duration-200 text-sm block font-bold transition duration-300 text-sm uppercase tracking-wide">
                   Seja um Revendedor Agora
                 </a>
               </div>
             </div>
 
-            <div class="md:hidden col-span-3 flex-col text-center mt-4">
-              <h4 class="text-base font-semibold text-brown-400">Pronto para revender?</h4>
-              <a
-                href="/revendedor"
-                class="inline-flex py-3 text-gray-300 hover:text-white transition duration-200 text-sm block font-bold transition duration-300 text-sm uppercase tracking-wide">
+            <div class=" md:hidden col-span-3 flex-col text-center mt-4">
+              <h4 class="text-base font-semibold text-brown-400">
+                Pronto para revender?
+              </h4>
+              <a href="/revendedor" class="inline-flex py-3 text-gray-300 hover:text-white transition duration-200 text-sm block font-bold transition duration-300 text-sm uppercase tracking-wide">
                 Seja um Revendedor Agora
               </a>
             </div>
@@ -618,13 +555,17 @@
 
           <div class="pt-8 text-center md:flex md:justify-between md:items-center">
             <p id="footer-year" class="text-xs text-brown-400 order-2 md:order-1">
-              &copy; {{ new Date().getFullYear() }} Boteco do Vinho. Todos os direitos reservados.
+              &copy; {{ new Date().getFullYear() }} Boteco do Vinho. Todos os
+              direitos reservados.
             </p>
-            <p class="text-xs text-brown-400 mt-2 md:mt-0 order-1 md:order-2">Desenvolvido com 🍷</p>
+            <p class="text-xs text-brown-400 mt-2 md:mt-0 order-1 md:order-2">
+              Desenvolvido com 🍷
+            </p>
           </div>
         </div>
       </footer>
-    </div>
-    <script src="./src/js/main.js" type="module"></script>
-  </body>
+  </div>
+  <script src="./src/js/main.js" type="module"></script>
+</body>
+
 </html>
