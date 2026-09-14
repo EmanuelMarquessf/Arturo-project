@@ -129,61 +129,63 @@
     </header>
 
     <main class="flex flex-col gap-16 md:gap-30 h-full py-16">
-      <!--Nossa História-->
       <div id="historyContainer" class="max-w-7xl mx-auto gap-12 md:gap-24 px-4 items-center">
-        <div class="md:my-12 flex flex-col items-start gap-12 lg:gap-20">
+        <div class=" flex flex-col items-start gap-12 lg:gap-20">
           <div class="text-left grid grid-cols-1 lg:grid-cols-4 items-end gap-4">
-            <h2 class=" md:text-2xl text-brown-500 libre-baskerville-regular lg:col-span-4">Terroirs do Brasil · Serra Gaúcha</h2>
-            <h2 class="text-5xl md:text-8xl lg:text-8xl text-brown-600 uppercase playfair-display-400 leading-none tracking-tighter lg:col-span-2">
-              Vale dos<br>Vinhedos
+            <h2 id="titleLocation" class="md:text-2xl text-brown-500 libre-baskerville-regular lg:col-span-4">Terroirs do Brasil · Serra Gaúcha</h2>
+            <h2 id="terroirName" class="text-5xl md:text-8xl lg:text-8xl text-brown-600 uppercase playfair-display-400 leading-none tracking-tighter lg:col-span-2">
+              Vale dos
+              <br />
+              Vinhedos
             </h2>
             <span class="hidden md:block"></span>
-            <span class="text-brown-400 libre-baskerville-regular text-2xl leading-relaxed pl-5 border-l-brown-500 grid" id="descricaoContainer">
+            <span id="mainheadlineTerroir" class="text-brown-400 libre-baskerville-regular text-2xl leading-relaxed pl-5 border-l-brown-500 grid" id="mainheadlineTerroir">
               Um dos territórios mais emblemáticos do vinho brasileiro
             </span>
           </div>
 
           <div class="w-full flex flex-col gap-2">
-            <img src="./public/terroirs/garibaldi.png" id="imgTerroir" class="object-cover max-h-[380px] rounded w-full" />
+            <img id="terroirImage" src="./public/terroirs/garibaldi.png" class="object-cover object-center max-h-[380px] rounded w-full" />
             <div class="flex flex-row justify-between uppercase text-brown-muted font-medium text-xs tracking-widest">
-              <span>Serra Gaúcha</span>
-              <span>Rio Grande do Sul</span>
+              <span id="location">Serra Gaúcha</span>
+              <span id="state">Rio Grande do Sul</span>
             </div>
           </div>
         </div>
       </div>
-      <!--Da mesa de família ao mundo do vinho-->
-      <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 lg:gap-32 items-center px-4">
-        <div class="flex flex-col gap-4">
-          <span class="text-lg text-brown-500 libre-baskerville-regular-italic">01</span>
-          <p class="text-brown-600 libre-baskerville-regular text-4xl leading-snug">
-            Localizado na Serra Gaúcha, o Vale dos Vinhedos reúne encostas, diferentes altitudes e solos de origem vulcânica, formando uma paisagem diversa
-            para a viticultura.
-          </p>
-        </div>
-        <div class="flex flex-col gap-12">
-          <p class="text-brown-700 libre-baskerville-regular text-base leading-loose">
-            Sua história está profundamente ligada à imigração italiana e à agricultura familiar, que ajudaram a construir uma tradição vitivinícola
-            transmitida por gerações.
-          </p>
-          <div class="w-full h-[1px] bg-brown-300"></div>
-          <div class="flex flex-row gap-10">
-            <span class="text-3xl text-brown-500 libre-baskerville-regular-italic">2012</span>
-            <p class="text-brown-700 libre-baskerville-regular text-base leading-loose">
-              O território recebeu o reconhecimento de Denominação de Origem, resultado de um longo trabalho de estudo, delimitação e caracterização de seus
-              vinhos e de seu território.
+
+      <div class="max-w-6xl mx-auto grid lg:grid-cols-3 gap-10 lg:gap-32 items-start px-4">
+        <div class="flex flex-col gap-8 col-span-2">
+          <div class="flex flex-col gap-4">
+            <span class="text-lg text-brown-500 uppercase font-medium">Sobre o Terroir</span>
+            <p class="text-brown-700 libre-baskerville-regular text-lg leading-loose">
+              Localizado na Serra Gaúcha, o Vale dos Vinhedos reúne encostas, diferentes altitudes e solos de origem vulcânica, formando uma paisagem diversa
+              para a viticultura. Sua história está profundamente ligada à imigração italiana e à agricultura familiar, que ajudaram a construir uma tradição
+              vitivinícola transmitida por gerações. O território recebeu o reconhecimento de Denominação de Origem, resultado de um longo trabalho de estudo,
+              delimitação e caracterização de seus vinhos e de seu território.
             </p>
+          </div>
+        </div>
+        <div class="flex flex-col gap-8 border-l-brown-500 px-8 mt-10">
+          <div class="flex flex-col">
+            <span class="text-sm text-brown-500 font-medium uppercase">Região</span>
+            <span class="text-brown-700 libre-baskerville-regular leading-loose text-xl">Serra Gaúcha</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-sm text-brown-500 font-medium uppercase">Estado</span>
+            <span class="text-brown-700 libre-baskerville-regular  leading-loose text-xl">Serra Gaúcha</span>
           </div>
         </div>
       </div>
 
-      <!--Terroirs do Brasil-->
       <div class="w-full bg-green px-2 md:px-5 py-20 flex flex-col gap-16">
-        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-15">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-20">
           <div class="text-left">
-            <h2 class="text-sm text-brown-350 uppercase font-medium tracking-widest">A expressão do lugar</h2>
+            <h2 class="text-lg text-brown-350 uppercase font-medium tracking-widest  libre-baskerville-regular">A expressão do lugar</h2>
             <h2 class="text-5xl md:text-5xl lg:text-8xl text-brown-200 uppercase playfair-display-400 leading-none tracking-tighter w-full break-words">
-              O que marca<br>esse terroir?
+              O que marca
+              <br />
+              esse terroir?
             </h2>
           </div>
           <div class="grid grid-cols-2">
@@ -210,7 +212,11 @@
               </p>
             </div>
             <div class="p-12 flex flex-col gap-4 border border-brown-350">
-              <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mountain text-brown-350" aria-hidden="true"><path d="M14 9.536V7a4 4 0 0 1 4-4h1.5a.5.5 0 0 1 .5.5V5a4 4 0 0 1-4 4 4 4 0 0 0-4 4c0 2 1 3 1 5a5 5 0 0 1-1 3"></path><path d="M4 9a5 5 0 0 1 8 4 5 5 0 0 1-8-4"></path><path d="M5 21h14"></path></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mountain text-brown-350" aria-hidden="true">
+                <path d="M14 9.536V7a4 4 0 0 1 4-4h1.5a.5.5 0 0 1 .5.5V5a4 4 0 0 1-4 4 4 4 0 0 0-4 4c0 2 1 3 1 5a5 5 0 0 1-1 3"></path>
+                <path d="M4 9a5 5 0 0 1 8 4 5 5 0 0 1-8-4"></path>
+                <path d="M5 21h14"></path>
+              </svg>
 
               <h3 class="text-brown-350 text-sm font-semibold tracking-[0.15em] uppercase m-0">Solo</h3>
               <p class="text-brown-200 libre-baskerville-regular text-base leading-loose">
@@ -218,7 +224,17 @@
               </p>
             </div>
             <div class="p-12 flex flex-col gap-4 border border-brown-350">
-              <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mountain text-brown-350" aria-hidden="true"><path d="M22 5V2l-5.89 5.89"></path><circle cx="16.6" cy="15.89" r="3"></circle><circle cx="8.11" cy="7.4" r="3"></circle><circle cx="12.35" cy="11.65" r="3"></circle><circle cx="13.91" cy="5.85" r="3"></circle><circle cx="18.15" cy="10.09" r="3"></circle><circle cx="6.56" cy="13.2" r="3"></circle><circle cx="10.8" cy="17.44" r="3"></circle><circle cx="5" cy="19" r="3"></circle></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mountain text-brown-350" aria-hidden="true">
+                <path d="M22 5V2l-5.89 5.89"></path>
+                <circle cx="16.6" cy="15.89" r="3"></circle>
+                <circle cx="8.11" cy="7.4" r="3"></circle>
+                <circle cx="12.35" cy="11.65" r="3"></circle>
+                <circle cx="13.91" cy="5.85" r="3"></circle>
+                <circle cx="18.15" cy="10.09" r="3"></circle>
+                <circle cx="6.56" cy="13.2" r="3"></circle>
+                <circle cx="10.8" cy="17.44" r="3"></circle>
+                <circle cx="5" cy="19" r="3"></circle>
+              </svg>
 
               <h3 class="text-brown-350 text-sm font-semibold tracking-[0.15em] uppercase m-0">Identidade</h3>
               <p class="text-brown-200 libre-baskerville-regular text-base leading-loose">
@@ -227,47 +243,29 @@
             </div>
           </div>
         </div>
-        <div class="w-full max-w-7xl mx-auto h-[1px] bg-brown-300"></div>
-        <div class="max-w-7xl mx-auto text-center">
-          <span class="block max-w-6xl mx-auto py-12 md:py-30 text-brown-200 playfair-display-600 leading-12 md:leading-18 text-4xl md:text-5xl">
-            “Não procuramos um único lugar para fazer nossos vinhos. Procuramos o lugar certo para cada vinho.”
-          </span>
-        </div>
-        <div class="w-full max-w-7xl mx-auto h-[1px] bg-brown-300"></div>
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20">
-          <img src="./public/img/background/1.jpg" alt="" class="w-full object-cover aspect-[6/4] rounded z-10 shadow-sm" />
-          <div class="flex flex-col gap-5">
-            <p class="text-brown-200 libre-baskerville-regular text-base leading-loose">
-              Hoje, nossos projetos passam por diferentes terroirs brasileiros, incluindo Vale dos Vinhedos, Garibaldi, Campanha Gaúcha e Serra da
-              Mantiqueira. Amanhã, novas regiões poderão fazer parte dessa história.
-            </p>
-            <p class="text-brown-200 libre-baskerville-regular text-base leading-loose">
-              Porque “Terroirs do Brasil” não estabelece fronteiras. Estabelece um compromisso.
-            </p>
-            <p class="text-brown-200 libre-baskerville-regular text-base leading-loose">
-              Se uma uva encontra sua melhor expressão em determinada região, queremos conhecê-la. Se encontramos um produtor ou um enólogo com um trabalho
-              extraordinário, queremos conversar com ele. Se descobrimos um vinhedo capaz de entregar algo especial, queremos estar lá.
-            </p>
-            <p class="text-brown-200 libre-baskerville-regular text-base leading-loose">
-              Não enxergamos o Brasil como um único terroir. Enxergamos um país inteiro de possibilidades.
-            </p>
-          </div>
-        </div>
       </div>
-
-      <!--Somelier-->
-      <div id="historyContainer" class="max-w-7xl mx-auto grid md:grid-cols-5 gap-12 md:gap-10 lg:gap-40 px-4 items-center">
+<!--
+      <div class="max-w-4xl mx-auto flex flex-row gap-6 md:gap-20 lg:gap-40 px-4">
+        <span class="text-2xl md:text-4xl lg:text-5xl text-end md:leading-12 lg:leading-16 text-brown-500 libre-baskerville-regular-italic">01</span>
+        <div class="flex flex-col gap-5">
+          <h3 class="text-3xl md:text-6xl md:leading-12 lg:leading-16 text-brown-600 libre-baskerville-regular">O olhar da Arturo</h3>
+          <div class="w-full max-w-5xl mx-auto h-[1px] bg-brown-300"></div>
+          <p class="text-brown-700 libre-baskerville-regular leading-loose text-xl">
+            No Vale dos Vinhedos, não buscamos apenas uma origem. Buscamos entender cada vinhedo, cada encosta e as pessoas que transformam esse território em
+            vinho.
+          </p>
+        </div>
+      </div>-->
+            <div id="historyContainer" class="max-w-7xl mx-auto grid md:grid-cols-5 gap-12 md:gap-10 lg:gap-40 px-4 items-center">
         <img src="./public/history/arthur.png" alt="" class="object-cover md:col-span-2 rounded z-10 md:aspect-[4/6]" />
         <div class="md:col-span-3 flex flex-col gap-5">
           <div class="flex flex-col gap-2">
-            <span class="text-md text-brown-muted uppercase tracking-widest libre-baskerville-bold">Quem está por trás da Arturo</span>
+            <span class="text-md text-brown-muted uppercase tracking-widest libre-baskerville-bold">O olhar do</span>
             <span class="text-6xl md:text-9xl text-brown-600 capitalize playfair-display-400 leading-none tracking-tighter">Arthur</span>
             <span class="text-xl text-brown-500 libre-baskerville-regular">Fundador e sommelier da Arturo Vinhos</span>
           </div>
-          <p class="text-brown-700 libre-baskerville-regular text-base leading-loose">
-            Minha relação com o vinho foi construída entre a vivência familiar, o estudo e os anos de contato direto com produtores e consumidores. Acredito
-            que cada vinho deve nascer de um encontro verdadeiro entre lugar, uva e pessoas. É essa busca que orienta os projetos da Arturo e que continuará
-            conduzindo os próximos capítulos da nossa história.
+          <p class="text-brown-700 libre-baskerville-regular text-xl leading-loose">
+            No Vale dos Vinhedos, não buscamos apenas uma origem. Buscamos entender cada vinhedo, cada encosta e as pessoas que transformam esse território em vinho.
           </p>
         </div>
       </div>
@@ -377,6 +375,7 @@
       </div>
     </footer>
   </div>
+  <script src="./src/js/terroirPage.js" type="module"></script>
 </body>
 
 </html>

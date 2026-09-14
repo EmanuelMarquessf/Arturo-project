@@ -130,6 +130,9 @@ html {
 .border-l-brown-300 {
   border-left: 2px solid var(--brown-300);
 }
+.border-l-brown-350 {
+  border-left: 2px solid var(--brown-350);
+}
 .border-l-brown-400 {
   border-left: 2px solid var(--brown-400);
 }

@@ -80,7 +80,7 @@ function loadTerroirs() {
     <a href="terroirPage.html?id=${terroir.id}" class="group relative flex flex-col justify-end w-[350px] h-[450px] md:h-[650px] overflow-hidden transform transition duration-300 ease-in-out cursor-pointer shrink-0">
       
       <!-- Imagem de fundo com efeito de zoom suave no hover -->
-      <img src="${terroir.cardImage}" alt="${terroir.name}" class="absolute inset-0 w-full h-full object-cover z-0 transition duration-700 ease-in-out group-hover:scale-110" />
+      <img src="./public/terroirs/${terroir.cardImage}" alt="${terroir.name}" class="absolute inset-0 w-full h-full object-cover z-0 transition duration-700 ease-in-out group-hover:scale-110" />
       
       <!-- Gradiente escuro para garantir a leitura do texto -->
       <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10"></div>
