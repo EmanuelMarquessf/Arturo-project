@@ -9,34 +9,24 @@ function buscarVinhoEExibirDetalhes() {
   // Busca o objeto de vinho correspondente ao ID
   const vinhoSelecionado = vinhosJson.find((vinho) => vinho.id === vinhoId);
 
-  // Se o vinho for encontrado, injeta os dados no HTML
   if (vinhoSelecionado) {
     // --- INJEÇÃO DE CAMPOS SIMPLES ---
     document.getElementById("tipoVinho").textContent = vinhoSelecionado.type;
     document.getElementById("tituloVinho").textContent = vinhoSelecionado.title;
     document.getElementById("categoria").textContent = vinhoSelecionado.type;
-    document.getElementById("variedade").textContent =
-      vinhoSelecionado.textContent =
-        vinhoSelecionado.grape.split(",").length > 1
-          ? "Blend"
-          : vinhoSelecionado.grape;
+
+    document.getElementById("variedade").textContent = vinhoSelecionado.textContent =
+      vinhoSelecionado.grape.split(",").length > 1 ? "Blend" : vinhoSelecionado.grape;
+
     document.getElementById("volume").textContent = vinhoSelecionado.volume;
     document.getElementById("teor").textContent = vinhoSelecionado.alcolic;
-    vinhoSelecionado.volume;
-    document.getElementById("descricaoContainer").textContent =
-      vinhoSelecionado.description;
-    document.getElementById("harmonizacao").textContent =
-      vinhoSelecionado.harmonization;
+    document.getElementById("harmonizacao").textContent = vinhoSelecionado.harmonization;
     document.getElementById("buttonToStore").href = vinhoSelecionado.url;
 
-    // --- INJEÇÃO DA IMAGEM ---
-    document.getElementById("imagemContainer").innerHTML = `
-          <img 
-            src="${vinhoSelecionado.image}" 
-            alt="Imagem de ${vinhoSelecionado.title}" 
-            class="w-56 lg:w-92 h-120 md:h-150 object-contain transition-transform duration-500 hover:scale-105"
-          />
-        `;
+    document.getElementById("descricaoContainer").textContent = vinhoSelecionado.description;
+
+    document.getElementById("imageWine").src = `${vinhoSelecionado.image}`;
+    document.getElementById("imageWine").alt = `Imagem de ${vinhoSelecionado.title}`;
 
     const descriptionHTML = vinhoSelecionado.description;
     // --- INJEÇÃO DA DESCRIÇÃO (Múltiplos Parágrafos) ---
@@ -57,13 +47,8 @@ function buscarVinhoEExibirDetalhes() {
 
     // Usa insertAdjacentHTML para adicionar conteúdo, e não substituir tudo
     // O h2 "Sobre o Vinho" já está no HTML estático
-    document
-      .getElementById("descricaoContainer")
-      .insertAdjacentHTML("beforeend", descriptionHTML);
-
-    document
-      .getElementById("detailDescricaoContainer")
-      .insertAdjacentHTML("beforeend", detailDescriptionHTML);
+    document.getElementById("descricaoContainer").insertAdjacentHTML("beforeend", descriptionHTML);
+    document.getElementById("detailDescricaoContainer").insertAdjacentHTML("beforeend", detailDescriptionHTML);
 
     // --- MONTAGEM E INJEÇÃO DA FICHA TÉCNICA ---
 
@@ -80,18 +65,18 @@ function buscarVinhoEExibirDetalhes() {
 
     // Cria os elementos <li> para a lista
     const caracteristicasHTML = caracteristicas
+      .filter((item) => item.value)
       .map(
         (item) => `
             <li class="flex justify-between border-b-brown-300 py-1">
                 <span>${item.label}:</span>
                 <span class="font-medium text-brown-600 text-right">${item.value}</span>
             </li>
-        `
+        `,
       )
       .join("");
     // Injeta os itens <li> na lista <ul>
-    document.getElementById("fichaTecnicaLista").innerHTML =
-      caracteristicasHTML;
+    document.getElementById("fichaTecnicaLista").innerHTML = caracteristicasHTML;
 
     const listTopics = vinhoSelecionado.topics.split(";");
 
@@ -101,14 +86,12 @@ function buscarVinhoEExibirDetalhes() {
         <li class="py-1 text-base text-brown-500">
           <span class="text-brown-400 libre-baskerville-regular text-md">${item}</span>
         </li>
-      `
+      `,
       )
       .join("");
 
     document.getElementById("topicsContainer").innerHTML = topicsHTML;
   } else {
-    // --- TRATAMENTO DE ERRO (Vinho não encontrado) ---
-    // Se o vinho não for encontrado, exibe a mensagem de erro no container principal
     const estruturaPrincipal = document.getElementById("estruturaPrincipal");
     if (estruturaPrincipal) {
       estruturaPrincipal.innerHTML = `
@@ -123,9 +106,6 @@ function buscarVinhoEExibirDetalhes() {
   }
 }
 
-// ==========================================================
-// 2. INICIALIZAÇÃO
-// Garante que a função seja chamada somente após o DOM estar pronto
 // ==========================================================
 setupHeaderInteractions();
 document.addEventListener("DOMContentLoaded", buscarVinhoEExibirDetalhes);

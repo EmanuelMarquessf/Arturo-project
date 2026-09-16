@@ -95,7 +95,7 @@ function loadTerroirs() {
         
         <!-- Subtítulo (Localização) -->
         <span class="text-brown-100 text-xs tracking-wider">
-          ${terroir.location || "Região | Estado"}
+          ${terroir.region || ""} | ${terroir.state || ""}
         </span>
         
         <!-- Linha decorativa com ícone -->

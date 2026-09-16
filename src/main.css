@@ -58,6 +58,7 @@ html {
 .hover-text-brown-100:hover { color: var(--brown-100); }
 .hover-text-brown-200:hover { color: var(--brown-200); }
 .hover-text-brown-300:hover { color: var(--brown-300); }
+.hover-text-brown-350:hover { color: var(--brown-350); }
 .hover-text-brown-400:hover { color: var(--brown-400); }
 .hover-text-brown-500:hover { color: var(--brown-500); }
 .hover-text-brown-600:hover { color: var(--brown-600); }
@@ -98,6 +99,7 @@ html {
 .hover-brown-100:hover { background-color: var(--brown-100); }
 .hover-brown-200:hover { background-color: var(--brown-200); }
 .hover-brown-300:hover { background-color: var(--brown-300); }
+.hover-brown-350:hover { background-color: var(--brown-350); }
 .hover-brown-400:hover { background-color: var(--brown-400); }
 .hover-brown-500:hover { background-color: var(--brown-500); }
 .hover-brown-600:hover { background-color: var(--brown-600); }

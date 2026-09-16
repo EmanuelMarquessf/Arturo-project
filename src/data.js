@@ -142,7 +142,7 @@ export const terroirsJson =
                 identity: "Merlot, Chardonnay e Pinot Noir ocupam papel de destaque dentro da Denominação de Origem."
             },
             arturo_perspective: "No Vale dos Vinhedos, não buscamos apenas uma origem. Buscamos entender cada vinhedo, cada encosta e as pessoas que transformam esse território em vinho.",
-            location: "Serra Gaúcha",
+            region: "Serra Gaúcha",
             state: "Rio Grande do Sul",
             cardImage: "vale dos vinhedos.png",
             fullImage: ""
@@ -159,7 +159,7 @@ export const terroirsJson =
                 identity: "Forte tradição vitícola e diversidade de variedades, com destaque para Merlot, Cabernet Franc, Chardonnay e Moscato."
             },
             arturo_perspective: "Monte Belo nos mostra que estar próximo de outro terroir não significa ser igual. Cada território tem sua própria história, suas pessoas e sua maneira de expressar a viticultura.",
-            location: "Serra Gaúcha",
+            region: "Serra Gaúcha",
             state: "Rio Grande do Sul",
             cardImage: "monte belo do sul.png",
             fullImage: ""
@@ -176,7 +176,7 @@ export const terroirsJson =
                 identity: "Tradição centenária em espumantes, com destaque para Chardonnay, Pinot Noir e Riesling Itálico."
             },
             arturo_perspective: "Em Garibaldi, encontramos mais do que uma tradição em espumantes. Encontramos gerações de conhecimento dedicadas a entender a uva, preservar seu frescor e transformá-la em espumantes que ajudaram a construir a história do vinho brasileiro.",
-            location: "Serra Gaúcha",
+            region: "Serra Gaúcha",
             state: "Rio Grande do Sul",
             cardImage: "garibaldi.png",
             fullImage: ""
@@ -193,7 +193,7 @@ export const terroirsJson =
                 identity: "Paisagem do Pampa, tradição rural e diversidade de Vitis vinifera, da delicadeza da Pinot Noir à estrutura da Tannat."
             },
             arturo_perspective: "Na Campanha Gaúcha, encontramos a possibilidade de olhar para um mesmo território através de uvas muito diferentes. Da delicadeza da Pinot Noir à estrutura da Tannat, nosso trabalho é entender onde cada variedade encontra as condições e as pessoas certas para revelar sua própria expressão.",
-            location: "Pampa",
+            region: "Pampa",
             state: "Rio Grande do Sul",
             cardImage: "campanha gaucha.png",
             fullImage: ""
@@ -210,7 +210,7 @@ export const terroirsJson =
                 identity: "Vinhos de Inverno e dupla poda, com a Syrah como variedade emblemática desse movimento."
             },
             arturo_perspective: "Na Serra da Mantiqueira, encontramos um terroir que nasceu da capacidade de interpretar a natureza de uma nova maneira. Aqui, ciência e conhecimento transformaram o calendário da videira e abriram um novo caminho para o vinho brasileiro.",
-            location: "Sudeste do Brasil",
+            region: "Sudeste do Brasil",
             state: "",
             cardImage: "serra da mantiqueira.png",
             fullImage: ""
