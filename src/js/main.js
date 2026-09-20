@@ -39,7 +39,6 @@ function setupAgeGate() {
   });
 }
 
-
 function filterSelectedProducts() {
   const selectedContainer = document.getElementById("productCards");
 
@@ -86,7 +85,7 @@ function loadTerroirs() {
       <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10"></div>
       
       <!-- Conteúdo do Card -->
-      <div class="relative z-20 w-full p-6 flex flex-col items-center text-center">
+      <div class="relative z-10 w-full p-6 flex flex-col items-center text-center">
         
         <!-- Título principal -->
         <h3 class="text-brown-300 text-lg tracking-[0.15em] uppercase libre-baskerville-regular mb-1">
@@ -122,7 +121,7 @@ function loadTerroirs() {
 
 function initializeApp() {
   setupAgeGate();
-  setupHeaderInteractions();
+  //setupHeaderInteractions();
   setupFooterInteractions();
   filterSelectedProducts();
   loadTerroirs();

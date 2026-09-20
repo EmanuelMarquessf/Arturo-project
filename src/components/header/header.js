@@ -2,17 +2,26 @@ export function setupHeaderInteractions() {
   const container = document.getElementById("wine-dropdown-container");
   const menu = document.getElementById("wine-dropdown-menu");
   const arrow = document.getElementById("wine-dropdown-arrow");
+  
+  // ALTERAÇÃO MÍNIMA 1: Variável para controlar o timeout e evitar que o menu pisque
+  let closeTimeout; 
 
   if (!container || !menu || !arrow) {
     console.error("Elementos do Header Dropdown não encontrados.");
     return;
   }
+  
   function openDropdown() {
+    clearTimeout(closeTimeout); // Evita que o menu feche se o mouse voltar rápido
+
     // Remove 'hidden' para mostrar o menu
     menu.classList.remove("hidden");
 
-    menu.classList.add("opacity-100", "scale-y-100");
-    menu.classList.remove("opacity-0", "scale-y-0");
+    // Pequeno delay para garantir que o navegador processe a remoção do 'hidden' antes de animar
+    setTimeout(() => {
+      menu.classList.add("opacity-100", "scale-y-100");
+      menu.classList.remove("opacity-0", "scale-y-0");
+    }, 10);
 
     arrow.classList.add("rotate-180");
   }
@@ -23,7 +32,7 @@ export function setupHeaderInteractions() {
 
     arrow.classList.remove("rotate-180");
 
-    setTimeout(() => {
+    closeTimeout = setTimeout(() => {
       menu.classList.add("hidden");
     }, 300);
   }
@@ -92,47 +101,16 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // ---------------------------------------------
-  // 2. Funcionalidade do Dropdown Desktop
-  // ---------------------------------------------
-  const wineDropdownContainer = document.getElementById(
-    "wine-dropdown-container"
-  );
-  const wineDropdownButton = document.getElementById("wine-dropdown-button");
-  const wineDropdownMenu = document.getElementById("wine-dropdown-menu");
-  const wineDropdownArrow = document.getElementById("wine-dropdown-arrow");
-
-  // Toggle por clique no desktop
-  wineDropdownButton.addEventListener("click", () => {
-    wineDropdownMenu.classList.toggle("hidden");
-    wineDropdownArrow.classList.toggle("rotate-180");
-  });
-
-  // Fechar se clicar fora
-  document.addEventListener("click", (event) => {
-    if (
-      !wineDropdownContainer.contains(event.target) &&
-      !wineDropdownMenu.classList.contains("hidden")
-    ) {
-      wineDropdownMenu.classList.add("hidden");
-      wineDropdownArrow.classList.remove("rotate-180");
-    }
-  });
+  // ALTERAÇÃO MÍNIMA 2: Removido o bloco "2. Funcionalidade do Dropdown Desktop" daqui
+  // Ele estava dando conflito com o hover (mouseenter/mouseleave) que já existe na função acima.
 
   // ---------------------------------------------
   // 3. Funcionalidade do Dropdown Mobile
   // ---------------------------------------------
-  // CORRIGIDO: As variáveis já foram definidas acima. Mantemos apenas o listener.
-
-  mobileWineDropdownButton.addEventListener("click", () => {
-    // Alterna a visibilidade do dropdown mobile
-    mobileWineDropdownMenu.classList.toggle("hidden");
-    // Gira a seta
-    mobileWineDropdownArrow.classList.toggle("rotate-180");
-  });
+  if(mobileWineDropdownButton){
+    mobileWineDropdownButton.addEventListener("click", () => {
+      mobileWineDropdownMenu.classList.toggle("hidden");
+      mobileWineDropdownArrow.classList.toggle("rotate-180");
+    });
+  }
 });
-// CORRIGIDO: Removida a chave de fechamento desnecessária da função exportada.
-// Caso você queira manter o 'export function setupHeaderInteractions() {'
-// e chamar document.addEventListener('DOMContentLoaded', setupHeaderInteractions);
-// fora da função (como no código completo anterior), o bloco acima deve estar
-// dentro da função 'setupHeaderInteractions'.

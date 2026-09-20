@@ -107,5 +107,5 @@ function buscarVinhoEExibirDetalhes() {
 }
 
 // ==========================================================
-setupHeaderInteractions();
+//setupHeaderInteractions();
 document.addEventListener("DOMContentLoaded", buscarVinhoEExibirDetalhes);

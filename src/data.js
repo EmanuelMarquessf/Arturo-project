@@ -19,6 +19,7 @@ export const vinhosJson = [
         alcolic: "",
         volume: "750ml",
         selected: true,
+        terroir: "1",
     },
     {
         id: 2,
@@ -40,13 +41,14 @@ export const vinhosJson = [
         alcolic: "",
         volume: "750ml",
         selected: true,
+        terroir: "2",
     },
     {
         id: 3,
         title: "Natural Delama Brut",
         type: "Vinho Espumante",
         description: `
-          Elaborado pelo método charmat, apresenta elegante perlage, fineza aromática, boa cremosidade, excelente equilíbrio e persistência.
+            Elaborado pelo método charmat, apresenta elegante perlage, fineza aromática, boa cremosidade, excelente equilíbrio e persistência.
         `,
         detailDescription: [
             "Iniciado em 2024, este projeto nasceu da seleção criteriosa das melhores uvas para a criação dos novos espumantes Arturo Vinhos. O lançamento está previsto para o final de 2025 — um brinde especial a mais um passo importante da nossa história.",
@@ -64,6 +66,7 @@ export const vinhosJson = [
         alcolic: "12.5%",
         volume: "750ml",
         selected: true,
+        terroir: "3",
     },
     {
         id: 4,
@@ -84,6 +87,7 @@ export const vinhosJson = [
         alcolic: "12.5%",
         volume: "",
         selected: true,
+        terroir: "1",
     },
     {
         id: 5,
@@ -103,6 +107,7 @@ export const vinhosJson = [
         alcolic: "",
         volume: "",
         selected: true,
+        terroir: "2",
     },
 
     {
@@ -125,6 +130,7 @@ export const vinhosJson = [
         alcolic: "12.5%",
         volume: "750ml",
         selected: true,
+        terroir: "3",
     },
 ];
 

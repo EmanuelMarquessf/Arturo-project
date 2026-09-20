@@ -2,7 +2,7 @@ import { setupHeaderInteractions } from "../components/header/header.js";
 import { setupFooterInteractions } from "../components/footer/footer.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  setupHeaderInteractions();
+  //setupHeaderInteractions();
   setupFooterInteractions();
 
   const btnContinuar = document.getElementById("btn-continuar-leitura");

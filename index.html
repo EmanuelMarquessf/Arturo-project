@@ -34,19 +34,20 @@
 
   <div class="flex flex-col min-h-screen justify-between bg-brown-100">
     <!-- Header -->
-      <header class="bg-zinc-900 top-0 z-10 sticky shadow-sm z-20">
-        <div class="max-w-7xl mx-auto py-4 flex justify-between items-center px-4 sm:px-6 lg:px-8">
-          <div class="flex-shrink-0">
-            <a href="index.html" class="barlow-bold text-3xl font-serif font-bold text-brown-400 tracking-wide hover:text-pink-700 transition duration-300">
-              <img src="./public/logo/logo.png" class="w-35" alt="Logo" />
-            </a>
-          </div>
+    <header class="bg-zinc-900 top-0 z-10 sticky shadow-sm z-20">
+      <div class="max-w-7xl mx-auto py-4 flex justify-between items-center px-4 sm:px-6 lg:px-8">
+        <div class="flex-shrink-0">
+          <a href="index.html" class="barlow-bold text-3xl font-serif font-bold text-brown-400 tracking-wide hover:text-pink-700 transition duration-300">
+            <img src="./public/logo/logo.png" class="w-35" alt="Logo" />
+          </a>
+        </div>
 
-          <nav class="hidden md:flex space-x-8 items-center relative">
-            <a href="index.html" class="text-gray-300 font-medium text-base hover:text-white transition duration-300 ease-in-out">Página Inicial</a>
-            <a href="#historyContainer" class="text-gray-300 font-medium text-base hover:text-white transition duration-300 ease-in-out">História</a>
-            <a href="#terroirContainer" class="text-gray-300 font-medium text-base hover:text-white transition duration-300 ease-in-out">Terroirs</a>
-            <!--
+        <nav class="hidden md:flex space-x-8 items-center relative">
+          <a href="index.html" class="text-gray-300 font-medium text-base hover:text-white transition duration-300 ease-in-out">Página Inicial</a>
+          <a href="#ourProducts" class="text-gray-300 font-medium text-base hover:text-white transition duration-300 ease-in-out">Vinhos</a>
+          <a href="#historyContainer" class="text-gray-300 font-medium text-base hover:text-white transition duration-300 ease-in-out">História</a>
+          <a href="#terroirContainer" class="text-gray-300 font-medium text-base hover:text-white transition duration-300 ease-in-out">Terroirs</a>
+          <!--
           <div class="relative group" id="wine-dropdown-container">
             <a href="#wineCategory" id="wine-dropdown-button" class="text-gray-300 font-medium text-base hover:text-white transition duration-300 ease-in-out flex items-center group-hover:text-white ">
               Familia Arturo
@@ -71,49 +72,38 @@
             </div>
           </div>-->
 
-            <a href="#ourProducts" class="text-gray-300 font-medium text-base hover:text-white transition duration-300 ease-in-out">Familia Arturo</a>
+          <a href="#buyContainer" class="text-gray-300 font-medium text-base hover:text-white transition duration-300 ease-in-out">Loja Online</a>
+          <a href="#contactContainer" class="border-brown-500 text-brown-500 hover-brown-500 hover-text-brown-100 rounded-full px-4 py-2 transition duration-300 font-medium text-base">
+            Contato
+          </a>
+        </nav>
 
-            <a href="#buyContainer" class="text-gray-300 font-medium text-base hover:text-white transition duration-300 ease-in-out">Loja Online</a>
-            <a
-              href="#contactContainer"
-              class="border-brown-500 text-brown-500 hover-brown-500 hover-text-brown-100 rounded-full px-4 py-2 transition duration-300 font-medium text-base">
-              Contato
-            </a>
-          </nav>
+        <button id="mobile-menu-toggle" class="md:hidden text-brown-400 hover:text-pink-700 z-30" aria-label="Abrir menu">
+          <svg id="icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
 
-          <button id="mobile-menu-toggle" class="md:hidden text-brown-400 hover:text-pink-700 z-30" aria-label="Abrir menu">
-            <svg id="icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-            <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-            </svg>
-          </button>
-        </div>
+      <nav id="mobile-menu" class="md:hidden hidden absolute top-full left-0 w-full bg-zinc-900 border-t border-zinc-700 shadow-lg z-20">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-center">
+          <a href="/index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-zinc-800 transition duration-300 w-full text-center">
+            Página Inicial
+          </a>
+          <a href="#ourProducts" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-zinc-800 transition duration-300 w-full text-center">
+            Vinhos
+          </a>
+          <a href="#historyContainer" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-zinc-800 transition duration-300 w-full text-center">
+            História
+          </a>
+          <a href="#terroirContainer" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-zinc-800 transition duration-300 w-full text-center">
+            Terroirs
+          </a>
 
-        <nav id="mobile-menu" class="md:hidden hidden absolute top-full left-0 w-full bg-zinc-900 border-t border-zinc-700 shadow-lg z-20">
-          <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-center">
-            <a
-              href="/index.html"
-              class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-zinc-800 transition duration-300 w-full text-center">
-              Página Inicial
-            </a>
-            <a
-              href="#historyContainer"
-              class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-zinc-800 transition duration-300 w-full text-center">
-              História
-            </a>
-            <a
-              href="#terroirContainer"
-              class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-zinc-800 transition duration-300 w-full text-center">
-              Terroirs
-            </a>
-            <a
-              href="#ourProducts"
-              class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-zinc-800 transition duration-300 w-full text-center">
-              Familia Arturo
-            </a>
-            <!--
+          <!--
           <div class="relative w-full text-center">
             <a href="index.html#wineCategory" id="mobile-wine-dropdown-button" class="px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-zinc-800 hover-text-brown-500 transition duration-300 w-full flex justify-center items-center">
               Familia Arturo
@@ -137,19 +127,15 @@
             </div>
           </div>
           -->
-            <a
-              href="index.html#buyContainer"
-              class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-zinc-800 transition duration-300 w-full text-center">
-              Loja Online
-            </a>
-            <a
-              href="/contato"
-              class="block border border-gold text-brown-400 hover:bg-gold hover:text-white rounded-full px-4 py-2 transition duration-300 font-medium text-base mt-2 w-1/2 text-center mx-auto">
-              Contato
-            </a>
-          </div>
-        </nav>
-      </header>
+          <a href="#buyContainer" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-zinc-800 transition duration-300 w-full text-center">
+            Loja Online
+          </a>
+          <a href="#contactContainer" class="block border border-gold text-brown-400 hover:bg-gold hover:text-white rounded-full px-4 py-2 transition duration-300 font-medium text-base mt-2 w-1/2 text-center mx-auto">
+            Contato
+          </a>
+        </div>
+      </nav>
+    </header>
 
     <main class="flex flex-col gap-16 md:gap-32 h-full">
       <!-- Pagina Inicial -->
@@ -410,7 +396,7 @@
 
           <!-- Botão de Ação -->
           <a href="https://www.botecodovinho.com.br/" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-4 rounded-lg border-2 border-brown-400 bg-brown-600 px-8 py-4 text-sm font-bold uppercase tracking-widest text-white shadow-sm transition-all duration-300 hover:border-brown-500 hover:bg-brown-700">
-            <span>Conheça Nossos Vinhos</span>
+            <span>Ver vinhos na loja online</span>
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M5 12h14" />
               <path d="m12 5 7 7-7 7" />
