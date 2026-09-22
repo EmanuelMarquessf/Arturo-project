@@ -23,7 +23,7 @@ function exibirDadosTerroir() {
     document.getElementById("soil").textContent = terroirSelecionado.characteristics.soil;
     document.getElementById("identity").textContent = terroirSelecionado.characteristics.identity;
 
-    document.getElementById("arturo_perspective").textContent = terroirSelecionado.arturo_perspective;
+    document.getElementById("arturo_perspective").textContent =`"${terroirSelecionado.arturo_perspective}"`;
 
     filterSelectedProducts(terroirId);
   }
@@ -40,7 +40,9 @@ function filterSelectedProducts(terroirId) {
   const filteredWine = vinhosJson.filter((item) => item.terroir == terroirId);
 
   if (filteredWine.length === 0) {
-    selectedContainer.innerHTML = "<p class='text-brown-500'>Nenhum vinho encontrado para este terroir no momento.</p>";
+    const productsTerroirContainer = document.getElementById("productsTerroirContainer");
+    productsTerroirContainer.innerHTML = ``;
+    //selectedContainer.innerHTML = "<p class='text-brown-500'>Nenhum vinho encontrado para este terroir no momento.</p>";
     return;
   }
 
