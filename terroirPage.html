@@ -338,34 +338,81 @@
           </div>
         </div>
 
-        <div id="productsTerroirContainer" class="max-w-7xl mx-auto flex flex-col gap-4 w-full scroll-mt-36 px-2 md:px-0">
-          <div class="flex justify-between items-end">
-            <div class="text-left">
-              <h2 class="text-base md:text-xl text-brown-500 libre-baskerville-regular">DA ORIGEM À TAÇA</h2>
-              <h2 class="text-4xl md:text-6xl text-brown-600 playfair-display-400">Vinhos deste terroir</h2>
-            </div>
-            <div class="flex gap-3">
-              <button
-                onclick="scrollCarrosselProducts(-1)"
-                class="p-2 border border-brown-200 rounded-full hover:bg-brown-200 transition text-brown-600 hover:scale-125 cursor-pointer">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-                  <path d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
-                </svg>
-              </button>
-              <button
-                onclick="scrollCarrosselProducts(1)"
-                class="p-2 border border-brown-200 rounded-full hover:bg-brown-200 transition text-brown-600 hover:scale-110 cursor-pointer">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-                  <path d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
-                </svg>
-              </button>
-            </div>
-          </div>
-          <div class="w-full h-[2px] bg-brown-200"></div>
-          <div
-            id="terroirProducts"
-            class="gap-6 flex flex-nowrap overflow-x-auto scrollbar-hide scroll-smooth snap-x snap-mandatory px-2 py-4 overflow-y-hidden custom-scrollbar"></div>
-        </div>
+<div
+  id="productsTerroirContainer"
+  class="max-w-7xl mx-auto flex flex-col gap-4 w-full scroll-mt-36 px-2 md:px-0"
+>
+  <div class="flex justify-between items-end">
+    <div class="text-left">
+      <h2 class="text-base md:text-xl text-brown-500 libre-baskerville-regular">
+        DA ORIGEM À TAÇA
+      </h2>
+
+      <h2 class="text-4xl md:text-6xl text-brown-600 playfair-display-400">
+        Vinhos deste terroir
+      </h2>
+    </div>
+  </div>
+
+  <div class="w-full h-[2px] bg-brown-200"></div>
+
+  <!-- Carrossel -->
+  <div class="relative w-full">
+
+    <!-- Cards -->
+    <div
+      id="terroirProducts"
+      class="gap-6 flex flex-nowrap overflow-x-auto scrollbar-hide scroll-smooth snap-x snap-mandatory px-2 py-4 overflow-y-hidden custom-scrollbar"
+    ></div>
+
+    <!-- Seta esquerda -->
+    <button
+      id="terroirProductsPrev"
+      onclick="scrollCarrosselProducts(-1)"
+      aria-label="Rolar para a esquerda"
+      class="absolute left-2 md:left-0 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 md:-translate-x-1/2 cursor-pointer items-center justify-center rounded-full border border-brown-600 bg-brown-600 text-brown-200 shadow-sm transition-all hover:scale-110 hover:bg-brown-100 active:scale-95 focus:outline-none focus:ring-2 focus:ring-brown-300"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        fill="currentColor"
+        viewBox="0 0 16 16"
+        aria-hidden="true"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
+        />
+      </svg>
+    </button>
+
+    <!-- Seta direita -->
+    <button
+      id="terroirProductsNext"
+      onclick="scrollCarrosselProducts(1)"
+      aria-label="Rolar para a direita"
+      class="absolute right-2 md:right-0 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 md:translate-x-1/2 cursor-pointer items-center justify-center rounded-full border border-brown-600 bg-brown-600 text-brown-200 shadow-sm transition-all hover:scale-110 hover:bg-brown-100 active:scale-95 focus:outline-none focus:ring-2 focus:ring-brown-300"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        fill="currentColor"
+        viewBox="0 0 16 16"
+        aria-hidden="true"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+        />
+      </svg>
+    </button>
+
+  </div>
+</div>
+
+
       </main>
 
       <footer class="bg-zinc-900 text-white">

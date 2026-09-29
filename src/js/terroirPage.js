@@ -29,6 +29,35 @@ function exibirDadosTerroir() {
   }
 }
 
+function updateTerroirProductsArrows() {
+  const container = document.getElementById('terroirProducts');
+  const prevButton = document.getElementById('terroirProductsPrev');
+  const nextButton = document.getElementById('terroirProductsNext');
+
+  if (!container || !prevButton || !nextButton) return;
+
+  const maxScroll = container.scrollWidth - container.clientWidth;
+
+  // Não existe conteúdo suficiente para scrollar
+  if (maxScroll <= 1) {
+    prevButton.classList.add('hidden');
+    nextButton.classList.add('hidden');
+    return;
+  }
+
+  // Botão esquerda
+  prevButton.classList.toggle(
+    'hidden',
+    container.scrollLeft <= 1
+  );
+
+  // Botão direita
+  nextButton.classList.toggle(
+    'hidden',
+    container.scrollLeft >= maxScroll - 1
+  );
+}
+
 function filterSelectedProducts(terroirId) {
   const selectedContainer = document.getElementById("terroirProducts");
 
@@ -63,7 +92,11 @@ function filterSelectedProducts(terroirId) {
   }).join("");
 
   selectedContainer.innerHTML = cardsHTML;
+
+  updateTerroirProductsArrows();
 }
+
+
 
 //setupHeaderInteractions();
 document.addEventListener("DOMContentLoaded", exibirDadosTerroir);
