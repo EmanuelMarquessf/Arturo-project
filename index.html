@@ -183,46 +183,18 @@
           <div id="productCards" class="flex w-full snap-x snap-mandatory flex-nowrap gap-6 overflow-x-auto overflow-y-hidden scroll-smooth px-2 py-4 scrollbar-hide custom-scrollbar"></div>
 
           <!-- Seta esquerda -->
-<button
-  onclick="scrollCarrosselProducts(-1)"
-  aria-label="Rolar para a esquerda"
-  class="absolute left-2 top-1/2 z-10 flex -translate-y-1/2 cursor-pointer items-center justify-center text-brown-600 transition-all hover:scale-125 hover:text-brown-400 active:scale-95 focus:outline-none md:left-0 md:-translate-x-full"
->
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="32"
-height="32"
-    fill="currentColor"
-    viewBox="0 0 16 16"
-    aria-hidden="true"
-  >
-    <path
-      fill-rule="evenodd"
-      d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
-    />
-  </svg>
-</button>
+          <button onclick="scrollCarrosselProducts(-1)" aria-label="Rolar para a esquerda" class="absolute left-2 -translate-x-0 md:left-0 md:-translate-x-1/2 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border border-brown-600 bg-brown-600 text-brown-300 shadow-sm transition-all hover:scale-110 hover:bg-brown-100 active:scale-95 focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+              <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+            </svg>
+          </button>
 
           <!-- Seta direita -->
-          <button
-  onclick="scrollCarrosselProducts(1)"
-  aria-label="Rolar para a direita"
-  class="absolute right-2 top-1/2 z-10 flex -translate-y-1/2 cursor-pointer items-center justify-center p-1 text-brown-600 transition-all hover:scale-125 hover:text-brown-400 active:scale-95 focus:outline-none md:right-0 md:translate-x-full"
->
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="32"
-    height="32"
-    fill="currentColor"
-    viewBox="0 0 16 16"
-    aria-hidden="true"
-  >
-    <path
-      fill-rule="evenodd"
-      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
-    />
-  </svg>
-</button>
+          <button onclick="scrollCarrosselProducts(1)" aria-label="Rolar para a direita"  class="absolute right-2 top-1/2 z-10 flex h-10 w-10 translate-y-[-50%] cursor-pointer items-center justify-center rounded-full border border-brown-600 bg-brown-600 text-brown-300 shadow-sm transition-all hover:scale-110 hover:bg-brown-100 active:scale-95 focus:outline-none md:right-0 md:translate-x-1/2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+              <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+            </svg>
+          </button>
 
         </div>
       </div>
