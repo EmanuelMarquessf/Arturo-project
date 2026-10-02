@@ -20,7 +20,7 @@ function buscarVinhoEExibirDetalhes() {
 
     document.getElementById("volume").textContent = vinhoSelecionado.volume;
     document.getElementById("teor").textContent = vinhoSelecionado.alcolic;
-    document.getElementById("harmonizacao").textContent = vinhoSelecionado.harmonization;
+    //document.getElementById("harmonizacao").textContent = vinhoSelecionado.harmonization;
     document.getElementById("buttonToStore").href = vinhoSelecionado.url;
 
     document.getElementById("descricaoContainer").textContent = vinhoSelecionado.description;
@@ -41,13 +41,10 @@ function buscarVinhoEExibirDetalhes() {
             <strong>${textoLimpo}</strong>
           </p>`;
         }
-        return `<p class="text-brown-400 libre-baskerville-regular text-base mb-4">${p}</p>`;
+        return `<p class="text-brown-700 libre-baskerville-regular text-base leading-relaxed md:leading-loose">${p}</p>`;
       })
       .join("");
 
-    // Usa insertAdjacentHTML para adicionar conteúdo, e não substituir tudo
-    // O h2 "Sobre o Vinho" já está no HTML estático
-    document.getElementById("descricaoContainer").insertAdjacentHTML("beforeend", descriptionHTML);
     document.getElementById("detailDescricaoContainer").insertAdjacentHTML("beforeend", detailDescriptionHTML);
 
     // --- MONTAGEM E INJEÇÃO DA FICHA TÉCNICA ---
@@ -61,6 +58,7 @@ function buscarVinhoEExibirDetalhes() {
       { label: "Safra", value: vinhoSelecionado.safra },
       { label: "Produtor", value: vinhoSelecionado.productor },
       { label: "Teor Alcoólico", value: vinhoSelecionado.alcolic },
+      { label: "Harmonização", value: vinhoSelecionado.harmonization },
     ];
 
     // Cria os elementos <li> para a lista
@@ -83,8 +81,8 @@ function buscarVinhoEExibirDetalhes() {
     const topicsHTML = listTopics
       .map(
         (item) => `
-        <li class="py-1 text-base text-brown-500">
-          <span class="text-brown-400 libre-baskerville-regular text-md">${item}</span>
+        <li class="py-1 text-lg md:text-2xl text-brown-500 border-b-brown-300">
+          <span class="pl-3 md:pl-6 text-brown-700 libre-baskerville-regular text-lg leading-loose">${item}</span>
         </li>
       `,
       )
