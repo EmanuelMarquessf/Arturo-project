@@ -11,7 +11,7 @@
   --brown-300: #D1B991;
   --brown-350: #AF9665;
   --brown-400: #9E845C;
-  
+  --brown-450: #aa7c36;
   --brown-500: #AF6900;
   --brown-600: #482817;
   --brown-700: #241710;
@@ -42,6 +42,9 @@ html {
 .text-brown-400{
   color: var(--brown-400);
 }
+.text-brown-450{
+  color: var(--brown-450);
+}
 .text-brown-500{
   color: var(--brown-500);
 }
@@ -60,6 +63,7 @@ html {
 .hover-text-brown-300:hover { color: var(--brown-300); }
 .hover-text-brown-350:hover { color: var(--brown-350); }
 .hover-text-brown-400:hover { color: var(--brown-400); }
+.hover-text-brown-450:hover { color: var(--brown-450); }
 .hover-text-brown-500:hover { color: var(--brown-500); }
 .hover-text-brown-600:hover { color: var(--brown-600); }
 
@@ -86,6 +90,9 @@ html {
 .bg-brown-400{
   background-color: var(--brown-400);
 }
+.bg-brown-450{
+  background-color: var(--brown-450);
+}
 .bg-brown-500{
   background-color: var(--brown-500);
 }
@@ -101,51 +108,85 @@ html {
 .hover-brown-300:hover { background-color: var(--brown-300); }
 .hover-brown-350:hover { background-color: var(--brown-350); }
 .hover-brown-400:hover { background-color: var(--brown-400); }
+.hover-brown-450:hover { background-color: var(--brown-450); }
 .hover-brown-500:hover { background-color: var(--brown-500); }
 .hover-brown-600:hover { background-color: var(--brown-600); }
 
-.border-brown-100 {
-  border-bottom: 2px solid var(--brown-100);
+
+.border-t-brown-100 {
+  border-top: 1.5px solid var(--brown-100);
+}
+.border-t-brown-200 {
+  border-top: 1.5px solid var(--brown-200);
+}
+.border-t-brown-300 {
+  border-top: 1.5px solid var(--brown-300);
+}
+.border-t-brown-350 {
+  border-top: 1.5px solid var(--brown-350);
+}
+.border-t-brown-400 {
+  border-top: 1.5px solid var(--brown-400);
+}
+.border-t-brown-450 {
+  border-top: 1.5px solid var(--brown-450);
+}
+.border-t-brown-500 {
+  border-top: 1.5px solid var(--brown-500);
+}
+.border-t-brown-600 {
+  border-top: 1.5px solid var(--brown-600);
+}
+
+
+.border-b-brown-100 {
+  border-bottom: 1.5px solid var(--brown-100);
 }
 .border-b-brown-200 {
-  border-bottom: 1px solid var(--brown-200);
+  border-bottom: 1.5px solid var(--brown-200);
 }
 .border-b-brown-300 {
-  border-bottom: 2px solid var(--brown-300);
+  border-bottom: 1.5px solid var(--brown-300);
 }
 .border-b-brown-350 {
-  border-bottom: 2px solid var(--brown-350);
+  border-bottom: 1.5px solid var(--brown-350);
 }
 .border-b-brown-400 {
-  border-bottom: 2px solid var(--brown-400);
+  border-bottom: 1.5px solid var(--brown-400);
+}
+.border-b-brown-450 {
+  border-bottom: 1.5px solid var(--brown-450);
 }
 .border-b-brown-500 {
-  border-bottom: 2px solid var(--brown-500);
+  border-bottom: 1.5px solid var(--brown-500);
 }
 .border-b-brown-600 {
-  border-bottom: 2px solid var(--brown-600);
+  border-bottom: 1.5px solid var(--brown-600);
 }
 
 .border-l-brown-100 {
-  border-left: 2px solid var(--brown-100);
+  border-left: 1.5px solid var(--brown-100);
 }
 .border-l-brown-200 {
-  border-left: 2px solid var(--brown-200);
+  border-left: 1.5px solid var(--brown-200);
 }
 .border-l-brown-300 {
-  border-left: 2px solid var(--brown-300);
+  border-left: 1.5px solid var(--brown-300);
 }
 .border-l-brown-350 {
-  border-left: 2px solid var(--brown-350);
+  border-left: 1.5px solid var(--brown-350);
 }
 .border-l-brown-400 {
-  border-left: 2px solid var(--brown-400);
+  border-left: 1.5px solid var(--brown-400);
+}
+.border-l-brown-450 {
+  border-left: 1.5px solid var(--brown-450);
 }
 .border-l-brown-500 {
-  border-left: 2px solid var(--brown-500);
+  border-left: 1.5px solid var(--brown-500);
 }
 .border-l-brown-600 {
-  border-left: 2px solid var(--brown-600);
+  border-left: 1.5px solid var(--brown-600);
 }
 
 .border-brown-100 { border: 1px solid var(--brown-100); }
@@ -153,6 +194,7 @@ html {
 .border-brown-300 { border: 1px solid var(--brown-300); }
 .border-brown-350 { border: 1px solid var(--brown-350); }
 .border-brown-400 { border: 1px solid var(--brown-400); }
+.border-brown-450 { border: 1px solid var(--brown-450); }
 .border-brown-500 { border: 1px solid var(--brown-500); }
 .border-brown-600 { border: 1px solid var(--brown-600); }
 
