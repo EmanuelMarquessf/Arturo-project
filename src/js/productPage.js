@@ -1,5 +1,6 @@
 import { setupHeaderInteractions } from "../components/header/header.js";
-import { vinhosJson } from "../data.js";
+import { setupFooterInteractions } from "../components/footer/footer.js";
+import { terroirsJson, vinhosJson } from "../data.js";
 
 function buscarVinhoEExibirDetalhes() {
   // Obtém o parâmetro 'id' da URL (ex: detalhe.html?id=1)
@@ -89,15 +90,21 @@ function buscarVinhoEExibirDetalhes() {
       .join("");
 
     document.getElementById("topicsContainer").innerHTML = topicsHTML;
+
+    const selectedTerroir = terroirsJson.find((t) => t.id === vinhoSelecionado.terroir)
+    document.getElementById("terroirSubtitle").textContent = selectedTerroir.name
+    document.getElementById("terroirDescription").textContent = selectedTerroir.description
+    document.getElementById("terroirLocation").textContent = `${selectedTerroir.region}${selectedTerroir.state ? ` • ${selectedTerroir.state}` : ""}`;
+    document.getElementById("buttonToTerroir").href = `/terroirPage.html?id=${selectedTerroir.id}`;
   } else {
     const estruturaPrincipal = document.getElementById("estruturaPrincipal");
     if (estruturaPrincipal) {
       estruturaPrincipal.innerHTML = `
-                <div class="text-center p-10 bg-white rounded-lg shadow-md max-w-lg mx-auto md:col-span-2">
-                    <h1 class="text-2xl text-red-600 libre-baskerville-bold">Vinho não encontrado.</h1>
-                    <p class="text-gray-500 mt-2">O ID do produto na URL está incorreto ou o produto foi removido.</p>
-                </div>
-            `;
+        <div class="text-center p-10 bg-white rounded-lg shadow-md max-w-lg mx-auto md:col-span-2">
+          <h1 class="text-2xl text-red-600 libre-baskerville-bold">Vinho não encontrado.</h1>
+          <p class="text-gray-500 mt-2">O ID do produto na URL está incorreto ou o produto foi removido.</p>
+        </div>
+      `;
       // Remove as classes de layout para centralizar a mensagem de erro
       estruturaPrincipal.className = "flex flex-col gap-16";
     }
@@ -106,4 +113,5 @@ function buscarVinhoEExibirDetalhes() {
 
 // ==========================================================
 //setupHeaderInteractions();
+setupFooterInteractions();
 document.addEventListener("DOMContentLoaded", buscarVinhoEExibirDetalhes);

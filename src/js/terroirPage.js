@@ -1,4 +1,4 @@
-import { setupHeaderInteractions } from "../components/header/header.js";
+import { setupFooterInteractions } from "../components/footer/footer.js";
 import { terroirsJson, vinhosJson  } from "../data.js";
 
 function exibirDadosTerroir() {
@@ -99,4 +99,5 @@ function filterSelectedProducts(terroirId) {
 
 
 //setupHeaderInteractions();
+setupFooterInteractions();
 document.addEventListener("DOMContentLoaded", exibirDadosTerroir);
