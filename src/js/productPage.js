@@ -95,7 +95,7 @@ function buscarVinhoEExibirDetalhes() {
     document.getElementById("terroirSubtitle").textContent = selectedTerroir.name
     document.getElementById("terroirDescription").textContent = selectedTerroir.description
     document.getElementById("terroirLocation").textContent = `${selectedTerroir.region}${selectedTerroir.state ? ` • ${selectedTerroir.state}` : ""}`;
-    document.getElementById("buttonToTerroir").href = `/terroirPage.html?id=${selectedTerroir.id}`;
+    document.getElementById("buttonToTerroir").href = `terroirPage.html?id=${selectedTerroir.id}`;
   } else {
     const estruturaPrincipal = document.getElementById("estruturaPrincipal");
     if (estruturaPrincipal) {
