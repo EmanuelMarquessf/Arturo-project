@@ -151,7 +151,7 @@ export const terroirsJson =
     [
         {
             id:"1",
-            name: "Vale dos Vinhedos",
+            name: "Vale dos\nVinhedos",
             main_headline: "Um dos territórios mais emblemáticos do vinho brasileiro",
             description: "Localizado na Serra Gaúcha, o Vale dos Vinhedos reúne encostas, diferentes altitudes e solos de origem vulcânica, formando uma paisagem diversa para a viticultura. Sua história está profundamente ligada à imigração italiana e à agricultura familiar, que ajudaram a construir uma tradição vitivinícola transmitida por gerações. Em 2012, o território recebeu o reconhecimento de Denominação de Origem, resultado de um longo trabalho de estudo, delimitação e caracterização de seus vinhos e de seu território.",
             characteristics: {
@@ -168,7 +168,7 @@ export const terroirsJson =
         },
         {
             id:"2",
-            name: "Monte Belo do Sul",
+            name: "Monte\nBelo do Sul",
             main_headline: "Um território construído por viticultores",
             description: "Também localizado na Serra Gaúcha, Monte Belo do Sul possui uma história profundamente ligada à produção de uvas e à pequena propriedade familiar. Durante décadas, seus produtores abasteceram vinícolas de diferentes partes da região. Hoje, Monte Belo possui sua própria Indicação de Procedência, reconhecendo a identidade vitivinícola construída nesse território. Com altitude média menor que outras áreas serranas e condições relativamente mais quentes, o território apresenta características próprias dentro da Serra Gaúcha.",
             characteristics: {
@@ -202,7 +202,7 @@ export const terroirsJson =
         },
         {
             id:"4",
-            name: "Campanha Gaúcha",
+            name: "Campanha\nGaúcha",
             main_headline: "Nos Pampas, uma paisagem diferente revela novas possibilidades para o vinho brasileiro",
             description: "Inserida no bioma Pampa, a Campanha Gaúcha ocupa uma extensa região do sul do Rio Grande do Sul, marcada por campos abertos, coxilhas e uma cultura rural profundamente ligada à paisagem de fronteira. Diferente das encostas mais úmidas da Serra Gaúcha, a Campanha apresenta, em escala regional, um clima mais quente e menor precipitação média, criando outras condições para a maturação das uvas. Sua vitivinicultura moderna ganhou força especialmente a partir da década de 1980, reunindo tradição agropecuária, pesquisa e a exploração de diferentes variedades de Vitis vinifera. Em 2020, essa identidade recebeu reconhecimento formal com a Indicação de Procedência Campanha Gaúcha.",
             characteristics: {
@@ -219,7 +219,7 @@ export const terroirsJson =
         },
         {
             id:"5",
-            name: "Serra da Mantiqueira",
+            name: "Serra da\nMantiqueira",
             main_headline: "Onde montanha, altitude e conhecimento deram origem aos Vinhos de Inverno",
             description: "A Serra da Mantiqueira atravessa diferentes áreas do Sudeste brasileiro, formando uma paisagem de montanhas, vales e grandes variações de altitude. Essa diversidade cria diferentes condições de clima, exposição solar e solo para o cultivo da videira. Foi nesse ambiente que pesquisa e experimentação deram origem a uma nova forma de produzir vinhos no Brasil: a dupla poda. A técnica desloca a maturação e a colheita das uvas do verão chuvoso para o inverno mais seco. A Syrah foi protagonista desse movimento, enquanto Sauvignon Blanc e outras castas vêm ampliando as possibilidades desse novo território vitivinícola.",
             characteristics: {

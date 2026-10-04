@@ -140,18 +140,19 @@
     <main class="flex flex-col gap-16 md:gap-30 h-full py-16">
       <div id="historyContainer" class="max-w-7xl mx-auto gap-12 md:gap-24 px-4 items-center">
         <div class="flex flex-col items-start gap-12 lg:gap-20">
-          <div class="text-left grid grid-cols-1 lg:grid-cols-4 items-end gap-4">
-            <h2 id="titleLocation" class="md:text-2xl text-brown-500 libre-baskerville-regular lg:col-span-4">Terroirs do Brasil · Serra Gaúcha</h2>
-            <h2 id="terroirName" class="text-5xl md:text-8xl lg:text-8xl text-brown-600 uppercase playfair-display-400 leading-none tracking-tighter lg:col-span-2">
-              Vale dos
-              <br />
-              Vinhedos
-            </h2>
-            <span class="hidden md:block"></span>
-            <span id="mainheadlineTerroir" class="text-brown-400 libre-baskerville-regular text-2xl leading-relaxed pl-5 border-l-brown-500 grid" id="mainheadlineTerroir">
-              Um dos territórios mais emblemáticos do vinho brasileiro
-            </span>
-          </div>
+          <div class="text-left grid grid-cols-1 lg:grid-cols-3 gap-4">
+  <!-- Agrupamos o título e o nome para ocuparem 2 colunas juntos -->
+  <div class="lg:col-span-2">
+    <h2 id="titleLocation" class="md:text-2xl text-brown-500 libre-baskerville-regular">Terroirs do Brasil · Serra Gaúcha</h2>
+    <h2 id="terroirName" class="text-5xl md:text-8xl lg:text-8xl text-brown-600 uppercase playfair-display-400 leading-none tracking-tighter">
+    </h2>
+  </div>
+  
+  <!-- A descrição ocupa a 1 coluna restante no desktop -->
+  <span id="mainheadlineTerroir" class="text-brown-400 libre-baskerville-regular text-2xl leading-relaxed pl-5 border-l-brown-500 lg:col-span-1 self-end w-fit">
+    Um dos territórios mais emblemáticos do vinho brasileiro
+  </span>
+</div>
 
           <div class="w-full flex flex-col gap-2">
             <img id="terroirImage" src="./public/terroirs/garibaldi.png" class="object-cover object-center max-h-[380px] rounded w-full" />
@@ -175,14 +176,14 @@
             </p>
           </div>
         </div>
-        <div class="flex flex-col gap-8 border-l-brown-500 px-8 mt-10">
-          <div class="flex flex-col">
+        <div class="flex flex-row md:flex-col gap-8 border-l-brown-500 px-8 md:mt-10 col-span-2 md:col-span-1">
+          <div id="regionContainer" class="flex flex-col">
             <span class="text-sm text-brown-500 font-medium uppercase">Região</span>
-            <span id="regionDescription" class="text-brown-700 libre-baskerville-regular leading-loose text-xl">Serra Gaúcha</span>
+            <span id="regionDescription" class="text-brown-700 libre-baskerville-regular leading-loose text-xl"></span>
           </div>
-          <div class="flex flex-col">
+          <div id="stateContainer" class="flex flex-col">
             <span class="text-sm text-brown-500 font-medium uppercase">Estado</span>
-            <span id="stateDescription" class="text-brown-700 libre-baskerville-regular leading-loose text-xl">Serra Gaúcha</span>
+            <span id="stateDescription" class="text-brown-700 libre-baskerville-regular leading-loose text-xl"></span>
           </div>
         </div>
       </div>

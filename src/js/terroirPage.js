@@ -8,15 +8,27 @@ function exibirDadosTerroir() {
   
   if (terroirSelecionado) {
     document.getElementById("titleLocation").textContent = `Terroirs do Brasil · ${terroirSelecionado.region}`;
-    document.getElementById("terroirName").textContent = `${terroirSelecionado.name}`;
+    document.getElementById("terroirName").innerText = `${terroirSelecionado.name}`;
     document.getElementById("mainheadlineTerroir").textContent = terroirSelecionado.main_headline;
     document.getElementById("terroirImage").src = `./public/terroirs/${terroirSelecionado.cardImage}`;
     document.getElementById("regionImage").textContent = terroirSelecionado.region;
     document.getElementById("stateImage").textContent = terroirSelecionado.state;
 
     document.getElementById("description").textContent = terroirSelecionado.description;
-    document.getElementById("regionDescription").textContent = terroirSelecionado.region;
-    document.getElementById("stateDescription").textContent = terroirSelecionado.state;
+
+    if(terroirSelecionado.region){
+      document.getElementById("regionDescription").textContent = terroirSelecionado.region;
+    } else {
+      document.getElementById("regionContainer").className = "hidden";
+    }
+
+    if(terroirSelecionado.state){
+      document.getElementById("stateDescription").textContent = terroirSelecionado.state;
+    } else {
+      document.getElementById("stateContainer").className = "hidden";
+    }
+
+
 
     document.getElementById("relief").textContent = terroirSelecionado.characteristics.relief;
     document.getElementById("climate").textContent = terroirSelecionado.characteristics.climate;
