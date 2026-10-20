@@ -126,10 +126,10 @@ export const vinhosJson = [
         type: "Vinho Suave",
         description: `Um vinho suave tratado, do vinhedo à garrafa, com o cuidado de um vinho fino.`,
         detailDescription: [
-            "O Delaso nasceu de uma história que aconteceu dentro do vinhedo. Durante uma visita à vinícola, o responsável pelo cuidado dos vinhedos apresentou suas uvas e surgiu a ideia de criar um vinho suave para completar o portfólio, mas com uma proposta diferente.",
-            "O Delaso é produzido em pequenas quantidades e seu cuidado começa ainda no vinhedo. As uvas são colhidas de madrugada, cuidadosamente acomodadas em pequenas caixas e levadas diretamente para a vinícola.",
-            "Na vinícola, o cuidado continua. O Delaso é elaborado em tanques de aço inox, com controle de temperatura e atenção em todas as etapas, seguindo o mesmo princípio de cuidado adotado na elaboração de vinhos finos.",
-            "No paladar, apresenta uma doçura intensa e agradável, acompanhada por uma acidez marcante e refrescante, que equilibra o doce e faz com que o vinho não se torne enjoativo. A fruta é tão presente que a sensação é de estar saboreando a própria uva."
+            "O Delaso nasceu de uma descoberta feita no vinhedo. Durante uma visita à vinícola, conhecemos de perto as uvas de mesa cultivadas pela família e percebemos que elas carregavam muito mais do que fruta e doçura: guardavam a origem de uma história construída por gerações.",
+            "Foi com essas uvas que os bisavós, vindos da Itália, deram os primeiros passos na viticultura. Elas estiveram presentes no sustento, no aprendizado e nas conquistas que permitiram à família chegar até aqui. Por isso, os produtores mantêm por elas um carinho profundo, enraizado na memória e na gratidão.",
+            "Selecionamos o Delaso porque encontramos nesse vinho uma forma de valorizar essa trajetória. Produzido em pequenas quantidades, recebe cuidado do vinhedo à garrafa: as uvas são colhidas de madrugada, acomodadas em pequenas caixas e vinificadas em tanques de aço inox com controle de temperatura.",
+            "No paladar, apresenta doçura intensa e agradável, equilibrada por uma acidez refrescante. A fruta permanece tão viva e presente que traz a sensação de saborear a própria uva."
         ],
         topics: "Produção limitada; Colheita de madrugada; Colheita em pequenas caixas; Vinificação com temperatura controlada; Cuidado do vinhedo à garrafa; Doçura e acidez equilibradas; Fruta intensa.",
         harmonization: "",
