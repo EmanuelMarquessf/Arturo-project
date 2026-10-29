@@ -23,7 +23,8 @@ export const vinhosJson = [
         alcolic: "12.7%",
         volume: "750ml",
         selected: true,
-        terroir: "2"
+        terroir: "2",
+        temperature: "",
     },
     {
         id: 2,
@@ -48,6 +49,7 @@ export const vinhosJson = [
         volume: "750ml",
         selected: true,
         terroir: "2",
+        temperature: "",
     },
     {
         id: 3,
@@ -73,6 +75,7 @@ export const vinhosJson = [
         volume: "750ml",
         selected: true,
         terroir: "3",
+        temperature: "",
     },
     {
         id: 4,
@@ -98,6 +101,7 @@ export const vinhosJson = [
         volume: "750ml",
         selected: true,
         terroir: "3",
+        temperature: "",
     },
     {
         id: 5,
@@ -118,6 +122,7 @@ export const vinhosJson = [
         volume: "",
         selected: true,
         terroir: "1",
+        temperature: "",
     },
 
     {
@@ -144,6 +149,35 @@ export const vinhosJson = [
         volume: "750ml",
         selected: true,
         terroir: "1",
+        temperature: "",
+    },
+
+    {
+        id: 7,
+        title: "Delaso Suco de Uva Integral",
+        type: "Suco",
+        description: `Uma história de família preservada na expressão mais pura da uva.`,
+        detailDescription: [
+            "Os sucos Delaso dão continuidade a uma história construída com as uvas de mesa. Para elaborá-los, escolhemos um produtor familiar cuja relação com a viticultura começou em 1886, quando Domingos Poggere deixou a província de Vicenza, no norte da Itália, e chegou ao Brasil trazendo consigo a cultura da videira.",
+            "Em 1917, a família estabeleceu-se em São Marcos, no Rio Grande do Sul. Desde então, o trabalho com a terra, a viticultura e o conhecimento artesanal atravessaram gerações, sempre acompanhados por uma relação profunda de cuidado e respeito pela uva.",
+            "Em 2006, essa experiência familiar ganhou uma nova expressão com a produção de suco de uva integral. O trabalho também presta homenagem a Celestino Poggere, precursor e grande incentivador da viticultura na família.",
+            "É essa combinação de origem, experiência e ligação afetiva com a uva que encontramos no Delaso. Elaborado com Bordô e Isabel, é um suco 100% integral, sem adição de açúcar e sem conservantes.",
+            "Na taça, apresenta coloração vermelho-rubi com reflexos violáceos, aromas intensos e frutados e um paladar naturalmente doce, equilibrado por uma acidez refrescante. O resultado é um suco fresco, harmônico e persistente."
+        ],
+        topics: "Tradição familiar; Viticultura desde 1886; 100% integral; Sem adição de açúcar; Sem conservantes; Fresco e equilibrado.",
+        harmonization: "",
+        image: "./public/img/garrafas/Sucos/Garrafas Delaso de Suco de Uva.png",
+        url: "",
+        grape: "Bordô e Isabel",
+        country: "Brasil",
+        region: "São Marcos",
+        productor: "Família Poggere — Don Celesto",
+        safra: "",
+        alcolic: "0%",
+        volume: "300ml e 1L",
+        selected: true,
+        terroir: "",
+        temperature: "8°C a 11°C",
     },
 ];
 

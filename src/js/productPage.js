@@ -60,6 +60,7 @@ function buscarVinhoEExibirDetalhes() {
       { label: "Produtor", value: vinhoSelecionado.productor },
       { label: "Teor Alcoólico", value: vinhoSelecionado.alcolic },
       { label: "Harmonização", value: vinhoSelecionado.harmonization },
+      { label: "Temperatura", value: vinhoSelecionado.temperature },
     ];
 
     // Cria os elementos <li> para a lista
@@ -92,10 +93,15 @@ function buscarVinhoEExibirDetalhes() {
     document.getElementById("topicsContainer").innerHTML = topicsHTML;
 
     const selectedTerroir = terroirsJson.find((t) => t.id === vinhoSelecionado.terroir)
-    document.getElementById("terroirSubtitle").textContent = selectedTerroir.name
-    document.getElementById("terroirDescription").textContent = selectedTerroir.description
-    document.getElementById("terroirLocation").textContent = `${selectedTerroir.region}${selectedTerroir.state ? ` • ${selectedTerroir.state}` : ""}`;
-    document.getElementById("buttonToTerroir").href = `terroirPage.html?id=${selectedTerroir.id}`;
+    if(selectedTerroir){
+      document.getElementById("terroirSubtitle").textContent = selectedTerroir.name
+      document.getElementById("terroirDescription").textContent = selectedTerroir.description
+      document.getElementById("terroirLocation").textContent = `${selectedTerroir.region}${selectedTerroir.state ? ` • ${selectedTerroir.state}` : ""}`;
+      document.getElementById("buttonToTerroir").href = `terroirPage.html?id=${selectedTerroir.id}`;
+    } else {
+      document.getElementById("ficha-container").classList = `col-span-6 bg-brown-200 p-6 rounded`
+      document.getElementById("terroir-container").classList = `hidden`
+    }
   } else {
     const estruturaPrincipal = document.getElementById("estruturaPrincipal");
     if (estruturaPrincipal) {
