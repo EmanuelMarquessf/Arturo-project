@@ -179,6 +179,34 @@ export const vinhosJson = [
         terroir: "",
         temperature: "8°C a 11°C",
     },
+{
+    id: 8,
+    title: "Delama Reserva dos Pampas",
+    type: "Tintos",
+    description: `A força da Campanha Gaúcha, amadurecida com tempo e precisão. Um Cabernet Sauvignon potente, estruturado e de presença marcante.`,
+    detailDescription: [
+        "Produzido com uvas provenientes de vinhedos antigos da Campanha Gaúcha, o Delama Reserva dos Pampas expressa a força e a identidade desse território. Uma região marcada por campos abertos, alta incidência solar e grandes variações de temperatura, que favorecem a maturação de uvas tintas com concentração, estrutura e personalidade.",
+        "As uvas são colhidas manualmente e passam por uma maceração prolongada de 15 dias, favorecendo a extração de taninos maduros. A fermentação ocorre com temperatura controlada a 25 °C, seguida de fermentação malolática espontânea.",
+        "Após a fermentação, o vinho amadurece durante nove meses em barricas de carvalho francês, ganhando estrutura, profundidade e equilíbrio. O envelhecimento acontece em cave, com temperatura natural próxima de 15 °C.",
+        "No paladar, apresenta um perfil potente e estruturado, com taninos maduros e a profundidade proporcionada pelo amadurecimento em carvalho francês. É um vinho de presença marcante, elaborado para acompanhar momentos especiais e sabores intensos.",
+        "Sua estrutura combina especialmente com pratos de maior intensidade, preparações com gordura ou cocção prolongada. Recomenda-se servir a 18 °C, com aproximadamente 40 minutos de decantação para valorizar sua expressão."
+    ],
+    topics: "100% Cabernet Sauvignon; Colheita manual; Maceração por 15 dias; Fermentação malolática espontânea; Nove meses em carvalho francês; Produção na Campanha Gaúcha; Potente e estruturado; Taninos maduros.",
+    harmonization: "Carnes bovinas assadas; Cortes com maior teor de gordura; Churrasco gaúcho; Massas com molhos encorpados; Queijos de média maturação.",
+    image: "./public/img/garrafas/Vinhos Tintos/delama-reserva-dos-pampas.png",
+    url: "",
+    grape: "Cabernet Sauvignon",
+    country: "Brasil",
+    region: "Campanha Gaúcha, Rio Grande do Sul",
+    productor: "Delama",
+    safra: "2020",
+    alcolic: "14%",
+    volume: "750ml",
+    selected: true,
+    terroir: "4",
+    temperature: "18°C",
+},
+
 ];
 
 export const terroirsJson =
