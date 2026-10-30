@@ -232,7 +232,7 @@ export const vinhosJson = [
     alcolic: "13.5%",
     volume: "750ml",
     selected: true,
-    terroir: "",
+    terroir: "4",
     temperature: "18°C",
 },
 
