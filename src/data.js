@@ -170,7 +170,7 @@ export const vinhosJson = [
         url: "",
         grape: "Bordô e Isabel",
         country: "Brasil",
-        region: "São Marcos",
+        region: "São Marcos, Rio Grande do Sul",
         productor: "Família Poggere — Don Celesto",
         safra: "",
         alcolic: "0%",
