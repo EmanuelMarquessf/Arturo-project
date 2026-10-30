@@ -207,6 +207,35 @@ export const vinhosJson = [
     temperature: "18°C",
 },
 
+{
+    id: 9,
+    title: "Delama Reserva dos Pampas Tannat",
+    type: "Tintos",
+    description: `A intensidade do Tannat conduzida com equilíbrio. Um vinho de corpo intenso, taninos maduros e expressão frutada, amadurecido em carvalho francês e premiado com Medalha de Ouro no Wines of Brazil Awards 2025.`,
+    detailDescription: [
+        "O Delama Reserva dos Pampas Tannat reúne tradição e precisão na elaboração de uma das variedades mais marcantes da Campanha Gaúcha. Uma região onde a amplitude térmica, a incidência solar e os campos abertos favorecem a maturação completa das uvas, originando vinhos de cor intensa, estrutura e personalidade.",
+        "As uvas são colhidas manualmente e passam por uma maceração de 15 dias, favorecendo a extração de cor, aromas e taninos maduros. A fermentação ocorre durante 10 dias, com temperatura controlada entre 25 e 28 °C, seguida de fermentação malolática espontânea.",
+        "Após a fermentação, o vinho amadurece durante seis meses em barricas de carvalho francês de média tosta, ganhando profundidade e equilíbrio. O envelhecimento acontece em cave, com temperatura natural próxima de 15 °C.",
+        "No paladar, apresenta corpo intenso, taninos maduros e presença frutada. Apesar de sua potência, demonstra equilíbrio e integração, proporcionando uma experiência agradável do início ao fim.",
+        "Sua estrutura combina especialmente com carnes, pratos condimentados e preparações de maior intensidade. Recomenda-se servir a 18 °C, com aproximadamente 40 minutos de decantação para valorizar sua expressão.",
+        "Reconhecido com Medalha de Ouro no Wines of Brazil Awards 2025, o Delama Reserva dos Pampas Tannat 2023 destaca a qualidade e a personalidade dos vinhos produzidos na Campanha Gaúcha."
+    ],
+    topics: "100% Tannat; Colheita manual; Maceração por 15 dias; Fermentação com temperatura controlada; Fermentação malolática espontânea; Seis meses em carvalho francês; Corpo intenso e taninos maduros; Expressão frutada; Produzido na Campanha Gaúcha; Medalha de Ouro — Wines of Brazil Awards 2025.",
+    harmonization: "Carnes assadas com maior teor de gordura; Churrasco; Massas com molhos condimentados; Presunto cru.",
+    image: "./public/img/garrafas/Vinhos Tintos/delama-reserva-dos-pampas-tannat.png",
+    url: "",
+    grape: "Tannat",
+    country: "Brasil",
+    region: "Campanha Gaúcha, Rio Grande do Sul",
+    productor: "Vinícola Peruzzo",
+    safra: "2023",
+    alcolic: "13.5%",
+    volume: "750ml",
+    selected: true,
+    terroir: "",
+    temperature: "18°C",
+},
+
 ];
 
 export const terroirsJson =
